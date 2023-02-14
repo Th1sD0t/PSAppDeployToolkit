@@ -1,0 +1,42 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".editorconfig":true,
+        ".gitattributes":true,
+        "*.png":true,
+        "CHANGELOG.txt":true,
+        "COPYING.Lesser":true,
+        "LICENSE":true,
+        "mkdocs.yml":true,
+        "README.md":true,
+        "TODO.txt":true,
+        "docs":true,
+        "Examples":true,
+        "material":true,
+        "*.pdf":true,
+        "Sources":true,
+        "Testing":true,
+        "wiki":true
+    },
+    "terminal.integrated.profiles.windows": {
+        "PowerShell (PSADT Profile)": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "args": [
+                "-NoLogo",
+                "-NoExit",
+                "-ExecutionPolicy",
+                "Unrestricted"
+            ]
+        },
+        "Git Bash": null,
+        "Command Prompt": null,
+        "JavaScript Debug Terminal": null
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell (PSADT Profile)"
+}
