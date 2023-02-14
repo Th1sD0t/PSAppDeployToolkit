@@ -23,6 +23,7 @@
         "Testing":true,
         "wiki":true
     },
+    "files.defaultLanguage": "powershell",
     "terminal.integrated.profiles.windows": {
         "PowerShell (PSADT Profile)": {
             "source": "PowerShell",
@@ -38,5 +39,7 @@
         "Command Prompt": null,
         "JavaScript Debug Terminal": null
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell (PSADT Profile)"
+    "terminal.integrated.defaultProfile.windows": "PowerShell (PSADT Profile)",
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never"
 }
