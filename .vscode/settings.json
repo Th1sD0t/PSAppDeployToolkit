@@ -41,5 +41,7 @@
     },
     "terminal.integrated.defaultProfile.windows": "PowerShell (PSADT Profile)",
     "terminal.integrated.enablePersistentSessions": false,
-    "terminal.integrated.persistentSessionReviveProcess": "never"
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+    "powershell.codeFormatting.whitespaceBetweenParameters": true
 }
