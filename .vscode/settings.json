@@ -8,7 +8,7 @@
         "**/Thumbs.db": true,
         ".editorconfig":true,
         ".gitattributes":true,
-        "*.png":true,
+        "**/*.png":true,
         "CHANGELOG.txt":true,
         "COPYING.Lesser":true,
         "LICENSE":true,
@@ -21,7 +21,10 @@
         "*.pdf":true,
         "Sources":true,
         "Testing":true,
-        "wiki":true
+        "wiki":true,
+        "**/*.exe":true,
+        "**/*.msi":true,
+        "**/*.ico":true
     },
     "files.defaultLanguage": "powershell",
     "terminal.integrated.profiles.windows": {
