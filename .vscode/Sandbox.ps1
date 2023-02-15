@@ -1,6 +1,6 @@
 . ".vscode\Global.ps1"
 
-Copy-Item -Path ".vscode\$LogonCommand" -Destination "$Win32App\" -Recurse -Force -Verbose -ErrorAction Ignore
+#Copy-Item -Path ".vscode\$LogonCommand" -Destination "$Win32App\" -Recurse -Force -Verbose -ErrorAction Ignore
 
 @"
 <Configuration>
@@ -13,9 +13,9 @@ Copy-Item -Path ".vscode\$LogonCommand" -Destination "$Win32App\" -Recurse -Forc
         </MappedFolder>
     </MappedFolders>
     <LogonCommand>
-        <Command>powershell.exe -ExecutionPolicy Unrestricted -Command "Start-Process -FilePath `"powershell.exe`" -ArgumentList `"-NoLogo -File `"$WDADesktop`"`"
+        <Command>powershell -ExecutionPolicy Unrestricted -Command "start powershell { -NoExit -File "$WDADesktop\$Application\Deploy-Application.ps1 }"</Command>
     </LogonCommand>
 </Configuration>
 "@ | Out-File -FilePath "$Win32App\$Application.wsb"
 
-Start-Process -FilePath "explorer.exe" -ArgumentList "$Win32App\Application.wsb" -Verbose -WindowStyle Maximized
+Start-Process -FilePath "$Win32App\$Application.wsb" -Verbose -WindowStyle Maximized
