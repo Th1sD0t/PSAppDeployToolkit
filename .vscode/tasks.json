@@ -63,6 +63,21 @@
             "presentation": {
                 "close": true
             }
+        },
+        {
+            "label": "Prepare Intune File",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "ByPass",
+                "-File",
+                "${cwd}\\.vscode\\Prepare.ps1"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
