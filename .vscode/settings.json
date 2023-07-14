@@ -15,7 +15,7 @@
         "mkdocs.yml":true,
         "README.md":true,
         "TODO.txt":true,
-        "docs":true,
+        "**/docs":true,
         "Examples":true,
         "material":true,
         "*.pdf":true,
@@ -23,7 +23,6 @@
         "Testing":true,
         "wiki":true,
         "**/*.exe":true,
-        "**/*.msi":true,
         "**/*.ico":true
     },
     "files.defaultLanguage": "powershell",
@@ -42,7 +41,7 @@
         "Command Prompt": null,
         "JavaScript Debug Terminal": null
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell (PSADT Profile)",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "editor.inlayHints.enabled": "on",

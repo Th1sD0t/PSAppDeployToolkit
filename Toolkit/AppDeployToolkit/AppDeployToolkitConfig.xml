@@ -54,7 +54,7 @@
     <!--Toast Notification Options-->
     <Toast_Options>
         <Toast_Disable>True</Toast_Disable>
-        <Toast_AppName>PSAppDeployToolkit</Toast_AppName>
+        <Toast_AppName>SEG-Automotive Software Deployment</Toast_AppName>
     </Toast_Options>
     <!--Toast Notification Options-->
         
