@@ -1,7 +1,7 @@
 ﻿<#
 .SYNOPSIS
 
-PSApppDeployToolkit - This script contains the PSADT core runtime and functions using by a Deploy-Application.ps1 script.
+PSAppDeployToolkit - This script contains the PSADT core runtime and functions using by a Deploy-Application.ps1 script.
 
 .DESCRIPTION
 
@@ -9,7 +9,7 @@ The script can be called directly to dot-source the toolkit functions for testin
 
 The script can usually be updated to the latest version without impacting your per-application Deploy-Application scripts. Please check release notes before upgrading.
 
-PSApppDeployToolkit is licensed under the GNU LGPLv3 License - (C) 2023 PSAppDeployToolkit Team (Sean Lillis, Dan Cunningham and Muhammad Mashwani).
+PSAppDeployToolkit is licensed under the GNU LGPLv3 License - (C) 2023 PSAppDeployToolkit Team (Sean Lillis, Dan Cunningham and Muhammad Mashwani).
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the
 Free Software Foundation, either version 3 of the License, or any later version. This program is distributed in the hope that it will be useful, but
@@ -107,9 +107,9 @@ Param (
 [String]$appDeployMainScriptFriendlyName = 'App Deploy Toolkit Main'
 
 ## Variables: Script Info
-[Version]$appDeployMainScriptVersion = [Version]'3.9.2'
-[Version]$appDeployMainScriptMinimumConfigVersion = [Version]'3.9.0'
-[String]$appDeployMainScriptDate = '02/02/2023'
+[Version]$appDeployMainScriptVersion = [Version]'3.9.3'
+[Version]$appDeployMainScriptMinimumConfigVersion = [Version]'3.9.3'
+[String]$appDeployMainScriptDate = '02/05/2023'
 [Hashtable]$appDeployMainScriptParameters = $PSBoundParameters
 
 ## Variables: Datetime and Culture
@@ -350,9 +350,12 @@ $GetAccountNameUsingSid = [ScriptBlock] {
 [String]$LocalSystemNTAccount = & $GetAccountNameUsingSid 'LocalSystemSid'
 [String]$LocalUsersGroup = & $GetAccountNameUsingSid 'BuiltinUsersSid'
 # Test if the current Windows is a Home edition
-If (!((Get-ComputerInfo -ErrorAction 'SilentlyContinue' | Select -Property WindowsProductName).WindowsProductName -like "*Home*")){
-    [string]$LocalPowerUsersGroup = & $GetAccountNameUsingSid 'BuiltinPowerUsersSid'
+Try {
+    If (!((Get-WmiObject -Class Win32_OperatingSystem | Select -Expand Caption) -like "*Home*")){
+        [string]$LocalPowerUsersGroup = & $GetAccountNameUsingSid 'BuiltinPowerUsersSid'
+    }
 }
+Catch{}
 [String]$LocalAdministratorsGroup = & $GetAccountNameUsingSid 'BuiltinAdministratorsSid'
 #  Check if script is running in session zero
 If ($IsLocalSystemAccount -or $IsLocalServiceAccount -or $IsNetworkServiceAccount -or $IsServiceAccount) {
@@ -405,6 +408,11 @@ If (-not (Test-Path -LiteralPath $appDeployCustomTypesSourceCode -PathType 'Leaf
 [String]$configBannerLogoImageFileName = $xmlBannerIconOptions.LogoImage_Filename
 [String]$configBannerIconBannerName = $xmlBannerIconOptions.Banner_Filename
 [Int32]$appDeployLogoBannerMaxHeight = $xmlBannerIconOptions.Banner_MaxHeight
+
+# Get Toast Notification Options
+[Xml.XmlElement]$xmlToastOptions = $xmlConfig.Toast_Options
+[String]$configToastDisable = $xmlToastOptions.Toast_Disable
+[String]$configToastAppName = $xmlToastOptions.Toast_AppName
 
 [String]$appDeployLogoIcon = Join-Path -Path $scriptRoot -ChildPath $configBannerIconFileName
 [String]$appDeployLogoImage = Join-Path -Path $scriptRoot -ChildPath $configBannerLogoImageFileName
@@ -3643,7 +3651,7 @@ https://psappdeploytoolkit.com
 
             #  Call the Execute-Process function
             If ($PassThru) {
-                [PSObject]$ExecuteResults = Execute-Process @ExecuteProcessSplat 
+                [PSObject]$ExecuteResults = Execute-Process @ExecuteProcessSplat
             }
             Else {
                 Execute-Process @ExecuteProcessSplat
@@ -4233,6 +4241,11 @@ https://psappdeploytoolkit.com
             ## Set the Working directory (if not specified)
             If (-not $WorkingDirectory) {
                 $WorkingDirectory = Split-Path -Path $Path -Parent -ErrorAction 'Stop'
+            }
+
+            ## If the WindowStyle parameter is set to 'Hidden', set the UseShellExecute parameter to '$true'.
+            If ($WindowStyle -eq 'Hidden') {
+                $UseShellExecute = $true
             }
 
             ## If MSI install, check to see if the MSI installer service is available or if another MSI install is already underway.
@@ -4888,6 +4901,14 @@ This function does not generate any output.
 .EXAMPLE
 
 Remove-Folder -Path "$envWinDir\Downloaded Program Files"
+
+Deletes all files and subfolders in the Windows\Downloads Program Files folder
+
+.EXAMPLE
+
+Remove-Folder -Path "$envTemp\MyAppCache" -DisableRecursion
+
+Deletes all files in the Temp\MyAppCache folder but does not delete any subfolders.
 
 .NOTES
 
@@ -7429,8 +7450,8 @@ https://psappdeploytoolkit.com
         ## Get the name of this function and write header
         [String]${CmdletName} = $PSCmdlet.MyInvocation.MyCommand.Name
         Write-FunctionHeaderOrFooter -CmdletName ${CmdletName} -CmdletBoundParameters $PSBoundParameters -Header
-        
-        If ($null -ne $tempPath) {             
+
+        If ((![string]::IsNullOrEmpty($tempPath))) {
             $executeAsUserTempPath = $tempPath
             If (($tempPath -eq $loggedOnUserTempPath) -and ($RunLevel -eq "HighestPrivilege")) {
                 Write-Log -Message "WARNING: Using [${CmdletName}] with a user writable directory using the HighestPrivilege creates a security vulnerability. Please use -RunLevel 'LeastPrivilege' when using a user writable directoy." -Severity 'Warning'
@@ -7438,7 +7459,7 @@ https://psappdeploytoolkit.com
         }
         Else {
             [String]$executeAsUserTempPath = Join-Path -Path $dirAppDeployTemp -ChildPath 'ExecuteAsUser'
-        }   
+        }
     }
     Process {
         ## Initialize exit code variable
@@ -7470,7 +7491,7 @@ https://psappdeploytoolkit.com
         }
 
         ## Build the scheduled task XML name
-        [String]$schTaskName = "$appDeployToolkitName-ExecuteAsUser"
+        [String]$schTaskName = (("$appDeployToolkitName-ExecuteAsUser" -replace ' ', '').Trim('_') -replace '[_]+', '_')
 
         ##  Remove and recreate the temporary folder
         If (Test-Path -LiteralPath $executeAsUserTempPath -PathType 'Container') {
@@ -7631,7 +7652,7 @@ https://psappdeploytoolkit.com
             Write-Log -Message "Failed to trigger scheduled task [$schTaskName]." -Severity 3 -Source ${CmdletName}
             #  Delete Scheduled Task
             Write-Log -Message 'Deleting the scheduled task which did not trigger.' -Source ${CmdletName}
-            #Execute-Process -Path $exeSchTasks -Parameters "/delete /tn $schTaskName /f" -WindowStyle 'Hidden' -CreateNoWindow -ExitOnProcessFailure $false
+            Execute-Process -Path $exeSchTasks -Parameters "/delete /tn $schTaskName /f" -WindowStyle 'Hidden' -CreateNoWindow -ExitOnProcessFailure $false
             If (-not $ContinueOnError) {
                 Throw "Failed to trigger scheduled task [$schTaskName]."
             }
@@ -7684,7 +7705,7 @@ https://psappdeploytoolkit.com
         ## Delete scheduled task
         Try {
             Write-Log -Message "Deleting scheduled task [$schTaskName]." -Source ${CmdletName}
-            #Execute-Process -Path $exeSchTasks -Parameters "/delete /tn $schTaskName /f" -WindowStyle 'Hidden' -CreateNoWindow -ErrorAction 'Stop'
+            Execute-Process -Path $exeSchTasks -Parameters "/delete /tn $schTaskName /f" -WindowStyle 'Hidden' -CreateNoWindow -ErrorAction 'Stop'
         }
         Catch {
             Write-Log -Message "Failed to delete scheduled task [$schTaskName]. `r`n$(Resolve-Error)" -Severity 3 -Source ${CmdletName}
@@ -7692,12 +7713,12 @@ https://psappdeploytoolkit.com
 
         ## Remove the XML scheduled task file
         If (Test-Path -LiteralPath $xmlSchTaskFilePath -PathType 'Leaf') {
-            #Remove-File -Path $xmlSchTaskFilePath
+            Remove-File -Path $xmlSchTaskFilePath
         }
 
         ##  Remove the temporary folder
         If (Test-Path -LiteralPath $executeAsUserTempPath -PathType 'Container') {
-            #Remove-Folder -Path $executeAsUserTempPath
+            Remove-Folder -Path $executeAsUserTempPath
         }
     }
     End {
@@ -8068,7 +8089,7 @@ https://psappdeploytoolkit.com
         [char[]]$invalidScheduledTaskChars = '$', '!', '''', '"', '(', ')', ';', '\', '`', '*', '?', '{', '}', '[', ']', '<', '>', '|', '&', '%', '#', '~', '@', ' '
         [string]$SchInstallName = $installName
         ForEach ($invalidChar in $invalidScheduledTaskChars) {
-            [string]$SchInstallName = $SchInstallName -replace [regex]::Escape($invalidChar),'' 
+            [string]$SchInstallName = $SchInstallName -replace [regex]::Escape($invalidChar),''
         }
         [string]$blockExecutionTempPath = Join-Path -Path $dirAppDeployTemp -ChildPath 'BlockExecution'
         [string]$schTaskUnblockAppsCommand += "-ExecutionPolicy Bypass -NoProfile -NoLogo -WindowStyle Hidden -File `"$blockExecutionTempPath\$scriptFileName`" -CleanupBlockedApps -ReferredInstallName `"$SchInstallName`" -ReferredInstallTitle `"$installTitle`" -ReferredLogName `"$logName`" -AsyncToolkitLaunch"
@@ -10041,7 +10062,7 @@ https://psappdeploytoolkit.com
         If ($deployModeSilent) {
             If ($NoSilentRestart -eq $false) {
                 Write-Log -Message "Triggering restart silently, because the deploy mode is set to [$deployMode] and [NoSilentRestart] is disabled. Timeout is set to [$SilentCountdownSeconds] seconds." -Source ${CmdletName}
-                Start-Process -FilePath "$PSHOME\powershell.exe" -ArgumentList "-ExecutionPolicy Bypass -NoProfile -NoLogo -WindowStyle Hidden -Command `'& { Start-Sleep -Seconds $SilentCountdownSeconds; Restart-Computer -Force; }`'" -WindowStyle 'Hidden' -ErrorAction 'SilentlyContinue'
+                Start-Process -FilePath "$PSHOME\powershell.exe" -ArgumentList "-ExecutionPolicy Bypass -NoProfile -NoLogo -WindowStyle Hidden -Command `"& { Start-Sleep -Seconds $SilentCountdownSeconds; Restart-Computer -Force; }`"" -WindowStyle 'Hidden' -ErrorAction 'SilentlyContinue'
             }
             Else {
                 Write-Log -Message "Skipping restart, because the deploy mode is set to [$deployMode] and [NoSilentRestart] is enabled." -Source ${CmdletName}
@@ -10445,7 +10466,7 @@ Show-BalloonTip -BalloonTipIcon 'Info' -BalloonTipText 'Installation Started' -B
 
 .NOTES
 
-For Windows 10 OS and above a Toast notification is displayed in place of a balloon tip. The toast notification does not use tte BalloonTipIcon if specified.
+For Windows 10 OS and above a Toast notification is displayed in place of a balloon tip if toast notifications are enabled in the XML config file.
 
 .LINK
 
@@ -10490,7 +10511,7 @@ https://psappdeploytoolkit.com
             }
         }
 
-        If ($envOSVersionMajor -lt 10) {
+        If (($envOSVersionMajor -lt 10) -or ($configToastDisable -eq $true)) {
             ## NoWait - Create the balloontip icon asynchronously
             If ($NoWait) {
                 Write-Log -Message "Displaying balloon tip notification asynchronously with message [$BalloonTipText]." -Source ${CmdletName}
@@ -10563,10 +10584,11 @@ https://psappdeploytoolkit.com
                 $script:notifyIcon.ShowBalloonTip($BalloonTipTime)
             }
         }
+        # Otherwise use toast notification
         Else {
             $toastAppID = $appDeployToolkitName
-            $toastAppDisplayName = $appDeployToolkitName            
-            
+            $toastAppDisplayName = $configToastAppName
+
             [scriptblock]$toastScriptBlock  = {
                 Param(
                     [Parameter(Mandatory = $true, Position = 0)]
@@ -10574,7 +10596,7 @@ https://psappdeploytoolkit.com
                     [String]$BalloonTipText,
                     [Parameter(Mandatory = $false, Position = 1)]
                     [ValidateNotNullorEmpty()]
-                    [String]$BalloonTipTitle,                                 
+                    [String]$BalloonTipTitle,
                     [Parameter(Mandatory = $false, Position = 2)]
                     [ValidateNotNullorEmpty()]
                     [String]$AppDeployLogoImage,
@@ -10585,43 +10607,26 @@ https://psappdeploytoolkit.com
                     [ValidateNotNullorEmpty()]
                     [String]$toastAppDisplayName
                 )
-            
+
                 # Check for required entries in registry for when using Powershell as application for the toast
                 # Register the AppID in the registry for use with the Action Center, if required
                 $regPathToastNotificationSettings = 'Registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings'
                 $regPathToastApp = 'Registry::HKEY_CURRENT_USER\Software\Classes\AppUserModelId'
 
-                # Create the registry entries if they don't exist
-                If (-not (Test-Path -Path "$regPathToastNotificationSettings\$toastAppId")) {
-                    $null = New-Item -Path "$regPathToastNotificationSettings\$toastAppId" -Force
-                }
+                # Create the registry entries
+                $null = New-Item -Path "$regPathToastNotificationSettings\$toastAppId" -Force
                 # Make sure the app used with the action center is enabled
-                If ((Get-ItemProperty -Path "$regPathToastNotificationSettings\$toastAppId" -Name 'ShowInActionCenter' -ErrorAction 'SilentlyContinue').ShowInActionCenter -ne '1') {
-                    $null = New-ItemProperty -Path "$regPathToastNotificationSettings\$toastAppId" -Name 'ShowInActionCenter' -Value 1 -PropertyType 'DWORD' -Force
-                }
-                If ((Get-ItemProperty -Path "$regPathToastNotificationSettings\$toastAppId" -Name 'Enabled' -ErrorAction 'SilentlyContinue').Enabled -ne '1') {
-                    $null = New-ItemProperty -Path "$regPathToastNotificationSettings\$toastAppId" -Name 'Enabled' -Value 1 -PropertyType 'DWORD' -Force
-                }
-                If (!(Get-ItemProperty -Path "$regPathToastNotificationSettings\$toastAppId" -Name 'SoundFile' -ErrorAction 'SilentlyContinue')) {
-                    $null = New-ItemProperty -Path "$regPathToastNotificationSettings\$toastAppId" -Name 'SoundFile' -PropertyType 'STRING' -Force
-                }
-                # Create the registry entries if they don't exist
-                If (-not (Test-Path -Path "$regPathToastApp\$toastAppId")) {
-                    $null = New-Item -Path "$regPathToastApp\$toastAppId" -Force
-                }
-                If (!(Get-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'DisplayName' -ErrorAction 'SilentlyContinue')) {
-                    $null = New-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'DisplayName' -Value "$($toastAppDisplayName)" -PropertyType 'STRING' -Force
-                }
-                If ((Get-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'ShowInSettings' -ErrorAction 'SilentlyContinue').ShowInSettings -ne '0') {
-                    $null = New-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'ShowInSettings' -Value 0 -PropertyType 'DWORD' -Force
-                }
-                If (!(Get-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'IconUri' -ErrorAction 'SilentlyContinue')) {
-                    $null = New-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'IconUri' -Value $appDeployLogoImage -PropertyType 'ExpandString' -Force
-                }
-                If (!(Get-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'IconBackgroundColor' -ErrorAction 'SilentlyContinue')) {
-                    $null = New-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'IconBackgroundColor' -Value 0 -PropertyType 'ExpandString' -Force
-                }                
-                
+                $null = New-ItemProperty -Path "$regPathToastNotificationSettings\$toastAppId" -Name 'ShowInActionCenter' -Value 1 -PropertyType 'DWORD' -Force
+                $null = New-ItemProperty -Path "$regPathToastNotificationSettings\$toastAppId" -Name 'Enabled' -Value 1 -PropertyType 'DWORD' -Force
+                $null = New-ItemProperty -Path "$regPathToastNotificationSettings\$toastAppId" -Name 'SoundFile' -PropertyType 'STRING' -Force
+
+                # Create the registry entries
+                $null = New-Item -Path "$regPathToastApp\$toastAppId" -Force
+                $null = New-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'DisplayName' -Value "$($toastAppDisplayName)" -PropertyType 'STRING' -Force
+                $null = New-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'ShowInSettings' -Value 0 -PropertyType 'DWORD' -Force
+                $null = New-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'IconUri' -Value $appDeployLogoImage -PropertyType 'ExpandString' -Force
+                $null = New-ItemProperty -Path "$regPathToastApp\$toastAppId" -Name 'IconBackgroundColor' -Value 0 -PropertyType 'ExpandString' -Force
+
                 [Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime] | Out-Null
                 [Windows.Data.Xml.Dom.XmlDocument, Windows.Data.Xml.Dom.XmlDocument, ContentType = WindowsRuntime] | Out-Null
 
@@ -10647,15 +10652,15 @@ https://psappdeploytoolkit.com
                 $notifier.Show($toastXml)
 
             }
-                
+
             If ($ProcessNTAccount -eq $runAsActiveUser.NTAccount) {
                 Write-Log -Message "Displaying toast notification with message [$BalloonTipText]." -Source ${CmdletName}
                 Invoke-Command -ScriptBlock $toastScriptBlock -ArgumentList $BalloonTipText, $BalloonTipTitle, $AppDeployLogoImage, $toastAppID, $toastAppDisplayName
             }
             Else {
                 ## Invoke a separate PowerShell process as the current user passing the script block as a command and associated parameters to display the toast notification in the user context
-                Try {   
-                    Write-Log -Message "Displaying toast notification with message [$BalloonTipText] using Execute-ProcessAsUser." -Source ${CmdletName}             
+                Try {
+                    Write-Log -Message "Displaying toast notification with message [$BalloonTipText] using Execute-ProcessAsUser." -Source ${CmdletName}
                     $executeToastAsUserScript = "$loggedOnUserTempPath" + "$($appDeployToolkitName)-ToastNotification.ps1"
                     Set-Content -Path $executeToastAsUserScript -Value $toastScriptBlock -Force
                     Execute-ProcessAsUser -Path "$PSHOME\powershell.exe" -Parameters "-ExecutionPolicy Bypass -NoProfile -NoLogo -WindowStyle Hidden -Command & { & `"`'$executeToastAsUserScript`' `'$BalloonTipText`' `'$BalloonTipTitle`' `'$AppDeployLogoImage`' `'$toastAppID`' `'$toastAppDisplayName`'`"; Exit `$LastExitCode }" -TempPath $loggedOnUserTempPath -Wait -RunLevel 'LeastPrivilege'
@@ -10833,7 +10838,7 @@ https://psappdeploytoolkit.com
                         <ColumnDefinition MinWidth="350" MaxWidth="350" Width="350"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Image x:Name = "ProgressBanner" Grid.ColumnSpan="2" Margin="0,0,0,0" Source="" Grid.Row="0"/>
-                    <TextBlock x:Name = "ProgressText" Grid.Row="1" Grid.Column="1" Margin="0,30,20,30" Text="Installation in progress" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Padding="10,0,10,0" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock x:Name = "ProgressText" Grid.Row="1" Grid.Column="1" Margin="0,30,64,30" Text="Installation in progress" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Padding="10,0,10,0" TextWrapping="Wrap"></TextBlock>
                     <Ellipse x:Name = "ellipse" Grid.Row="1" Grid.Column="0" Margin="0,0,0,0" StrokeThickness="5" RenderTransformOrigin="0.5,0.5" Height="32" Width="32" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Ellipse.RenderTransform>
                         <TransformGroup>
@@ -14064,9 +14069,9 @@ This Function:
 
 .PARAMETER StubExePath
 
-Full destination path to the file that will be executed for each user that logs in.
+Use this parameter to specify the destination path of the file that will be executed upon user login.
 
-If this file exists in the 'Files' subdirectory of the script directory, it will be copied to the destination path.
+Note: Place the file you want users to execute in the '\Files' subdirectory of the script directory and the toolkit will install it to the path specificed in this parameter.
 
 .PARAMETER Arguments
 
@@ -14083,6 +14088,10 @@ Name of the registry key for the Active Setup entry. Default is: $installName.
 .PARAMETER Version
 
 Optional. Specify version for Active setup entry. Active Setup is not triggered if Version value has more than 8 consecutive digits. Use commas to get around this limitation. Default: YYYYMMDDHHMMSS
+
+Note: 
+    - Do not use this parameter if it is not necessary. PSADT will handle this parameter automatically using the time of the installation as the version number.
+    - In Windows 10, Scripts and EXEs might be blocked by AppLocker. Ensure that the path given to -StubExePath will permit end users to run Scripts and EXEs unelevated.
 
 .PARAMETER Locale
 
@@ -14270,37 +14279,39 @@ https://psappdeploytoolkit.com
                 Else {
                     $HKCUProps = (Get-RegistryKey -Key $HKCUKey -ContinueOnError $true)
                 }
+
                 $HKLMProps = (Get-RegistryKey -Key $HKLMKey -ContinueOnError $true)
                 [String]$HKCUVer = $HKCUProps.Version
                 [String]$HKLMVer = $HKLMProps.Version
                 [Int32]$HKLMInst = $HKLMProps.IsInstalled
-                # HKLM entry not present. Nothing to run
+
+                # HKLM entry not present. Nothing to run.
                 If (-not $HKLMProps) {
                     Write-Log 'HKLM active setup entry is not present.' -Source ${CmdletName}
                     Return ($false)
                 }
-                # HKLM entry present, but disabled. Nothing to run
+                # HKLM entry present, but disabled. Nothing to run.
                 If ($HKLMInst -eq 0) {
                     Write-Log 'HKLM active setup entry is present, but it is disabled (IsInstalled set to 0).' -Source ${CmdletName}
                     Return ($false)
                 }
-                # HKLM entry present and HKCU entry is not. Run the StubPath
+                # HKLM entry present and HKCU entry is not. Run the StubPath.
                 If (-not $HKCUProps) {
                     Write-Log 'HKLM active setup entry is present. HKCU active setup entry is not present.' -Source ${CmdletName}
                     Return ($true)
                 }
-                # Both entries present. HKLM entry does not have Version property. Nothing to run
+                # Both entries present. HKLM entry does not have Version property. Nothing to run.
                 If (-not $HKLMVer) {
                     Write-Log 'HKLM and HKCU active setup entries are present. HKLM Version property is missing.' -Source ${CmdletName}
                     Return ($false)
                 }
-                # Both entries present. HKLM entry has Version property, but HKCU entry does not. Run the StubPath
+                # Both entries present. HKLM entry has Version property, but HKCU entry does not. Run the StubPath.
                 If (-not $HKCUVer) {
                     Write-Log 'HKLM and HKCU active setup entries are present. HKCU Version property is missing.' -Source ${CmdletName}
                     Return ($true)
                 }
-                # Both entries present, with a Version property. Compare the Versions
-                ## Remove invalid characters from Version. Only digits and commas are allowed
+
+                # Remove invalid characters from Version property. Only digits and commas are allowed.
                 [String]$HKLMValidVer = ''
                 For ($i = 0; $i -lt $HKLMVer.Length; $i++) {
                     If ([Char]::IsDigit($HKLMVer[$i]) -or ($HKLMVer[$i] -eq ',')) {
@@ -14314,34 +14325,60 @@ https://psappdeploytoolkit.com
                         $HKCUValidVer += $HKCUVer[$i]
                     }
                 }
-                # After cleanup, the HKLM Version is empty. Considering it missing. HKCU is present so nothing to run.
+
+                # After cleanup, the HKLM Version property is empty. Considering it missing. HKCU is present so nothing to run.
                 If (-not $HKLMValidVer) {
                     Write-Log 'HKLM and HKCU active setup entries are present. HKLM Version property is invalid.' -Source ${CmdletName}
                     Return ($false)
                 }
-                # the HKCU Version property is empty while HKLM Version property is not. Run the StubPath
+
+                # After cleanup, the HKCU Version property is empty while HKLM Version property is not. Run the StubPath.
                 If (-not $HKCUValidVer) {
                     Write-Log 'HKLM and HKCU active setup entries are present. HKCU Version property is invalid.' -Source ${CmdletName}
                     Return ($true)
                 }
-                # Both Version properties are present
-                # Split the version by commas
-                [String[]]$SplitHKLMValidVer = $HKLMValidVer.Split(',')
-                [String[]]$SplitHKCUValidVer = $HKCUValidVer.Split(',')
-                # Check whether the Versions were split in the same number of strings
-                If ($SplitHKLMValidVer.Count -ne $SplitHKCUValidVer.Count) {
-                    # The versions are different length - more commas
-                    If ($SplitHKLMValidVer.Count -gt $SplitHKCUValidVer.Count) {
-                        #HKLM is longer, Run the StubPath
-                        Write-Log "HKLM and HKCU active setup entries are present. Both contain Version properties, however they don't contain the same amount of sub versions. HKLM Version has more sub versions." -Source ${CmdletName}
+
+                ## Both entries present, with a Version property. Compare the Versions.
+                # Convert the version property to Version type and compare
+                [Version]$VersionHKLMValidVer = $null
+                [Version]$VersionHKCUValidVer = $null
+                Try {
+                    [Version]$VersionHKLMValidVer = [Version]$HKLMValidVer.Replace(',','.')
+                    [Version]$VersionHKCUValidVer = [Version]$HKCUValidVer.Replace(',','.')
+                    
+                    If ($VersionHKLMValidVer -gt $VersionHKCUValidVer) {
+                        # HKLM is greater, run the StubPath.
+                        Write-Log "HKLM and HKCU active setup entries are present. Both contain Version properties, and the HKLM Version is greater." -Source ${CmdletName}
                         Return ($true)
                     }
                     Else {
-                        #HKCU is longer, Nothing to run
-                        Write-Log "HKLM and HKCU active setup entries are present. Both contain Version properties, however they don't contain the same amount of sub versions. HKCU Version has more sub versions." -Source ${CmdletName}
+                        # The HKCU version is equal or higher than HKLM version, Nothing to run
+                        Write-Log 'HKLM and HKCU active setup entries are present. Both contain Version properties. However, they are either the same or the HKCU Version property is higher.' -Source ${CmdletName}
                         Return ($false)
                     }
                 }
+                Catch {
+                    # Failed to convert version property to Version type.
+                }
+
+                # Check whether the Versions were split into the same number of strings
+                # Split the version by commas
+                [String[]]$SplitHKLMValidVer = $HKLMValidVer.Split(',')
+                [String[]]$SplitHKCUValidVer = $HKCUValidVer.Split(',')
+                If ($SplitHKLMValidVer.Count -ne $SplitHKCUValidVer.Count) {
+                    # The versions are different length - more commas
+                    If ($SplitHKLMValidVer.Count -gt $SplitHKCUValidVer.Count) {
+                        # HKLM is longer, Run the StubPath
+                        Write-Log "HKLM and HKCU active setup entries are present. Both contain Version properties. However, the HKLM Version has more version fields." -Source ${CmdletName}
+                        Return ($true)
+                    }
+                    Else {
+                        # HKCU is longer, Nothing to run
+                        Write-Log "HKLM and HKCU active setup entries are present. Both contain Version properties. However, the HKCU Version has more version fields." -Source ${CmdletName}
+                        Return ($false)
+                    }
+                }
+                
                 # The Versions have the same number of strings. Compare them
                 Try {
                     For ($i = 0; $i -lt $SplitHKLMValidVer.Count; $i++) {
@@ -14350,17 +14387,17 @@ https://psappdeploytoolkit.com
                         [UInt64]$ParsedHKCUVer = [UInt64]::Parse($SplitHKCUValidVer[$i])
                         # The HKCU ver is lower, Run the StubPath
                         If ($ParsedHKCUVer -lt $ParsedHKLMVer) {
-                            Write-Log 'HKLM and HKCU active setup entries are present. Both Version properties are present and valid, however HKCU Version property is lower.' -Source ${CmdletName}
+                            Write-Log 'HKLM and HKCU active setup entries are present. Both Version properties are present and valid. However, HKCU Version property is lower.' -Source ${CmdletName}
                             Return ($true)
                         }
                     }
                     # The HKCU version is equal or higher than HKLM version, Nothing to run
-                    Write-Log 'HKLM and HKCU active setup entries are present. Both Version properties are present and valid, however they are either the same or HKCU Version property is higher.' -Source ${CmdletName}
+                    Write-Log 'HKLM and HKCU active setup entries are present. Both Version properties are present and valid. However, they are either the same or HKCU Version property is higher.' -Source ${CmdletName}
                     Return ($false)
                 }
                 Catch {
-                    # Failed to parse strings as UInts, Run the StubPath
-                    Write-Log 'HKLM and HKCU active setup entries are present. Both Version properties are present and valid, however parsing strings to uintegers failed.' -Severity 2 -Source ${CmdletName}
+                    # Failed to parse strings as UInt64, Run the StubPath
+                    Write-Log 'HKLM and HKCU active setup entries are present. Both Version properties are present and valid. However, parsing string numerics to 64-bit integers failed.' -Severity 2 -Source ${CmdletName}
                     Return ($true)
                 }
             }
@@ -15272,7 +15309,7 @@ Returns a custom object with the following properties
 
 Get-PendingReboot
 
-Returns caustom object with following properties:
+Returns custom object with following properties:
 - ComputerName
 - LastBootUpTime
 - IsSystemRebootPending
@@ -15762,10 +15799,10 @@ If (-not ([Management.Automation.PSTypeName]'PSADT.UiAutomation').Type) {
         [String]$userProfileName = $RunAsActiveUser.UserName
         If (Test-Path (Join-Path -Path $dirUserProfile -ChildPath $userProfileName -ErrorAction 'SilentlyContinue')) {
             [String]$runasUserProfile = Join-Path -Path $dirUserProfile -ChildPath $userProfileName -ErrorAction 'SilentlyContinue'
-            [String]$loggedOnUserTempPath = Join-Path -Path $runasUserProfile -ChildPath (Join-Path -Path $appDeployToolkitName -ChildPath 'ExecuteAsUser')  
+            [String]$loggedOnUserTempPath = Join-Path -Path $runasUserProfile -ChildPath (Join-Path -Path $appDeployToolkitName -ChildPath 'ExecuteAsUser')
             If (-not (Test-Path -LiteralPath $loggedOnUserTempPath -PathType 'Container' -ErrorAction 'SilentlyContinue')) {
                 $null = New-Item -Path $loggedOnUserTempPath -ItemType 'Directory' -Force -ErrorAction 'SilentlyContinue'
-            }            
+            }
         }
     }
     Else {
@@ -16147,8 +16184,13 @@ If ($usersLoggedOn) {
     }
 
     # Check if user session is running under defaultuser0 account (Autopilot OOBE) or if application is installing during ESP and if so change deployment to run silently
-    If ($CurrentLoggedOnUserSession.UserName -match 'defaultuser0' -or (((Get-Process -Name 'wwahost' -ErrorAction 'SilentlyContinue').count) -gt 0)) {
+    If ($RunAsActiveUser.NTAccount -like '*\defaultuser0' -and (((Get-Process -Name 'wwahost' -ErrorAction 'SilentlyContinue').count) -gt 0)) {
         Write-Log -Message "Autopilot OOBE user [$($CurrentLoggedOnUserSession.UserName)] or ESP process 'wwahost' detected, changing deployment mode to silent." -Source $appDeployToolkitExtName
+        $deployMode = 'Silent'
+    }
+
+    [Int]$defenderHideSysTray = Get-RegistryKey -Key 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Systray' -Value 'HideSystray'
+    If ($defenderHideSysTray -ne "1" -and ($null -eq (Get-Process -Name SecurityHealthSystray -ErrorAction SilentlyContinue))) {
         $deployMode = 'Silent'
     }
 
