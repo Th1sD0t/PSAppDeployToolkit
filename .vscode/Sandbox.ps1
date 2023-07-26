@@ -13,7 +13,7 @@
         </MappedFolder>
     </MappedFolders>
     <LogonCommand>
-        <Command>powershell -ExecutionPolicy Unrestricted -Command "start powershell { -NoExit -File "$WDADesktop\$Application\Deploy-Application.ps1 }"</Command>
+        <Command>powershell -ExecutionPolicy Unrestricted -Command "explorer.exe "$WDADesktop\$Application"; start powershell {-NoExit -File "$WDADesktop\$Application\Deploy-Application.ps1 }"</Command>
     </LogonCommand>
 </Configuration>
 "@ | Out-File -FilePath "$Win32App\$Application.wsb"

@@ -6,4 +6,4 @@
 
 Remove-Item -Path "$Cache" -Recurse -Force -ErrorAction Ignore
 Copy-Item -Path 'Toolkit' -Destination "$Cache" -Recurse -Force -Verbose -ErrorAction Ignore
-Start-Process -FilePath 'explorer.exe' -ArgumentList "$Cache"
+#Start-Process -FilePath 'explorer.exe' -ArgumentList "$Cache"
