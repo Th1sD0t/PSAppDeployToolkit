@@ -92,9 +92,9 @@ Try {
     ##* VARIABLE DECLARATION
     ##*===============================================
     ## Variables: Application
-    [String]$appVendor = 'SEG'
-    [String]$appName = 'Default Power Plan'
-    [String]$appVersion = '1.0'
+    [String]$appVendor = ''
+    [String]$appName = ''
+    [String]$appVersion = ''
     [String]$appArch = ''
     [String]$appLang = 'EN'
     [String]$appRevision = '01'
@@ -188,18 +188,14 @@ Try {
         }
 
         ## <Perform Installation tasks here>
-        $result = Execute-Process -Path 'powercfg.exe' -Parameters "/import `"$($dirSupportFiles)\seg-default.pow`"" -PassThru
+
         ##*===============================================
         ##* POST-INSTALLATION
         ##*===============================================
         [String]$installPhase = 'Post-Installation'
 
         ## <Perform Post-Installation tasks here>
-        if($result -match '(?<GUID>[a-z0-9]{8}\-(?:[a-z0-9]{4}\-){3}[a-z0-9]{12})') {
-            $guid = $Matches['GUID']
-            Write-Log -Message "Power Plan GUID is '$guid'" -Severity 1
-            Execute-Process -Path 'powercfg.exe' -Parameters "/setactive `"$guid`""
-        }
+
     }
     ElseIf ($deploymentType -ieq 'Uninstall') {
         ##*===============================================
@@ -227,33 +223,6 @@ Try {
         }
 
         ## <Perform Uninstallation tasks here>
-        $objs = @()
-        $plans = & powercfg.exe /list
-        $matches = ([regex]'(?<GUID>[a-z0-9]{8}\-(?:[a-z0-9]{4}\-){3}[a-z0-9]{12})\s*\((?<NAME>[A-Za-z0-9\-]*)\)').Matches($plans)
-        if($matches.Count -gt 0) {
-            foreach($match in $matches) {
-                $objs += [PSCustomObject]@{
-                    Name = $match.Groups["NAME"].Value
-                    Guid = $match.Groups["GUID"].Value
-                }
-            }
-        }
-
-        if($objs.Count -gt 1) {
-            $newActive = $null
-            $balanced = $objs | Where-Object { $_.Name -eq 'Balanced' }
-            $old = $objs | Where-Object { $_.Name -eq 'SEG-Default' }
-            if($balanced) {
-                $newActive = $balanced
-            }
-            else {
-                $newActive = $objs | Where-Object { $_.Name -ne 'SEG-Default' } | Select-Object -First 1
-            }
-            Execute-Process -Path 'powercfg.exe' -Parameters "/setactive `"$($newActive.Guid)`""
-            if($old) {
-                Execute-Process -Path 'powercfg.exe' -Parameters "/delete `"$($old.Guid)`""
-            }
-        }
 
         ##*===============================================
         ##* POST-UNINSTALLATION
