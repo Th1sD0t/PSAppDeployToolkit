@@ -1,0 +1,127 @@
+#
+# The PostX JavaScript feature descriptor file.
+#
+# Each line can be one of:
+#
+#   ignored line - blank lines, lines consisting of only whitespace, lines
+#	starting with #, lines consisting of whitespace followed by a #
+#   declaration lines - lines consisting of a feature name, a colon, and
+#	feature and file names. Whitespace at end of the line and around the
+#	colon is ignored. Everything after and including a # (and any
+#	immediately preceding whitespace) is ignored. Dependency and file
+#	names are separated by a single space.
+#   continuation lines - lines starting with whitespace followed by feature
+#	and file names separated by a single space. The previous line must
+#	have been a feature line or another continuation line. Continuation
+#	lines are treated as if they appear at the end of the previous line.
+#
+# Feature names starting with a period are special and shouldn't be used, as
+# additional special feature names may be added in the future.
+#
+# File names may be prefixed with <encoding> where the < and > appear
+# literally and encoding is the name of an available character encoding. For
+# example: <ISO-8859-1>file.js indicates file.js should be used and read
+# using the ISO-8859-1 character encoding.
+#
+# Copyright (c) 2003-2007 PostX Corporation. All rights reserved.
+# Copyright (c) 2008-2011, 2013 Cisco Systems, Inc. All rights reserved.
+#
+# $Id: Features,v 1.34 2013-04-21 20:07:08 blm Exp $
+#
+
+# The .Default feature is used if no features are specifed. If there is no
+# .Default feature, a feature must always be specified.
+
+.Default:	Envelope Images KeyCaching Postmark RPC Signature
+		Cryptography AES ARC4 SHA1 SHA-256 Encryption
+
+# The .First feature is automatically included before any other features.
+
+.First:		notices.js .Version
+
+# The .Last feature is automatically included after all other features.
+
+.Last:
+
+# The contents of the .Version feature are searched for Version: <version>
+# to get the version of this whole envelope part.
+
+.Version:	version.js
+
+# Some top-level features. These don't appear as dependencies of any other
+# feature, and can be used to select specific packages.
+
+# An envelope
+
+Envelope:	Decryption Opener Payload Display
+
+# Legacy support for old names
+
+CRC:		CRC-32
+SHA-1:		SHA1
+SHA256:		SHA-256
+
+# Encryption/decryption algorithms
+
+AES:		Base64 AES.js		# Decryption only
+ARC4:		ARC4.js
+
+# Digest algorithms
+
+SHA1:		BitOpsConstants BitOps GlobalConstants LongUtils SHA1.js
+SHA-256:	BitOpsConstants BitOps GlobalConstants LongUtils SHA256.js
+MD5:		BitOpsConstants BitOps GlobalConstants MD5.js
+
+# Miscellaneous packages
+
+BarCode39:	barCode39.js
+Images:		EnvironmentInfo GlobalConstants StringUtils images.js
+KeyCaching:	ARC4 CookieNames Cookies CRC-32 KeyCachingConstants
+		keyCaching.js
+Postmark:	Applet Payload postmark.js
+RPC:		GlobalConstants RPCConstants StringUtils RPC.js
+Signature:	Applet Payload signature.js
+
+VectorLib:	wz_jsgraphics.js
+PieChart:	VectorLib piechart.js
+BarChart:	barchart.js
+Polling:	RPC polling.js
+
+# Features used by the top-level features and each other
+
+Applet:		CookieNames Cookies EnvironmentInfo GlobalConstants
+		KeyCachingConstants Locale ObjectUtils Payload
+		PayloadConstants Preferences StringUtils applet.js
+Base64:		base64.js
+BitOpsConstants:	bitOpsConstants.js
+BitOps:		BitOpsConstants bitOps.js
+CookieNames:	cookieNames.js
+Cookies:	GlobalConstants StringUtils cookies.js
+CRC-32:		BitOpsConstants BitOps LongUtils CRC.js
+Cryptography:	GlobalConstants cryptography.js
+Debug:		debug.js
+Decryption:	CookieNames Cookies KeyCachingConstants Opener Payload Zlib
+		decryption.js
+Display:	EnvironmentInfo GlobalConstants Locale OpenerConstants
+		display.js
+Encryption:	encryption.js
+EnvironmentInfo:	environmentInfo.js
+FileUtils:	fileUtils.js
+GlobalConstants:	globalConstants.js
+KeyCachingConstants:	keyCachingConstants.js
+Locale:		GlobalConstants <ISO-8859-1>locale.js
+LongUtils:	longUtils.js
+ObjectUtils:	GlobalConstants objectUtils.js
+Opener:		Base64 BitOpsConstants BitOps CRC-32 Cryptography
+		EnvironmentInfo KeyCachingConstants OpenerConstants Payload
+		opener.js
+OpenerConstants:	openerConstants.js
+Payload:	CookieNames Cookies CRC-32 Decryption EnvironmentInfo
+		FileUtils GlobalConstants KeyCachingConstants KeyCaching
+		Locale ObjectUtils OpenerConstants PayloadConstants
+		Preferences RPCConstants SHA1 payload.js
+PayloadConstants:	CookieNames payloadConstants.js
+Preferences:	Cookies CRC-32 preferences.js
+RPCConstants:	RPCConstants.js
+StringUtils:	stringUtils.js
+Zlib:		BitOpsConstants EnvironmentInfo GlobalConstants zlib.js

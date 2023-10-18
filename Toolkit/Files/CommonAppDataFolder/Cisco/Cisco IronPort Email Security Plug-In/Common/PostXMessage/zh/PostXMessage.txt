@@ -1,0 +1,11 @@
+您已收到安全郵件
+
+請開啟附件 ${AttachmentName} 讀取您的安全郵件。
+系統將會提示您開啟 (檢視) 該檔案，或將其儲存 (下載) 至電腦中。若要得到最佳結果，請先儲存檔案，然後在網頁瀏覽器中開啟該檔案。 若要從行動裝置存取，請將此郵件轉寄至 ${MOBILE_EMAIL} 以取得行動登入 URL。
+
+如果您不確定此郵件是否有效，請直接與寄件者連絡。
+
+首次使用者 – 開啟附件後需要進行註冊。 如需詳細資訊，請參閱以下說明連結。
+說明 - ${HTTPS_URL}/websafe/help?topic=RegEnvelope
+關於 ${FULL_SERVICE_NAME} - ${HTTPS_URL}/websafe/about 
+

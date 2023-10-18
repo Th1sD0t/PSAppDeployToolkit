@@ -1,0 +1,476 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd"><!-- frame-height: none --><html
+lang="$[5]"><head><meta
+name=version
+content="$Id: //prod/main/_is/products/cs_plugin/inst/Files/conf/postx_config/messagebar/messagebar.html#29 $">
+<meta
+name=copyright
+content="Copyright (c) 2011-2016 Cisco Systems, Inc. and/or its affiliates. All rights reserved."
+><meta
+http-equiv=Content-Type
+content="text/html; charset=UTF-8"><meta
+http-equiv=Cache-Control
+content="no-cache, must-revalidate, max-age=0"><meta
+http-equiv=Pragma
+content=no-cache><meta
+http-equiv=Expires
+content=0><title
+id=messageBarTitle>${messageBarTitle}${subject}</title><style
+type="text/css"><!-- table {border: none; text-align: left; vertical-align:
+top; font-family: Arial, sans-serif} .timestamp {font-family: Verdana,
+Arial, Helvetica, sans-serif; font-size: 8px; color: #C0C0FF; font-weight:
+bold; line-height: 10px} .headingtext {font-weight: 700; font-size: 10pt;
+color: #333333; font-family: Verdana, Arial, Helvetica, sans-serif;}
+ .inputLabel {font-weight: 300; font-size: 8pt; vertical-align: middle;
+color: #555555; font-family: Verdana, Arial, Helvetica, sans-serif;}
+ .inputText {font-size: 8pt; color: #000000; vertical-align: middle;
+font-family: Verdana, Arial, Helvetica, sans-serif; text-decoration: none;}
+ .smallText {font-size: 1pt; color: #000000; font-family: Verdana, Arial,
+Helvetica, sans-serif; text-decoration: none;} .sbLogoCell {padding: 5px}
+ .sbConvLinkBar {background-color: #fbf0c2; font-size: 3px; line-height:
+3px} .warning{ font-size: 8pt; text-align: left; font-weight: bold; color:
+#0033CC; display: inline;} .spacer {margin-right: 3px;} #bodycontent
+{word-break: break-all;} --></style>${__if useScript}<script
+type="text/javascript"
+language=javascript><!--
+${__if raw-graphic_Logo}${__set offline-image true}${__endif}
+${__if raw-graphic_FlapCorner}${__set offline-image true}${__endif}
+${__if offline-image}'$Serial: 5189 $ $Revision: #29 $';var at=navigator.userAgent.toLowerCase()
+,_E=at.indexOf('msie')!=-1,ah=!_E,fH=parseInt(navigator.appVersion),fM=ah&&
+fH<5,fN=at.indexOf('netscape6/')!=-1,fJ=at.indexOf(' gecko/')+1,fK=at.
+indexOf('msie 5.0')!=-1,fL=at.indexOf('msie 7')!=-1,fO=at.indexOf('opera')!=
+-1,fI=at.indexOf(' chrome/')!=-1,fF=0,_W=0,fG=0;if(navigator.platform.substr
+(0,3)=='Mac'){if(ah)fF=at.indexOf('mac os x')==-1;else{fF=at.indexOf('msie')
+;fF=parseFloat(at.substr(fF+5))<5.2}_W=!fF;if((fG=at.indexOf(' applewebkit/'
+)+1))fH=parseInt(at.substr(fG+12))/100}var _V=fF||_W,fP=false,fQ=!fG,fR=fG,
+_Z=fF||!navigator.javaEnabled();aq=true;OSMacOS9=fF;OSMacOSX=_W;
+browserAppleWebKit=fG;
+
+'$Serial: 4248 $ $Revision: #29 $';var gf=1,gg=2;function gj(f1,gb,gc,f3,f6
+){if(!f1.flags)f1.flags=0;if(f1.flags&gf){f1.data=go(f1.data);f1.flags&=~gf}
+var f9=f1.palette,cs=f1.width,cc=f1.height,_,f5,c,gn=typeof f1.transparent==
+fE?-1:f1.transparent;f6=f6?1:0;if(!f3||f3<1)f3=1+f6;else f3=Math.floor(f3)+
+f6;if(!(f1.flags&gg)){var gk=[0,'',''],n=[0,0,0],b,d=f9.length;for(_=0;_<d;
+_++){f5=f9[_];if(typeof f5!=aG){n[0]=f5;n[1]=n[2]=''}else{for(b=0;b<f5.
+length;b++)n[b]=gk[b]=f5[b];for(;b<3;b++)n[b]=gk[b]}if(n[1])n[1]=
+' onMouseOver="'+n[1]+'"';if(n[2])n[2]=' onMouseOut="'+n[2]+'"';if(_==gn)n[0
+]='';f9[_]=[n[0],n[1]+n[2]]}f1.flags|=gg}var gd=f1.data.split(' '),gi=gd.
+length,f2=new Array(gi),g_=0;f2[g_++]=
+'\x3cspan style="display:block;position:relative;width:'+(cs*f3-f6)+
+'px;height:'+(cc*f3-f6)+'px;font-size:0;line-height:0"\x3e\n';var _m=new
+Array(cc);for(_=0;_<cc;_++)_m[_]=new Array(cs);var f7=0,a=0,f8,f4,cS,g,gh,S,
+T;for(_=0;_<gi;_++){if(gd[_]=='-'){_m[a++]=0;f7=0;continue}cS=_m[a];while(cS
+[f7])f7++;f8=gd[_].split(':');if(f8.length==1){f5=f9[+f8];f4=[1,1]}else{f5=
+f9[+f8[1]];f4=f8[0].split('x');f4[0]=f4[0]==''?cs-f7:+f4[0];f4[1]=f4[1]==''?
+cc-a:+f4[1]}if(f5[0]||f5[1]){c='\x3cspan style="position:absolute;top:'+a*f3
++'px;left:'+f7*f3+'px;height:'+(f4[1]*f3-f6)+'px';if(f5[0])c+=
+';border-left:'+(f4[0]*f3-f6)+'px solid #'+f5[0];f2[g_++]=c+'"'+f5[1]+
+'\x3e\x3c/span\x3e\n'}if(f4[1]>1){g=f7+f4[0];gh=a+f4[1];for(T=a+1;T<gh;T++){
+cS=_m[T];for(S=f7;S<g;S++)cS[S]=1}}f7+=f4[0]}f2[g_++]='\x3c/span\x3e';f2.
+length=g_;return f2.join('')}function gm(ge,gl,ga,f1,gb,gc,f3,f6){if(typeof
+f1!=aG){f6=f3;f3=gc;gc=gb;gb=f1;f1=ga;ga={}}ge=_Y(ge);var f2=['\x3ca',
+'href="'+ge+'"'];if(_E){f2[f2.length]=
+'onmouseover="this.style.cursor=\'hand\'"';f2[f2.length]=
+'onmouseout="this.style.cursor=\'default\'"'}if(gl)f2[f2.length]=
+'target=_blank';var _;for(_ in ga)f2[f2.length]=_+'="'+_Y(ga[_])+'"';
+return f2.join(' ')+'\x3e'+gj(f1,gb,gc,f3,f6)+'\x3c/a\x3e'}zz=
+linkInlineImage=gm;zy=makeInlineImage=gj;
+${__endif}
+'$Serial: 0478 $ $Revision: #29 $';var ae='appletHolder',f0='appletHolder',
+fE='undefined',aG='object',dv='string';try{if(typeof Array.prototype.push==
+fE)Array.prototype.push=function(){for(var _=0;_<arguments.length;_++)this[
+this.length]=arguments[_];return this.length}}catch(fx){}try{if(typeof
+String.prototype.trim==fE)String.prototype.trim=function(){return this.
+replace(/^\s+|\s+$/g,'')}}catch(fx){}
+
+'$Serial: 3888 $ $Revision: #29 $';function _w(a8){var gS=
+/^\s*function\s+([^(]+)/,cS;if((cS=gS.exec(a8)))return cS[1];return''}
+function mp(i){i=i.toString(16);if(i.length&1)i='0'+i;return'%'+i}function
+_N(c,mr){c+='';var au,_,d=c.length,aw='';for(_=0;_<d;_++){au=c.charAt(_);if(
+au>='A'&&au<='Z'||au>='a'&&au<='z'||au>='0'&&au<='9'||au=='.'||au=='-'||au==
+'*'||au=='_')aw+=au;else{au=au.charCodeAt(0);if(mr||au<128){aw+=mp(au&255)}
+else if(au<2048){aw+=mp(192|au>>>6);aw+=mp(128|au&63)}else{aw+=mp(224|au>>>
+12);aw+=mp(128|(au>>>6)&63);aw+=mp(128|au&63)}}}return aw}function a_(c,mr){
+c+='';var au,dE,_,d=c.length,aw='';for(_=0;_<d;_++){au=c.charAt(_);switch(au
+){default:aw+=au;break;case'+':aw+=' ';break;case'%':if(c.charAt(_+1)=='u'){
+au=c.substr(_+2,4);_+=5;dE=parseInt(au,16)}else{au=c.substr(_+1,2);_+=2;dE=
+parseInt(au,16);if(mr||dE<128){}else if(dE<224){if(d-_<4||c.charAt(_+1)!='%'
+){}else{au=c.substr(_+2,2);_+=3;dE=((dE&31)<<6)|(parseInt(au,16)&63)}}else{
+if(d-_<7||c.charAt(_+1)!='%'||c.charAt(_+4)!='%'){}else{au=c.substr(_+2,2);_
++=3;dE=((dE&15)<<6)|(parseInt(au,16)&63);au=c.substr(_+2,2);_+=3;dE=(dE<<6)|
+(parseInt(au,16)&63)}}}aw+=String.fromCharCode(dE);break}}return aw}function
+_Y(c){c+='';var au,_,d=c.length,aw='';for(_=0;_<d;_++){au=c.charAt(_);if(au<
+' '||au>'~'||au=='\''||au=='"')aw+='&#'+c.charCodeAt(_)+';';else aw+=au}
+return aw}function mv(my,mu){var k0=arguments.length,j=[],_;if(k0==3&&
+arguments[2].elements){var ey=arguments[2],eq;for(_=1;eq=ey['key'+_];_++)if(
+eq.value!='')j[j.length]=eq.value}else{for(_=2;_<k0;_++)if(arguments[_]!='')
+j[j.length]=arguments[_]}j=j.join(my);if(mu)j=j.toLowerCase();return j}
+function go(cN,mq){if(!mq)mq=72;var _,b,d=cN.length;if('\
+'=='')return cN;var cS=new Array(Math.floor((d+mq-1)/mq));for(_=b=0;_<d;_+=
+mq+1,b++)cS[b]=cN.substr(_,mq);cS.length=b;return cS.join('')}var mt=0;
+function mw(ir){var c;if(fM)c=ir+new Date().getTime()+mt++;else do{c=ir+mt++
+}while(document.getElementById(c));return c}function jy(hq){var mo='',_,d=hq
+ .length;for(_=0;_<d;_++){var au=hq.charCodeAt(_);if(au<128)mo+=String.
+fromCharCode(au);else if(au<2048){mo+=String.fromCharCode(192|(au>>>6));mo+=
+String.fromCharCode(128|(au&63))}else{mo+=String.fromCharCode(224|(au>>>12))
+;mo+=String.fromCharCode(128|((au>>>6)&63));mo+=String.fromCharCode(128|(au&
+63))}}return mo}function mz(ge,gM){var iS=ge.indexOf('#');if(iS<0)iS=ge.
+length;var mn=ge.substring(0,iS),ms='&',mx=mn.indexOf('?');if(mx<0)ms='?';
+for(var j in gM){mn+=ms;ms='&';mn+=_N(j);mn+='=';mn+=_N(gM[j])}mn+=ge.
+substring(iS);return mn}zw=formKey=mv;zj=fixMultilineString=go;zi=genId=mw;
+attrEsc=_Y;
+
+'$Serial: 0611 $ $Revision: #29 $';function du(_8){var e=new Date().getTime(
+);if(!_8)_8=dc;_9(_8,e,'','/');if((e=(al(_8)==e)))aj(_8,'/');return e}
+function al(_8){_8=_N(_8);var c=document.cookie,dr=c.indexOf(_8+'=');if(dr==
+-1)return null;var ds=dr+_8.length+1,dp=c.indexOf(';',ds);if(dp==-1)dp=c.
+length;return a_(c.substring(ds,dp))}function _9(_8,_H,dm,_S,dn,dt){var c=_N
+(_8)+'='+_N(_H);if(typeof dm!='number'){var dq=parseInt(dm.toString());if(dq
++''!='NaN')dm=dq}if(typeof dm=='number')c+=';expires='+new Date(new Date().
+getTime()+dm).toUTCString();else if(typeof dm==dv&&dm!='')c+=';expires='+dm;
+else if(typeof dm==aG)c+=';expires='+dm.toUTCString();if(_S)c+=';path='+_S;
+if(dn)c+=';domain='+dn;if(dt)c+=';secure';document.cookie=c}function aj(_8,
+_S,dn){if(al(_8))_9(_8,'',-1000,_S,dn)}
+var ok=true,$={},_6=$[6]||$;
+function oB(){if(document.getElementById('ff_saved'))ok=false}function oG(nS
+){if(ok)document.write(nS)}function oz(){var ou='',c;if(c=document.
+getElementById('msg_history'))return true;if(c=document.getElementById(
+'bodycontent')||document.getElementById('abcd')){var on=0,ol=0,oC=1000,ov=c.
+innerHTML,op=ov.length,ow='';while(on<op){ol=on+oC;if(ol>=op)ol=op;ow=ov.
+substring(on,ol);ou+='<input type=hidden name=chunk value="'+_N(ow)+'">';on=
+ol}}if(c=document.getElementById('chunkHolder'))c.innerHTML=ou;return true}
+function oj(oD){var c,ot='\x3cinput type="hidden" name="mode" value='+oD+
+'\x3e';if(document.getElementById&&(c=document.getElementById('modeHolder'))
+)c.innerHTML=ot;else eval('modeHolder.innerHTML = "'+ot+'"')}
+${__if attachments}var oE={'.eml':1},_E=navigator.userAgent.toLowerCase().
+indexOf('msie')!=-1;function oA(oy){oq();if(!_E)return true;var c=oy.
+pathname,_=c.lastIndexOf('.');if(_>=0&&oE[c.substr(_)]){if(c=_6[
+'messageBarOpenAlert'])alert(c);return false}return true}${__endif}var os=al
+('JSESSIONID');function oq(){var oF=al('JSESSIONID');if(!oF&&os)_9(
+'JSESSIONID',os)}window.onbeforeunload=oq;function updateText(){var cS='alt'
+,e='value',oi='messageBar',aI='Reply',ra='ReplyAll',eI='Forward',aw='-top',i
+='-bottom',gh='-hidden',om='altImg',d='Logo',or='FlapCorner',oo=[[aI+aw,e,oi
++aI],[aI+aw+gh,e,oi+aI],[aI+i,e,oi+aI],[ra+aw,e,oi+ra],[ra+aw+gh,e,oi+ra],[
+ra+i,e,oi+ra],[eI+aw,e,oi+eI],[eI+aw+gh,e,oi+eI],[eI+i,e,oi+eI],[om+d,cS,om+
+d],[om+or,cS,om+or]],eq,_,d=oo.length,j;for(j in _6)if((eq=document.
+getElementById(j))&&eq.nodeName!='IMG'&&eq.nodeName!='TITLE')eq.innerHTML=_6
+[j];for(_=0;_<d;_++){eq=document.getElementById(oo[_][0]);j=_6[oo[_][2]];if(
+eq&&j)eq.setAttribute(oo[_][1],j)}if(j=_6.messageBarTitle)document.title=j+
+' ${raw-subject|js}';if(!(document.getElementById(
+'messageBarPswdExpWarnMsgHeadB')&&document.getElementById(
+'messageBarPswdExpWarnMsgHeadB').innerHTML!='')){document.getElementById(
+'messageBarPswdExpWarnMsgHeadA').innerHTML='';document.getElementById(
+'messageBarPswdExpWarnMsgHeadC').innerHTML='';document.getElementById(
+'messageBarPswdExpWarnMsgHeadD').innerHTML='';document.getElementById(
+'messageBarPswdExpWarnMsgHeadE').innerHTML=''}}//--></script>${__endif}
+</head><body
+bgcolor="#ffffff"
+style="margin: 0px"><div
+id=ff_trash
+style="display: none"></div>${__if useScript}<script
+type="text/javascript"
+language=javascript><!--
+oB();var ox;if(ox=document.getElementById('ff_trash'))ox.innerHTML=
+'\x3cspan id=ff_saved\x3e\x3c/span\x3e';//--></script>${__endif}<table
+cellspacing=0
+cellpadding=0
+border=0
+width="100%"><tr><td
+class=sbConvLinkBar
+colspan=4>&nbsp;</td></tr><tr
+valign=middle><td>&nbsp;</td><td
+width="100%">&nbsp;</td><td
+valign=top
+width=18>${__if useScript}<script
+type="text/javascript"
+language=javascript><!--
+if(!ok)document.write('\x3c!--');//--></script>
+${__if raw-graphic_FlapCorner}${raw-graphic_FlapCorner}<script
+type="text/javascript"
+language=javascript><!--
+oG('\x3c!--');//--></script>${__endif}${__endif}
+${__if raw-graphic_FlapCorner_link}${__if raw-graphic_FlapCorner_anchor}<a
+${raw-graphic_FlapCorner_anchor}><img
+id=altImgFlapCorner
+alt="${raw-graphic_FlapCorner_alt}"
+src="${raw-graphic_FlapCorner_link}"
+border=0></a>${__else}<img
+id=altImgFlapCorner
+alt="${raw-graphic_FlapCorner_alt}"
+src="${raw-graphic_FlapCorner_link}"
+border=0>${__endif}${__endif}${__if useScript}<script
+type="text/javascript"
+language=javascript><!--
+${__if raw-graphic_FlapCorner}document.write('--\x3e');${__else}if(!ok)
+document.write('--\x3e');${__endif}//--></script>${__endif}</td><td
+align=right
+nowrap=nowrap
+style="background-color: #fbf0c2">${__if online}<span
+class=inputText><a
+href="${helpHostURL}/websafe/help?topic=MsgBar"
+target=_blank
+id=messageBarHelp>Help</a>&nbsp;|&nbsp;<a
+href="${keyServerScheme}://${keyServerHost}/keyserver/Logout"
+id=messageBarLogout>Forget me on this computer (Log Out)</a>&nbsp;&nbsp;
+</span>${__endif}</td></tr><tr><td
+class=sbLogoCell><div
+style="margin-top: -15px; position: relative">${__if useScript}<script
+type="text/javascript"
+language=javascript><!--
+if(!ok)document.write('\x3c!--');//--></script>${__if raw-graphic_Logo}
+${raw-graphic_Logo}<script
+type="text/javascript"
+language=javascript><!--
+document.write('\x3c!--');//--></script>${__endif}${__endif}
+${__if raw-graphic_Logo_link}${__if raw-graphic_Logo_anchor}<a
+${raw-graphic_Logo_anchor}><img
+id=altImgLogo
+alt="${raw-graphic_Logo_alt}"
+src="${raw-graphic_Logo_link}"
+border=0></a>${__else}<img
+id=altImgLogo
+alt="${raw-graphic_Logo_alt}"
+src="${raw-graphic_Logo_link}"
+border=0>${__endif}${__endif}${__if useScript}<script
+type="text/javascript"
+language=javascript><!--
+${__if raw-graphic_Logo}document.write('--\x3e');${__else}if(!ok)document.
+write('--\x3e');${__endif}//--></script>${__endif}</div></td><td
+colspan=3><p
+class="warning spacer"
+id=messageBarPswdExpWarnMsgHeadA></p><p
+class="warning spacer"
+id=messageBarPswdExpWarnMsgHeadB></p><p
+class="warning spacer"
+id=messageBarPswdExpWarnMsgHeadC></p><a
+class=warning
+id=messageBarPswdExpWarnMsgHeadD></a><p
+class=warning
+id=messageBarPswdExpWarnMsgHeadE></p></td></tr></table><div
+style="margin: 8px"><div
+style="width: 100%"><form
+id=srform
+name=srform
+method=POST
+action="${replyURL}"
+target=_top><input
+type=hidden
+id=cmd
+name=cmd
+value=secureReply><input
+type=hidden
+id=altfield
+name=altfield
+value=altfieldvalue><input
+type=hidden
+id=e
+name=e
+value="${encryptionEnabled}"><input
+type=hidden
+id=a
+name=a
+value="${encryptalgorithm}"><input
+type=hidden
+id=t
+name=t
+value="${encryptiontoken}"><input
+type=hidden
+id=messageFormat
+name=messageFormat
+value="${messageFormat}"><input
+type=hidden
+id=de
+name=de
+value=true><input
+type=hidden
+id=dt
+name=dt
+value="${localdate} ${localtime}">${__if secureReplyTo}<input
+type=hidden
+id=from
+name=from
+value="${secureReplyTo}">${__else}<input
+type=hidden
+id=from
+name=from
+value="${secureFrom}">${__endif}<input
+type=hidden
+id=subject
+name=subject
+value="${secureSubject}"><input
+type=hidden
+id=to
+name=to
+value="$[1]"><input
+type=hidden
+id=presetTo
+name=presetTo
+value="${secureEmail}"><input
+type=hidden
+id=tolist
+name=tolist
+value="${secureToList}"><input
+type=hidden
+id=keyType
+name=keyType
+value="${secureKeyType}"><input
+type=hidden
+id=msgId
+name=msgId
+value="${MessageId}"><input
+type=hidden
+id=accountId
+name=accountId
+value="${accountId}"><input
+type=hidden
+id=profileName
+name=profileName
+value="${profileName}"><input
+type=hidden
+id=cc
+name=cc
+value="${secureCcList}"><input
+type=hidden
+id=replyOptions
+name=replyOptions
+value="${secureReplyOptions}"><input
+type=hidden
+id=formattedDate
+name=formattedDate
+value="$[4]"><input
+type=hidden
+id=localeUI
+name=localeUI
+value="$[5]"><table
+width="100%"><tr><td
+valign=top><table
+cellpadding=0
+cellspacing=0
+width="100%"><tr><td><span
+class=headingtext
+id=messageBarHeader>${messageBarHeader}</span></td><td
+align=right
+colspan=2><table
+cellpadding=2><tr>${__equal replyEnabled true}<td><input
+type=submit
+class=inputText
+value=Reply
+name=replyType
+id=Reply-top><input
+type=hidden
+name=Reply
+value=0
+id=Reply-top-hidden></td>${__endequal}${__equal replyAllEnabled true}<td>
+<input
+type=submit
+class=inputText
+value=ReplyAll
+name=replyType
+id=ReplyAll-top><input
+type=hidden
+name=ReplyAll
+value=1
+id=ReplyAll-top-hidden></td>${__endequal}${__equal forwardEnabled true}<td>
+<input
+type=submit
+class=inputText
+value=Forward
+name=replyType
+id=Forward-top><input
+type=hidden
+name=Forward
+value=2
+id=Forward-top-hidden></td>${__endequal}</tr></table></td></tr><tr><td
+style="border-top: 1px solid black"
+colspan=3><span
+class=smallText>&nbsp;</span></td></tr><tr
+bgcolor="#ebf0f6"><td
+colspan=3><table><tr><td><span
+id=messageBarFrom
+class=inputLabel>From:</span></td><td>${__if fromPersonal}<span
+class=inputText>${fromPersonal} &lt;${from}&gt;</span>${__else}<span
+class=inputText>${from}</span>${__endif}</td></tr><tr><td><span
+id=messageBarTo
+class=inputLabel>To:</span></td><td><span
+class=inputText>${toList}</span></td></tr>${__if cc}<tr><td><span
+id=messageBarCC
+class=inputLabel>CC:</span></td><td><span
+class=inputText>${cc}</span></td></tr>${__endif}<tr><td><span
+id=messageBarDate
+class=inputLabel>Date:</span></td><td><span
+class=inputText
+id=createDate>${localdate} &#32;${localtime}</span>${__if useScript}<script
+type="text/javascript"
+language=javascript><!--
+var dq=document.getElementById('formattedDate');if(dq&&dq.value!=''&&dq.
+value!='$'+'[4]'){var eI=document.getElementById('createDate');if(eI)eI.
+innerHTML=dq.value}//--></script>${__endif}</td></tr><tr><td><span
+class=inputLabel><span
+id=messageBarSubject>Subject:</span>&nbsp;</span></td><td><span
+class=inputText>${subject}</span></td></tr>${__if attachments}<tr><td><span
+class=inputLabel><span
+id=messageBarAttachments>Attachments:</span>&nbsp;</span></td><td><span
+class=inputText>${__for attachment-url in enc-url-attachments,
+attachment-html in enc-html-attachments}<a
+href="${attachment-url}" ${__if useScript}
+onclick="return oA(this)" ${__endif}
+target=_blank>${attachment-html}</a>&#32; ${__endfor}</span></td></tr>
+${__endif}</table></td></tr></table></td></tr></table><div
+id=abcd>$[0]</div><table
+width="100%"><tr><td><table
+border=0
+cellpadding=0
+cellspacing=0
+width="100%"><tr><td
+style="border-bottom: 1px solid black"
+colspan=3><span
+class=smallText>&nbsp;</span></td></tr><tr><td>&nbsp;</td><td
+align=right><table
+cellpadding=2><tr>${__equal replyEnabled true}<td><input
+type=submit
+class=inputText
+value=Reply
+name=replyType
+id=Reply-bottom></td>${__endequal}${__equal replyAllEnabled true}<td><input
+type=submit
+class=inputText
+value=ReplyAll
+name=replyType
+id=ReplyAll-bottom></td>${__endequal}${__equal forwardEnabled true}<td>
+<input
+type=submit
+class=inputText
+value=Forward
+name=replyType
+id=Forward-bottom></td>${__endequal}</tr></table></td></tr><tr><td>
+&nbsp;</td></tr><tr><td
+colspan=2><table
+border=0
+cellpadding=0
+cellspacing=0
+width="100%"
+bgcolor="#ebf0f6"><tr><td
+valign=middle
+bgcolor="#ebf0f6"
+align=center
+height=20
+width="33%"
+nowrap=nowrap><span
+class=inputText
+id=messageBarCopyright>Copyright &copy; 2011-2016 Cisco Systems, Inc. and/or
+its affiliates. All rights reserved.</span></td></tr></table></td></tr>
+</table></td></tr></table><div
+id=modeHolder></div><div
+id=chunkHolder
+style=visibility:hidden>$[3]</div></form></div></div>${__if useScript}
+<script
+type="text/javascript"
+language=javascript><!--
+updateText();var eq;if(eq=document.getElementById('Reply-top'))eq.onclick=
+function(){oj(0)};if(eq=document.getElementById('Reply-bottom'))eq.onclick=
+function(){oj(0)};if(eq=document.getElementById('ReplyAll-top'))eq.onclick=
+function(){oj(1)};if(eq=document.getElementById('ReplyAll-bottom'))eq.
+onclick=function(){oj(1)};if(eq=document.getElementById('Forward-top'))eq.
+onclick=function(){oj(2)};if(eq=document.getElementById('Forward-bottom'))eq
+ .onclick=function(){oj(2)};if(eq=document.forms[0])eq.onsubmit=oz;//-->
+</script>${__endif}</body></html>

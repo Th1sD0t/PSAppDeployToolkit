@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommonComponentsConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <lockUIOptions>false</lockUIOptions>
+  <IsPluginEnabled>true</IsPluginEnabled>
+  <emailBodyTemplates>
+    <template>
+      <languageName>en</languageName>
+      <htmlFilePath>en\PostXMessage.html</htmlFilePath>
+      <textFilePath>en\PostXMessage.txt</textFilePath>
+    </template>
+    <template>
+      <languageName>de</languageName>
+      <htmlFilePath>de\PostXMessage.html</htmlFilePath>
+      <textFilePath>de\PostXMessage.txt</textFilePath>
+    </template>
+    <template>
+      <languageName>es</languageName>
+      <htmlFilePath>es\PostXMessage.html</htmlFilePath>
+      <textFilePath>es\PostXMessage.txt</textFilePath>
+    </template>
+    <template>
+      <languageName>fr</languageName>
+      <htmlFilePath>fr\PostXMessage.html</htmlFilePath>
+      <textFilePath>fr\PostXMessage.txt</textFilePath>
+    </template>
+    <template>
+      <languageName>ja</languageName>
+      <htmlFilePath>ja\PostXMessage.html</htmlFilePath>
+      <textFilePath>ja\PostXMessage.txt</textFilePath>
+    </template>
+    <template>
+      <languageName>zh</languageName>
+      <htmlFilePath>zh\PostXMessage.html</htmlFilePath>
+      <textFilePath>zh\PostXMessage.txt</textFilePath>
+    </template>
+    <template>
+      <languageName>it</languageName>
+      <htmlFilePath>it\PostXMessage.html</htmlFilePath>
+      <textFilePath>it\PostXMessage.txt</textFilePath>
+    </template>
+    <template>
+      <languageName>pt</languageName>
+      <htmlFilePath>pt\PostXMessage.html</htmlFilePath>
+      <textFilePath>pt\PostXMessage.txt</textFilePath>
+    </template>
+  </emailBodyTemplates>
+  <selectedEmailBodyTemplate>en</selectedEmailBodyTemplate>
+  <PathToJava>%JAVA_HOME%\bin\java.exe</PathToJava>
+  <displayUsageReminder>true</displayUsageReminder>
+  <allowDisableUsageReminder>true</allowDisableUsageReminder>
+  <diagnosticSupportAddress></diagnosticSupportAddress>
+  <diagnosticReportSubject>Cisco Email Security plug-in diagnostic report</diagnosticReportSubject>
+  <localizationFile>en.xml</localizationFile>
+  <showPluginOptions>true</showPluginOptions>
+  <showManageMessageButton>true</showManageMessageButton>
+  <loggingXml>
+    <logging>
+      <enabled>true</enabled>
+      <traceRedirection name="System.Diagnostics.Redirection">True</traceRedirection>
+      <log4net>
+        <appender name="RollingFile" type="log4net.Appender.RollingFileAppender">
+          <file value="${USERCONFIGDIR}\CiscoEmailSecurity.log" />
+          <appendToFile value="true" />
+          <rollingStyle value="Size" />
+          <maximumFileSize value="5MB" />
+          <maxSizeRollBackups value="2" />
+          <encoding value="utf-8" />
+          <layout type="log4net.Layout.PatternLayout">
+            <conversionPattern value="%d{MM/dd/yyyy hh:mm:ss tt zz} %5p [%-40.40c{3}] %M: %m%n" />
+          </layout>
+        </appender>
+        <root>
+          <level value="WARN" />
+          <appender-ref ref="RollingFile" />
+        </root>
+      </log4net>
+    </logging>
+  </loggingXml>
+  <callHome>
+    <callHomeAdminEnabled>false</callHomeAdminEnabled>
+  </callHome>
+</CommonComponentsConfiguration>

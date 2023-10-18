@@ -1,0 +1,625 @@
+<configs>
+    <config file="envelopes.xml">
+        <template file="templates/Envelopes/_envelopes.template">
+            <map>
+                <key name="Envelope">
+                    <template file="templates/Envelopes/_envelope.template">
+                        <map>
+                            <key name="Name">Offline</key>
+                            <key name="envelopeSource">${envelope_root}/offline_envelope/envelope.html</key>
+                            <key name="envelopeTEName">postx</key>
+                            <key name="envelopeFileEncoding">ISO-8859-1</key>
+                            <key name="useScript">true</key>
+                            <key name="useSSO">false</key>
+                            <key name="useGetForGPT">true</key>
+                            <key name="usePassphrase">false</key>
+                            <key name="showSenderAuth">false</key>
+                            <key name="showSensitivity">false</key>
+                            <key name="showOpenButton">true</key>
+                            <key name="showSaveButton">false</key>
+                            <key name="showOpenOnlineButton">true</key>
+                            <key name="showOpenOfflineCheckbox">false</key>
+                            <key name="showRememberUserKeyCheckbox">false</key>
+                            <key name="showRememberEnvelopeKeyCheckbox">false</key>
+                            <key name="showRememberMeCheckbox">false</key>
+                            <key name="showEnablePSPCheckbox">false</key>
+                            <key name="showAutoOpenCheckbox">false</key>
+                            <key name="evpCompanyLink">${__if companyURL}${companyURL}${__else}${keyServerScheme}://${keyServerHost}${__endif}</key>
+                            <key name="evpHelpLink">${__if helpURL}${helpURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=Envelope${__endif}</key>
+                            <key name="evpNotListedLink">${__if notListedURL}${notListedURL}${__endif}</key>
+                            <key name="evpForgotPasswordLink">${__if forgotPasswordURL}${forgotPasswordURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/pswdForgot.action${__endif}</key>
+                            <key name="evpPassphraseNotShownLink">${__if passphraseNotShownURL}${passphraseNotShownURL}${__endif}</key>
+                            <key name="keyFieldSep">^</key>
+                            <key name="keyCaseSensitive">true</key>
+                            <key name="mobileAddress">mobile@res.cisco.com</key>
+                            <key name="EnvelopeGraphics">
+                                <template file="templates/Envelopes/_envelopeGraphic.template">
+                                    <map>
+                                        <key name="Name">Help</key>
+                                        <key name="source">${envelope_root}/offline_envelope/help.gif</key>
+                                        <key name="link"/>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgHelp|html}</key>
+                                        <key name="anchorHref">${helpURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">Logo</key>
+                                        <key name="source">${envelope_root}/offline_envelope/ironport_logo.gif</key>
+                                        <key name="link"/>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgLogo|html}</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">BCEInfo</key>
+                                        <key name="source"/>
+                                        <key name="link">https://res.cisco.com/websafe/images/bce/appInfo.gif?lp=${+defaultLocale}</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgBCEInfo|html}</key>
+                                        <key name="anchorHref">https://res.cisco.com/websafe/BCEDownloadLink?logoLink=${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">AndroidBCEInfo</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/BCEDownloadLink/Android?logoLink=${companyURL}</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText"></key>
+                                        <key name="anchorHref"></key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">IOSBCEInfo</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/BCEDownloadLink/iOS?logoLink=${companyURL}</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText"></key>
+                                        <key name="anchorHref"></key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">Postmark</key>
+                                        <key name="source">${envelope_root}/offline_envelope/postmark.gif</key>
+                                        <key name="link"/>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgPostmark|html}</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">PostmarkLeft</key>
+                                        <key name="source">${envelope_root}/offline_envelope/postmarkLeftLocal.gif</key>
+                                        <key name="link"/>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">Ironport Email Encryption</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">Provider</key>
+                                        <key name="source">${envelope_root}/offline_envelope/provider.gif</key>
+                                        <key name="link"/>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">Ironport Email Encryption</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">FlapCorner</key>
+                                        <key name="source">${envelope_root}/offline_envelope/flap_corner.gif</key>
+                                        <key name="link"/>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgFlapCorner|html}</key>
+                                        <key name="anchorHref"/>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                </template>
+                            </key>
+                            <key name="EnvelopeFields">
+                                <template file="templates/Envelopes/_envelopeField.template">
+                                    <map>
+                                        <key name="Name">Password</key>
+                                        <key name="titlePosition">l</key>
+                                        <key name="titleID">text_i18n.authframe.safr.field.password</key>
+                                        <key name="titleClass">text</key>
+                                        <key name="titleText">${i18n.authframe.safr.field.password|html}</key>
+                                        <key name="inputSize">20</key>
+                                        <key name="inputMaxLen">127</key>
+                                        <key name="inputObscure">true</key>
+                                        <key name="inputID">passwordInput1</key>
+                                        <key name="inputClass">text</key>
+                                        <key name="inputTitle"/>
+                                    </map>
+                                </template>
+                            </key>
+                        </map>
+                        <map>
+                            <key name="Name">Registered</key>
+                            <key name="envelopeSource">${envelope_root}/registered_envelope/envelope.html</key>
+                            <key name="envelopeTEName">postx</key>
+                            <key name="envelopeFileEncoding">ISO-8859-1</key>
+                            <key name="useScript">true</key>
+                            <key name="useSSO">false</key>
+                            <key name="useGetForGPT">true</key>
+                            <key name="usePassphrase">true</key>
+                            <key name="showSenderAuth">true</key>
+                            <key name="showSensitivity">true</key>
+                            <key name="showOpenButton">true</key>
+                            <key name="showSaveButton">false</key>
+                            <key name="showOpenOnlineButton">true</key>
+                            <key name="showOpenOfflineCheckbox">false</key>
+                            <key name="showRememberUserKeyCheckbox">false</key>
+                            <key name="showRememberEnvelopeKeyCheckbox">false</key>
+                            <key name="showRememberMeCheckbox">true</key>
+                            <key name="showEnablePSPCheckbox">true</key>
+                            <key name="showAutoOpenCheckbox">false</key>
+                            <key name="evpCompanyLink">${__if companyURL}${companyURL}${__else}${keyServerScheme}://${keyServerHost}${__endif}</key>
+                            <key name="evpHelpLink">${__if helpURL}${helpURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=RegEnvelope${__endif}</key>
+                            <key name="evpNotListedLink">${__if notListedURL}${notListedURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=AddrNotShown${__endif}</key>
+                            <key name="evpForgotPasswordLink">${__if forgotPasswordURL}${forgotPasswordURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/pswdForgot.action${__endif}</key>
+                            <key name="evpPassphraseNotShownLink">${__if passphraseNotShownURL}${passphraseNotShownURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=PPNotShown${__endif}</key>
+                            <key name="keyFieldSep">^</key>
+                            <key name="keyCaseSensitive">true</key>
+                            <key name="mobileAddress">mobile@res.cisco.com</key>
+                            <key name="EnvelopeGraphics">
+                                <template file="templates/Envelopes/_envelopeGraphic.template">
+                                    <map>
+                                        <key name="Name">Help</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/help.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgHelp|html}</key>
+                                        <key name="anchorHref">${helpURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">Logo</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/customer-logo.gif?f=1</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgLogo|html}</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">BCEInfo</key>
+                                        <key name="source"/>
+                                        <key name="link">https://res.cisco.com/websafe/images/bce/appInfo.gif?lp=${+defaultLocale}</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgBCEInfo|html}</key>
+                                        <key name="anchorHref">https://res.cisco.com/websafe/BCEDownloadLink?logoLink=${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">AndroidBCEInfo</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/BCEDownloadLink/Android?logoLink=${companyURL}</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText"></key>
+                                        <key name="anchorHref"></key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">IOSBCEInfo</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/BCEDownloadLink/iOS?logoLink=${companyURL}</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText"></key>
+                                        <key name="anchorHref"></key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">Postmark</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/postmark.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgPostmark|html}</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">PostmarkLeft</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/postmarkLeftLocal.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">Ironport Email Encryption</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">Provider</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/provider.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">Ironport Email Encryption</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">FlapCorner</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/images/flap_corner.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgFlapCorner|html}</key>
+                                        <key name="anchorHref"/>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                </template>
+                            </key>
+                            <key name="EnvelopeFields">
+                                <template file="templates/Envelopes/_envelopeField.template">
+                                    <map>
+                                        <key name="Name">Password</key>
+                                        <key name="titlePosition">l</key>
+                                        <key name="titleID">text_i18n.authframe.safr.field.password</key>
+                                        <key name="titleClass">text</key>
+                                        <key name="titleText">${i18n.authframe.safr.field.password|html}</key>
+                                        <key name="inputSize">20</key>
+                                        <key name="inputMaxLen">127</key>
+                                        <key name="inputObscure">true</key>
+                                        <key name="inputID">passwordInput1</key>
+                                        <key name="inputClass">text</key>
+                                        <key name="inputTitle"/>
+                                    </map>
+                                </template>
+                            </key>
+                        </map>
+                        <map>
+                            <key name="Name">CRES</key>
+                            <key name="envelopeSource">${envelope_root}/cres_envelope/envelope.html</key>
+                            <key name="envelopeTEName">postx</key>
+                            <key name="envelopeFileEncoding">ISO-8859-1</key>
+                            <key name="useScript">true</key>
+                            <key name="useSSO">false</key>
+                            <key name="useGetForGPT">true</key>
+                            <key name="usePassphrase">true</key>
+                            <key name="showSenderAuth">true</key>
+                            <key name="showSensitivity">true</key>
+                            <key name="showOpenButton">true</key>
+                            <key name="showSaveButton">false</key>
+                            <key name="showOpenOnlineButton">true</key>
+                            <key name="showOpenOfflineCheckbox">false</key>
+                            <key name="showRememberUserKeyCheckbox">false</key>
+                            <key name="showRememberEnvelopeKeyCheckbox">false</key>
+                            <key name="showRememberMeCheckbox">true</key>
+                            <key name="showEnablePSPCheckbox">true</key>
+                            <key name="showAutoOpenCheckbox">false</key>
+                            <key name="evpCompanyLink">${__if companyURL}${companyURL}${__else}${keyServerScheme}://${keyServerHost}${__endif}</key>
+                            <key name="evpHelpLink">${__if helpURL}${helpURL}${__else} ${keyServerScheme}://${keyServerHost}/websafe/help?topic=RegEnvelope${__endif}</key>
+                            <key name="evpNotListedLink">${__if notListedURL}${notListedURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=AddrNotShown${__endif}</key>
+                            <key name="evpForgotPasswordLink">${__if forgotPasswordURL}${forgotPasswordURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/pswdForgot.action${__endif}</key>
+                            <key name="evpPassphraseNotShownLink">${__if passphraseNotShownURL}${passphraseNotShownURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=PPNotShown${__endif}</key>
+                            <key name="keyFieldSep">^</key>
+                            <key name="keyCaseSensitive">true</key>
+                            <key name="mobileAddress">mobile@res.cisco.com</key>
+                            <key name="EnvelopeGraphics">
+                                <template file="templates/Envelopes/_envelopeGraphic.template">
+                                    <map>
+                                        <key name="Name">Help</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/help.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgHelp|html}</key>
+                                        <key name="anchorHref">${helpURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">Logo</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/customer-logo.gif?f=1</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgLogo|html}</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">BCEInfo</key>
+                                        <key name="source"/>
+                                        <key name="link">https://res.cisco.com/websafe/images/bce/appInfo.gif?lp=${+defaultLocale}</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgBCEInfo|html}</key>
+                                        <key name="anchorHref">https://res.cisco.com/websafe/BCEDownloadLink?logoLink=${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">AndroidBCEInfo</key>
+                                        <key name="source"/>
+                                        <key name="link">https://res.cisco.com/websafe/BCEDownloadLink/Android?logoLink=${companyURL}</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText"></key>
+                                        <key name="anchorHref"></key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">IOSBCEInfo</key>
+                                        <key name="source"/>
+                                        <key name="link">https://res.cisco.com/websafe/BCEDownloadLink/iOS?logoLink=${companyURL}</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText"></key>
+                                        <key name="anchorHref"></key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">Postmark</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/postmark.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgPostmark|html}</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">PostmarkLeft</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/postmarkLeft.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgPostmark|html}</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">Provider</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/logo/${+Id}/${+ProfileName}/branding/CRES.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgProvider|html}</key>
+                                        <key name="anchorHref">${companyURL}</key>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                    <map>
+                                        <key name="Name">FlapCorner</key>
+                                        <key name="source"/>
+                                        <key name="link">${+graphicURL}/websafe/images/flap_corner.gif</key>
+                                        <key name="cache">true</key>
+                                        <key name="explode">false</key>
+                                        <key name="size"/>
+                                        <key name="altText">${+altImgFlapCorner|html}</key>
+                                        <key name="anchorHref"/>
+                                        <key name="anchorName"/>
+                                        <key name="anchorNewWindow">true</key>
+                                        <key name="anchorID"/>
+                                        <key name="anchorClass"/>
+                                        <key name="anchorTitle"/>
+                                    </map>
+                                </template>
+                            </key>
+                            <key name="EnvelopeFields">
+                                <template file="templates/Envelopes/_envelopeField.template">
+                                    <map>
+                                        <key name="Name">Password</key>
+                                        <key name="titlePosition">l</key>
+                                        <key name="titleID">text_i18n.authframe.safr.field.password</key>
+                                        <key name="titleClass">text</key>
+                                        <key name="titleText">${i18n.authframe.safr.field.password|html}</key>
+                                        <key name="inputSize">20</key>
+                                        <key name="inputMaxLen">127</key>
+                                        <key name="inputObscure">true</key>
+                                        <key name="inputID">passwordInput1</key>
+                                        <key name="inputClass">text</key>
+                                        <key name="inputTitle"/>
+                                    </map>
+                                </template>
+                            </key>
+                        </map>
+                    </template>
+                </key>
+             </map>
+         </template>
+    </config>
+    <config file="connections.xml">
+        <template file="templates/_connections.template">
+            <map>
+                <key name="accept_untrusted_certificates">true</key>
+                <key name="config">
+                    <template file="templates/_proxy_none.template">
+                        <map>
+                            <key name="Name">None</key>
+                            <key name="Description"/>
+                            <key name="ClassName"/>
+                        </map>
+                    </template>
+                    <template file="templates/_proxy_web.template">
+                        <map>
+                            <key name="Name">Web</key>
+                            <key name="Description"/>
+                            <key name="ClassName">com.postx.comm.proxy.ProxyWeb</key>
+                            <key name="Host"/>
+                            <key name="Port">3128</key>
+                            <key name="UserName"/>
+                            <key name="Password"/>
+                        </map>
+                    </template>
+                    <template file="templates/_proxy_socks4.template">
+                        <map>
+                            <key name="Name">SOCKS4</key>
+                            <key name="Description"/>
+                            <key name="ClassName">com.postx.comm.proxy.ProxySOCKS4</key>
+                            <key name="Host"/>
+                            <key name="Port">1080</key>
+                            <key name="UserName"/>
+                        </map>
+                    </template>
+                    <template file="templates/_proxy_socks4a.template">
+                        <map>
+                            <key name="Name">SOCKS4a</key>
+                            <key name="Description"/>
+                            <key name="ClassName">com.postx.comm.proxy.ProxySOCKS4a</key>
+                            <key name="Host"/>
+                            <key name="Port">1080</key>
+                            <key name="UserName"/>
+                        </map>
+                    </template>
+                    <template file="templates/_proxy_socks5.template">
+                        <map>
+                            <key name="Name">SOCKS5</key>
+                            <key name="Description"/>
+                            <key name="ClassName">com.postx.comm.proxy.ProxySOCKS5</key>
+                            <key name="Host"/>
+                            <key name="Port">1080</key>
+                            <key name="UserName"/>
+                            <key name="Password"/>
+                        </map>
+                    </template>
+                </key>
+            </map>
+        </template>
+    </config>
+</configs>

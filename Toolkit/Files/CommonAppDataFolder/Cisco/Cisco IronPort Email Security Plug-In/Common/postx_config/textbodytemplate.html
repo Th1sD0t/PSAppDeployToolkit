@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html lang=en>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>IronPort: $subject</title>
+${__unless raw-htmlmessage}
+<style type="text/css">
+<!--
+div#bodycontent {font-family: Verdana, Arial, sans-serif; font-size: 12px;
+ line-height: 14px; margin: 4px}
+pre {white-space: pre-wrap; white-space: -moz-pre-wrap;
+ white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;
+ width: 100%;}
+-->
+</style>
+${__endif}
+</head>
+<body>
+<div id=bodycontent>
+${__if raw-htmlmessage}
+${raw-htmlmessage}
+${__else}
+<pre>
+${textmessage}
+</pre>
+${__endif}
+</div>
+</body>
+</html>

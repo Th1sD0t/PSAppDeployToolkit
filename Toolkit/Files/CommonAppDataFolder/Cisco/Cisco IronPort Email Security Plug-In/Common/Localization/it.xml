@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings language="Italiano">
+  <group name="Diagnostic">
+    <string id="windowTitle">Diagnostica di Cisco Email Security Plug-In</string>
+    <string id="inProgressMessage">In corso...</string>
+    <string id="goToReportButton">Vai a report</string>
+    <string id="okButton">OK</string>
+    <string id="cancelButton">Annulla</string>
+    <string id="resultMessage">I dati di diagnostica sono stati salvati in {0}. È ora possibile inviarli all'amministratore di sistema o contattare la persona di Cisco Email Security Plug-In.</string>
+    <string id="errorMessage">Si è verificato un errore durante il processo di diagnostica: 
+{0}</string>
+    <string id="messageBoxTitle">Cisco Email Security Plug-In</string>
+  </group>
+  <group name="Core">
+    <string id="localizationReadingError">Si è verificato un errore durante l'inizializzazione del file di localizzazione di Cisco Email Security Plug-In. Gli elementi localizzabili sono stati impostati sui valori predefiniti.</string>
+    <string id="saveConfigError">Si è verificato un errore durante il salvataggio delle impostazioni di configurazione di {0}.</string>
+    <string id="configFileNotFound">Impossibile trovare il file di configurazione di {0}. Sono stati ripristinati i valori predefiniti delle impostazioni.</string>
+    <string id="configReadingError">Si è verificato un errore durante l'inizializzazione del file di configurazione di {0}. Sono stati ripristinati i valori predefiniti di alcune impostazioni.</string>
+    <string id="log4netXmlError">Spiacenti, ma non è possibile leggere la registrazione. Sono stati ripristinati i valori di registrazione predefiniti.</string>
+    <string id="errorHelpNotFound">Spiacenti, ma la cartella Cisco non contiene alcun file della Guida.</string>
+    <string id="generalError">Si è verificato un errore.
+Se questo messaggio è stato visualizzato più volte, avviare lo strumento Diagnostica dalla finestra Opzioni o eseguendo l'applicazione autonoma</string>
+    <string id="logFilePathError">Il percorso del file di registro non è corretto e non verrà salvato</string>
+    <string id="noBuildForUpdate">La versione più recente di Cisco Email Security Plug-in  è già installata nella macchina.</string>
+    <string id="applyBCE">Questo messaggio contiene un allegato protetto con impostazioni per {0}
+Applicare queste impostazioni?</string>
+    <string id="BCEHasWrongStructure">Il formato del file di configurazione di BCE è errato. I dettagli sono specificati nel file di registro.</string>
+    <string id="BceHasInvalidValues">Il file di configurazione di BCE contiene valori non validi. I dettagli sono specificati nel file di registro.</string>
+    <string id="ErrorDuringBCEValidation">Si è verificato un errore durante la convalida del file di configurazione di BCE.</string>
+    <string id="errorConfigLoad">Si è verificato un errore durante l'inizializzazione del file di configurazione di {0}. Sono stati ripristinati i valori predefiniti di alcune impostazioni.</string>
+    <string id="cannotGenerateNewPath">Impossibile generare nuovo percorso per il file di configurazione. La configurazione non verrà salvata.</string>
+    <string id="errorCode">Codice di errore: {0}</string>
+  </group>
+  <group name="Core.Dialog">
+    <string id="dialogCaption">Cisco Email Security Plug-In</string>
+    <string id="OKButton">OK</string>
+    <string id="applyButton">Applica</string>
+    <string id="cancelButton">Annulla</string>
+    <string id="yesButton">Sì</string>
+    <string id="noButton">No</string>
+    <string id="applyCommonSettings">Applica impostazioni plug-in comuni</string>
+    <string id="showDetailsButton">Dettagli</string>
+    <string id="dontShowCheckboxCaption">Non visualizzare più questo messaggio.</string>
+    <string id="logFileOpenDialogCaption">Seleziona file di registro</string>
+    <string id="enableButton">Abilita</string>
+    <string id="optionsTabCaption">Cisco Email Security</string>
+    <string id="pluginOptionsCaption">Opzioni plug-in</string>
+    <string id="pluginOptionsToolTip">Apre la finestra di dialogo Opzioni plug-in</string>
+    <string id="applyCommonSettingsToolTip">Applica le impostazioni plug-in comuni da BCE</string>
+    <string id="dontShowCheckboxToolTip">Impedisce che questo messaggio venga nuovamente visualizzato</string>
+    <string id="showDetailsToolTip">Visualizza i dettagli di questo errore</string>
+  </group>
+  <group name="Core.Options">
+    <string id="loggingGroupTitle">Registrazione</string>
+    <string id="logFileLabel">Nome file di registro:</string>
+    <string id="logLevelLabel">Livello di registrazione:</string>
+    <string id="diagnosticButton">Esegui diagnostica</string>
+    <string id="diagnosticOptionsElementName">Diagnostica</string>
+    <string id="diagnosticOptionsElementDescription">Lo strumento Diagnostica consente di raccogliere tutte le informazioni correlate al plug-in</string>
+    <string id="helpButton">Guida</string>
+    <string id="aboutButton">Informazioni su</string>
+    <string id="extendedLogLevel">Esteso</string>
+    <string id="normalLogLevel">Normale</string>
+    <string id="addExplorerToolbar">Aggiungi barra degli strumenti di sicurezza alla finestra principale</string>
+    <string id="addInspectorToolbar">Aggiungi barra degli strumenti di sicurezza alla finestra del messaggio</string>
+    <string id="addContextMenu">Aggiungi opzioni di segnalazione dei messaggi al menu di scelta rapida</string>
+    <string id="reportingTabTitle">Segnalazione</string>
+    <string id="aboutButtonToolTip">Apre la finestra di dialogo Informazioni su</string>
+    <string id="helpButtonToolTip">Apre la Guida in linea</string>
+    <string id="languagesComboBoxToolTip">Visualizza un elenco di lingue disponibili tra cui scegliere</string>
+    <string id="diagnosticOptionsButtonToolTip">Esegue la funzionalità di diagnostica</string>
+    <string id="logingEnableChBxToolTip">Abilita la registrazione</string>
+    <string id="selectLogButtonToolTip">Individua il percorso del file di registro</string>
+    <string id="logLevelComboToolTip">Seleziona il livello di registrazione</string>
+    <string id="additionalOptionsElementName">Aggiuntivo</string>
+    <string id="additionalOptionsElementDescription">Consente di configurare opzioni plug-in aggiuntive</string>
+    <string id="additionalOptionsElementButton">Opzioni aggiuntive...</string>
+    <string id="additionalOptionsWindowTitle">Opzioni aggiuntive</string>
+    <string id="additionalOptionsButtonToolTip">Apre la finestra di dialogo Opzioni aggiuntive</string>
+    <string id="loggingTabName">Registrazione</string>
+    <string id="usageDataTabName">Invio dei dati utilizzo</string>
+    <string id="loggingTabDescription">In un file di registro vengono scritte ed elencate tutte le azioni che si sono verificate</string>
+    <string id="usageDataTabDescription">Inviare dati utilizzo anonimi a Cisco per migliorare Cisco Email Security Plug-in?</string>
+    <string id="enableLoggingChBx">Abilita registrazione</string>
+    <string id="enableUsageDataChBx">Invia dati utilizzo anonimi a Cisco</string>
+    <string id="readMoreLink">Ulteriori informazioni</string>
+    <string id="usageDataEnableChBxToolTip">Consenti l'invio di dati utilizzo anonimi a Cisco</string>
+    <string id="readMoreToolTip">Apre i dettagli dei dati utilizzo</string>
+    <string id="privacyTabPage">Privacy</string>
+    <string id="uuidLabel">Identificatore</string>
+    <string id="uuidDescriptionLabel">Un identificatore non permanente generato al momento dell'installazione iniziale del plug-in. Viene utilizzato per correlare i report di utilizzo in modo da poter tenere traccia dell'utilizzo nel tempo.</string>
+    <string id="passLabel">Passphrase</string>
+    <string id="passDescriptionLabel">Se si preme questo pulsante, tutte le passphrase memorizzate nella cache per tutti gli account verranno eliminate.</string>
+    <string id="resetUuidButton">Reimposta identificatore</string>
+    <string id="clearPassButton">Cancella tutte le passphrase</string>
+    <string id="resetUuidButtonToolTip">Reimposta l'identificatore</string>
+    <string id="clearPassButtonToolTip">Cancella tutte le passphrase per tutti gli account</string>
+    <string id="uuidIsReset">L'identificatore è stato reimpostato.</string>
+    <string id="uuidIsNotReset">Impossibile reimpostare l'identificatore.</string>
+    <string id="passIsCleared">Tutte le passphrase per tutti gli account sono state cancellate.</string>
+  </group>
+  <group name="Core.AboutBox">
+    <string id="firstTextPart">Cisco Email Security Plug-In
+Versione: {0}
+Ultimo aggiornamento: {1}</string>
+    <string id="secondTextPart">Questo prodotto contiene funzioni crittografate ed è tutelato dalle leggi degli Stati Uniti e nazionali che governano l'importazione, l'esportazione, il trasferimento e l'utilizzo. Il recapito di prodotti crittografati Cisco non implica l'autorità di terze parti per importare,
+esportare, distribuire o utilizzare la crittografia. Importatori, esportatori, distributori e utenti sono responsabili della conformità con le leggi degli Stati Uniti e nazionali.
+Utilizzando questo prodotto si accetta di rispettare le leggi e le normative applicabili.
+Se non è possibile rispettare le leggi degli Stati Uniti e nazionali, restituire immediatamente il prodotto. 
+
+Un riepilogo delle leggi degli Stati Uniti che governano i prodotti crittografati Cisco è disponibile presso: 
+http://tools.cisco.com/legal/export/pepd/Search.do</string>
+    <string id="thirdTextPart">Avviso: questo programma per computer è protetto dalle leggi sulla proprietà intellettuate e da trattati internazionali. La riproduzione o la distribuzione non autorizzata di questo programma, o di qualsiasi parte di esso, può comportare gravi sanzioni civili e penali e sarà perseguito nella misura massima possibile ai sensi della legge applicabile.
+	
+Copyright © 2011-2016 Cisco Systems, Inc. e/o le relative società affiliate. Tutti i diritti riservati.</string>
+    <string id="helpLinkText">Per ulteriore assistenza, visitare il sito Web</string>
+  </group>
+  <group name="Core.UpdateNotificationForm">
+    <string id="dialogBody">Nuova versione {0} disponibile</string>
+    <string id="whatsNewString">Novità di questa versione:</string>
+    <string id="automaticallyCheckForUpdates">Controlla automaticamente aggiornamenti</string>
+    <string id="download">Scarica</string>
+    <string id="skipThisVersion">Ignora questa versione</string>
+    <string id="checkForUpdates">Controlla aggiornamenti</string>
+    <string id="unableConnectToRemoteServer">Impossibile connettersi al server remoto</string>
+    <string id="invalidJsonResponse">Il server remoto non fornisce informazioni di aggiornamento valide</string>
+    <string id="checkForUpdatesButtonToolTip">Controlla se è disponibile una nuova versione del plug-in</string>
+    <string id="closeButtonToolTip">Chiude la finestra di dialogo</string>
+    <string id="automaticallyCheckBoxToolTip">Abilita il controllo automatico degli aggiornamenti</string>
+    <string id="downloadButtonToolTip">Scarica aggiornamenti</string>
+    <string id="skipVersionButtonToolTip">Ignora l'uso della versione disponibile corrente</string>
+    <string id="outlookVersionUnsupportedString">La versione di Outlook in uso non è supportata dal plug-in {0}.
+Deve essere installata {1} o versione successiva.</string>
+    <string id="windowsVersionUnsupportedString">La versione di Windows in uso non è supportata dal plug-in {0}.
+Deve essere installata {1} o versione successiva.</string>
+    <string id="outlookAndWindowsVersionUnsupportedString">Le versioni di Windows e Outlook in uso non sono supportate dal plug-in {0}.
+Devono essere installate {1} e {2} o versioni successive.</string>
+  </group>
+  <group name="Mso">
+    <string id="unableLoadPlugin">Impossibile caricare Cisco Email Security Plug-In per Outlook.</string>
+    <string id="errorShuttingDown">Si è verificato un errore durante l'arresto di Cisco Email Security Plug-In per Outlook.</string>
+    <string id="errorOracleConnector">Cisco Email Security Plug-In non supporta Oracle Connector per Outlook. Pertanto, verrà disabilitato.
+Per impedire che questo messaggio venga nuovamente visualizzato, disinstallare il plug-in.</string>
+  </group>
+  <group name="Mso.Options">
+    <string id="restartToApplySettings">Ė necessario riavviare Outlook per applicare le modifiche.</string>
+    <string id="tabTitle">Cisco Email Security</string>
+  </group>
+  <group name="Encrypt.Options">
+    <string id="flagHeaderLabel">Flag nome/valore X-header:</string>
+    <string id="subjectRadioLabel">Flag testo oggetto</string>
+    <string id="flagHeaderRadioLabel">Flag X-header</string>
+    <string id="EncryptionCaption">Flag crittografia</string>
+    <string id="flagHeaderLimitations">Osservare che il nome intestazione deve iniziare con la stringa "x-". 
+Il numero di caratteri dell'intestazione deve essere compreso tra 4 e 253.</string>
+    <string id="subjectToolTipText">${subject} viene sostituito con l'oggetto originale.</string>
+    <string id="flagSensitivityLabel">Flag intestazione Sensitivity</string>
+    <string id="subjectRbToolTipText">Utilizzare il testo oggetto per contrassegnare il messaggio</string>
+    <string id="headerRbToolTipText">Utilizzare x-header per contrassegnare il messaggio</string>
+    <string id="sensitivityRbToolTipText">Utilizzare l'intestazione riservatezza per contrassegnare il messaggio</string>
+  </group>
+  <group name="Report.Dialogs">
+    <string id="progressCaption">Cisco Email Security Plug-In</string>
+    <string id="progressLabel">Segnalazione messaggio {0} di {1} in corso...</string>
+    <string id="blockSenderMultipleError">Ė possibile selezionare un solo messaggio alla volta per bloccare un mittente.</string>
+    <string id="reportSuccessOne">Il report è stato generato e inviato a Outlook per il recapito.</string>
+    <string id="reportSuccessMultiple">{0} report sono stati generati e inviati a Outlook per il recapito.</string>
+    <string id="reportErrorOne">Impossibile segnalare questo messaggio.</string>
+    <string id="reportErrorMultiple">Impossibile segnalare {0} messaggi.</string>
+    <string id="reportSuccessAndErrorsMultiples">Messaggi totali : {0}
+Messaggi correttamente segnalati : {1}
+Impossibile segnalare : {2}</string>
+    <string id="invalidAddress">Indirizzo non valido per tipo di report di "{0}". Aggiornare il file di configurazione.</string>
+    <string id="reportNoHeaderErrorSingle">Impossibile segnalare messaggi senza intestazioni Internet.</string>
+    <string id="reportNoHeaderErrorMultiple">Impossibile segnalare {0} messaggi senza intestazioni Internet.</string>
+    <string id="reportTooHugeErrorSingle">Questo messaggio è troppo grande.</string>
+    <string id="reportTooHugeErrorMultiple">{0} messaggi sono troppo grandi.</string>
+    <string id="reportNotMailErrorSingle">L'elemento selezionato non è un messaggio.</string>
+    <string id="reportNotMailErrorMultiple">{0} elementi selezionati non sono messaggi.</string>
+    <string id="reportGeneralError">Verificare quanto segue:
+-Accertarsi che le impostazioni dell'account BCE siano corrette.
+-Controllare che la connessione di rete funzioni.
+-Verificare che la connessione al server di posta elettronica funzioni. Può chiudersi in maniera imprevista.
+-Verificare che il software firewall sia correttamente configurato.
+-Controllare che le impostazioni del software antivirus siano corrette.</string>
+  </group>
+  <group name="Report.Options">
+    <string id="reportingGroupTitle">Segnalazione di spam e minacce</string>
+    <string id="keepReportsLabel">Conserva una copia del report inviato</string>
+    <string id="showReportSuccessOneLabel">Visualizza notifica quando una singola e-mail viene correttamente segnalata</string>
+    <string id="showReportSuccessMultipleLabel">Visualizza notifica quando più e-mail vengono correttamente segnalate</string>
+    <string id="optionsElementName">Segnalazione</string>
+    <string id="optionsElementDescription">La segnalazione consente di inviare feedback ai sistemi Cisco riguardo messaggi non sollecitati o di minaccia</string>
+    <string id="optionsElementButton">Opzioni di segnalazione...</string>
+    <string id="optionsWindowTitle">Opzioni di segnalazione</string>
+    <string id="topPanelText">Gli account Outlook sono elencati. Per ciascuno di questi account, è possibile applicare impostazioni di segnalazione differenti.</string>
+    <string id="topPanelHeaderText">Account di segnalazione</string>
+    <string id="encryptConfigButtonText">Opzioni...</string>
+    <string id="addressColumnHeaderText">Indirizzo account</string>
+    <string id="reportingOptionsTitle">Opzioni di segnalazione- {0}</string>
+  </group>
+  <group name="Mso.Report">
+    <string id="contextMenuCaption">Contrassegna come...</string>
+    <string id="restartOutlook">Riavviare Outlook.
+Apparentemente è stato aggiunto un account Outlook. Cisco Email Security Spam Plug-In per Outlook potrebbe non funzionare correttamente se non si riavvia Outlook.</string>
+  </group>
+  <group name="Mso.Report.Button.Cations">
+    <string id="blockSender">Blocca mittente</string>
+    <string id="spam">Spam</string>
+    <string id="ham">Non spam</string>
+    <string id="virus">Virus</string>
+    <string id="phish">Phish</string>
+    <string id="marketing">Marketing</string>
+  </group>
+  <group name="Mso.Report.Button.ToolTips">
+    <string id="blockSender">Aggiungi questo mittente all'elenco dei mittenti bloccati</string>
+    <string id="spam">Segnala messaggio come Spam</string>
+    <string id="ham">Segnala messaggio come Non spam</string>
+    <string id="virus">Segnala messaggio come Virus</string>
+    <string id="phish">Segnala messaggio come Tentativo di phishing</string>
+    <string id="marketing">Segnala messaggio come Marketing</string>
+  </group>
+  <group name="Mso.Report.Button.Ribbons">
+    <string id="spamGroup">Cisco Email Security</string>
+  </group>
+  <group name="Encryption.Options">
+    <string id="deEnabled">Abilita crittografia</string>
+    <string id="optionsElementName">Crittografia</string>
+    <string id="optionsElementDescription">La crittografia consente di inviare e-mail crittografate utilizzando la tecnologia di crittografia Cisco</string>
+    <string id="optionsElementButton">Opzioni di crittografia...</string>
+    <string id="optionsWindowTitle">Opzioni di crittografia</string>
+    <string id="serverUrl">URL server</string>
+    <string id="tokenFileName">Nome file token</string>
+    <string id="defaultExpiricyDays">Scadenza predefinita (giorni)</string>
+    <string id="defaultReadByDays">Letto da predefinito (giorni)</string>
+    <string id="cachePassword">Memorizza passphrase</string>
+    <string id="showEncryptDialog">Mostra finestra di dialogo durante la crittografia del messaggio</string>
+    <string id="generalTab">Generale</string>
+    <string id="connectionTab">Connessione</string>
+    <string id="useSystemProxy">Utilizza impostazioni proxy sistema</string>
+    <string id="noProxy">Nessun proxy</string>
+    <string id="manualProxy">Configurazione proxy manuale:</string>
+    <string id="protocol">Protocollo</string>
+    <string id="httpProtocol">HTTP</string>
+    <string id="socks4Protocol">SOCKS4</string>
+    <string id="socks4aProtocol">SOCKS4a</string>
+    <string id="socks5Protocol">SOCKS5</string>
+    <string id="host">Host:</string>
+    <string id="port">Porta:</string>
+    <string id="username">Nome utente:</string>
+    <string id="password">Passphrase</string>
+    <string id="emptyFieldsError">I campi Host e Porta non possono essere vuoti</string>
+    <string id="wrongAttachmentNameError">Il nome allegato busta non può essere vuoto e deve contenere caratteri nome file validi.</string>
+    <string id="emptyTextFieldError">L'opzione {0} non può essere vuota.</string>
+    <string id="encryptByDefaultCheckBox">Crittografa per impostazione predefinita</string>
+    <string id="attachmentNameLabel">Nome allegato</string>
+    <string id="sensitivityLabel">Protezione dei messaggi</string>
+    <string id="sendReturnReceipCheckBox">Invia ricevuta di ritorno</string>
+    <string id="unsecureServerUrlLabel">URL server non protetto</string>
+    <string id="connectTimeoutLabel">Timeout connessione (ms)</string>
+    <string id="socketTimeoutLabel">Timeout socket (ms)</string>
+    <string id="dispRemMeCheckBox">Visualizza 'Memorizza credenziali'</string>
+    <string id="dispAutoOpenCheckBox">Visualizza 'Apertura automatica'</string>
+    <string id="addMessageBarCheckBox">Aggiungi barra messaggi</string>
+    <string id="showReplyToAllCheckBox">Mostra pulsante 'Rispondi a tutti' nella barra messaggi</string>
+    <string id="openInSameWindCheckBox">Apri nella stessa finestra</string>
+    <string id="dispOpenOfflineCheckBox">Visualizza casella di controllo 'Apri non in linea'</string>
+    <string id="dispRemEnvKeyCheckBox">Visualizza 'Memorizza tasto busta'</string>
+    <string id="dispEnablePSPCheckBox">Visualizza 'Abilita frase segreta personale'</string>
+    <string id="showReplyCheckBox">Mostra pulsante 'Rispondi' nella barra messaggi</string>
+    <string id="showForwardCheckBox">Mostra pulsante 'Inoltra' nella barra messaggi</string>
+    <string id="suppresAppletCheckBox">Impedisci l'apertura dell'applet</string>
+    <string id="topPanelText">Gli account Outlook in uso sono elencati. Per ciascuno di questi account, è possibile applicare diverse impostazioni di crittografia.</string>
+    <string id="topPanelHeaderText">Account di crittografia</string>
+    <string id="encryptConfigButtonText">Opzioni...</string>
+    <string id="addressColumnHeaderText">Indirizzo account di crittografia</string>
+    <string id="typeColumnHeaderText">Tipo</string>
+    <string id="keyServerColumnHeaderText">Server chiavi</string>
+    <string id="encryptionOptionsTitle">Opzioni di crittografia - {0}</string>
+    <string id="passCacheNeverText">Mai</string>
+    <string id="passCacheDurLabelText">minuti</string>
+    <string id="passCacheAlwaysText">Sempre</string>
+    <string id="advancedTab">Avanzato</string>
+    <string id="passCacheDurToolTip">Tra {0} e {1} minuti (inclusi)</string>
+    <string id="usageReminderCheckBox">Visualizza promemoria utilizzo crittografia</string>
+    <string id="defaultKeyServerCheckBox">Utilizza come account crittografia predefinito</string>
+    <string id="makeThisAccountDefaultQuestion">Fedeltà è attualmente l'account di crittografia predefinito. Rendere questo account predefinito?</string>
+    <string id="alwaysUseMessageBodyFromKeyServer">Utilizzare sempre corpo messaggio da server chiavi</string>
+    <string id="defaultLanguageForOutgoingMessages">Lingua predefinita per messaggi in uscita</string>
+    <string id="turnOffLocalizedEnvelopesAlert">Se si disattiva questa funzione, verrà utilizzato l'elenco dei modelli corpo messaggio del plug-in che si distingue dall'elenco del server chiavi</string>
+	<string id="useKeyServerDefault">Utilizza chiave server di default</string>
+  </group>
+  <group name="DE.DecryptPassFormStrings">
+    <string id="windowTitle">Immettere passphrase</string>
+    <string id="SensitivityLowDesc">Il messaggio è stato trasmesso in modo sicuro ma non richiede una passphrase.</string>
+    <string id="FlagDesc">Questo messaggio verrà contrassegnato e non richiede una passphrase.</string>
+    <string id="SensitivityHighDesc">A causa del livello di protezione impostato per questo messaggio, una passphrase è sempre richiesta.</string>
+    <string id="SensitivityMedium">Medio</string>
+    <string id="SensitivityLow">Basso</string>
+    <string id="SensitivityHigh">Alto</string>
+    <string id="address">Indirizzo e-mail*</string>
+    <string id="password">Passphrase*</string>
+    <string id="AcknowledgeButton">Conferma</string>
+    <string id="RegisterButton">Registra</string>
+    <string id="messageSecurity">Protezione dei messaggi: {0}</string>
+    <string id="requiredLegend">* - obbligatorio</string>
+    <string id="rememberPassword">Memorizza passphrase</string>
+    <string id="accountDoesNotExist">Specificare o digitare account di posta elettronica appropriato.</string>
+    <string id="addressComboBoxToolTip">Consente di scegliere un account</string>
+    <string id="passwordTextBoxToolTip">Passphrase per l'account scelto</string>
+    <string id="remPassCheckBoxToolTip">Memorizza passphrase per l'account</string>
+    <string id="decryptionMessage">Attendere.</string>
+	<string id="addressIsNotListed">Indirizzo non presente</string>
+  </group>
+  <group name="DE.SendOnlineFormStrings">
+    <string id="windowTitle">Opzioni busta protetta</string>
+    <string id="defaultExpiricyTime">Scade il</string>
+    <string id="requestReadReceipt">Richiedi una notifica di decrittografia</string>
+    <string id="bodyMessageLabel">Il destinatario della Busta protetta Cisco vedrà il seguente messaggio prima dell'apertura della busta</string>
+    <string id="hideEncryptDialog">Non mostrare questa finestra di dialogo in futuro</string>
+    <string id="sendButton">Invia</string>
+    <string id="hideEncryptDialogToolTip">Impedisce che questa finestra di dialogo venga nuovamente visualizzata</string>
+    <string id="sendButtonToolTip">Invia un'e-mail crittografata</string>
+    <string id="locEnvBodyMessageLabel">I destinatari riceveranno corpi messaggi specifici per la lingua scelta sul server chiavi. Il messaggio originale può essere diverso da questo modello</string>
+  </group>
+  <group name="DE.EncryptionProcessFormStrings">
+    <string id="message">Crittografia in corso. Attendere.</string>
+  </group>
+  <group name="DE.PostXErrorCodesStrings">
+    <string id="GeneralEncryptError">Si è verificato un errore durante la crittografia.</string>
+    <string id="GeneralDecryptError">Si è verificato un errore durante la decrittografia.</string>
+    <string id="SystemError">Errore di sistema.</string>
+    <string id="Unimplemented">Funzione non implementata.</string>
+    <string id="Failed">Comando daemon non riuscito.</string>
+    <string id="BadEnvelopeConfigFile">Il file di configurazione della busta non è corretto.</string>
+    <string id="BadConfig">Si è verificato un errore durante la crittografia: individuata configurazione dell'SDK non valida.</string>
+    <string id="HttpFailureUnknown">Errore HTTP durante la connessione al server.</string>
+    <string id="HttpFailureDns">Errore HTTP durante la connessione al server: impossibile risolvere nome DNS.</string>
+    <string id="HttpFailureOpen">Errore HTTP durante la connessione al server: impossibile stabilire connessione IP.</string>
+    <string id="HttpFailureTlsOpen">Errore HTTP durante la connessione al server: impossibile negoziare connessione TLS.</string>
+    <string id="HttpFailureRequest">Errore HTTP durante la connessione al server: si è verificato un errore durante l'invio della richiesta.</string>
+    <string id="HttpFailureResponse">Errore HTTP durante la connessione al server: si è verificato un errore durante la lettura della risposta.</string>
+    <string id="HttpFailureTlsClose">Errore HTTP durante la connessione al server: impossibile interrompere la connessione TLS.</string>
+    <string id="HttpFailureClose">Errore HTTP durante la connessione al server: impossibile chiudere il socket.</string>
+    <string id="MaxMemoryReached">Ė stata raggiunta la dimensione massima della memoria.</string>
+    <string id="OutOfMemory">Eccezione memoria esaurita.</string>
+    <string id="NoRecipients">Si è verificato un errore durante la crittografia: nessun destinatario specificato.</string>
+    <string id="BadRcpt">Si è verificato un errore durante la crittografia: è stata specificata un'e-mail non valida per il campo RCPT.</string>
+    <string id="BadTo">Si è verificato un errore durante la crittografia: è stata specificata un'e-mail non valida per il campo A.</string>
+    <string id="BadCc">Si è verificato un errore durante la crittografia: è stata specificata un'e-mail non valida per il campo CC.</string>
+    <string id="BadBcc">Si è verificato un errore durante la crittografia: è stata specificata un'e-mail non valida per il campo BCC.</string>
+    <string id="BadFrom">Si è verificato un errore durante la crittografia: è stata specificata un'e-mail non valida per il campo Da.</string>
+    <string id="BadPropertyFile">Si è verificato un errore durante la crittografia: è stato specificato un file delle proprietà generatore buste non valido.</string>
+    <string id="UuidFailed">Si è verificato un errore durante la crittografia: impossibile creare un identificatore univoco.</string>
+    <string id="BuildFailure">Si è verificato un errore durante la crittografia: impossibile creare busta.</string>
+    <string id="badAttachments">Si è verificato un errore durante la crittografia: è stato trovato un allegato non valido.</string>
+    <string id="BadReplyUrl">Si è verificato un errore durante la crittografia: è stato specificato un URL risposta non valido.</string>
+    <string id="BadRegister">Si è verificato un errore durante la crittografia: è stato specificato un URL registrazione non valido.</string>
+    <string id="BadToken">Si è verificato un errore durante la crittografia: è stato specificato un token non valido.</string>
+    <string id="BadMimemessage">Si è verificato un errore durante la crittografia: errori nel messaggio mime.</string>
+    <string id="BadShaedKey">Si è verificato un errore durante la crittografia: è stata specificata una passphrase di crittografia errata.</string>
+    <string id="UnknownAlgorithm">Si è verificato un errore durante la crittografia: specificato algoritmo sconosciuto.</string>
+    <string id="BadReplyto">Si è verificato un errore durante la crittografia: è stata specificata un'e-mail non valida per il campo Risposta.</string>
+    <string id="EncryptionFailure">Si è verificato un errore durante la crittografia: errore di crittografia.</string>
+    <string id="KeyserverUnreachable">Si è verificato un errore durante la crittografia: server chiavi non raggiungibile.</string>
+    <string id="BadPassword">Passphrase immessa non corretta.</string>
+    <string id="MalformedRequest">Impossibile aprire busta - Richiesta non valida inviata al server.</string>
+    <string id="ServerError">Impossibile aprire busta - Errore server interno.</string>
+    <string id="Expired">Impossibile eseguire la decrittografia del messaggio perché è scaduto. Per ulteriori informazioni, contattare il mittente.</string>
+    <string id="PermanentLocked">La busta è stata bloccata in modo definitivo dall'amministratore.</string>
+    <string id="TemporaryLocked">La busta è stata temporaneamente bloccata e non può essere aperta.</string>
+    <string id="NoRecordFound">Nessun record server chiavi trovato nella busta specificata.</string>
+    <string id="NoLoginSession">Nessuna sessione di accesso attiva.</string>
+    <string id="FailedToUpdateDb">Impossibile aggiornare database keystore.</string>
+    <string id="NotRegistered">Questa funzione è disponibile solo dopo aver completato la registrazione aprendo la prima envelope protetta.</string>
+    <string id="NotRegisteredRegisterLink">Questa funzione è disponibile solo dopo aver completato la registrazione. Fare clic {0}qui{1} per registrarsi.</string>
+	<string id="AuthenticationFailed">Il server chiavi non è in grado di verificare il token utilizzato per l'autenticazione.</string>
+    <string id="AccesscheckFailed">Controllo di accesso a server chiavi non riuscito.</string>
+    <string id="ExceedMaxFailedOpens">Troppi tentativi di apertura non riusciti.</string>
+    <string id="RecipientNotSentEnvelope">Questa busta non è stata inviata al destinatario.</string>
+    <string id="RecipientSuspended">L'account in uso è stato sospeso.</string>
+	<string id="RecipientSuspendedWithTime">Il tuo account è stato sospeso. Riprova tra {0} minuti.</string>
+    <string id="RecipientNotActivated">L'account utente del destinatario non è attivato.</string>
+    <string id="EnvelopeLocked">La busta è stata bloccata dal server.</string>
+    <string id="RecipientNotIdentified">Impossibile identificare destinatario.</string>
+    <string id="InvalidSession">Sessione scaduta. Riaprire il messaggio.</string>
+    <string id="PollFailed">Poll non riuscito.</string>
+    <string id="RecipientBlocked">L'account utente del destinatario è bloccato.</string>
+    <string id="RecipientLocked">L'account in uso è stato bloccato. Per ulteriori informazioni, contattare l'amministratore.</string>
+    <string id="PasswordExpired">La passphrase è scaduta. Per reimpostare la passphrase, effettuare l'accesso da websafe.</string>
+    <string id="InsufficientSecurity">Il livello di protezione dei messaggi è troppo basso.</string>
+    <string id="ExceedMaximumSecurity">Il livello di protezione dei messaggi è superiore al massimo consentito.</string>
+    <string id="InvalidFrom">Indirizzo Da non valido.</string>
+    <string id="InvalidRecipient">Indirizzo destinatario non valido.</string>
+    <string id="RequestAborted">La richiesta è stata annullata.</string>
+    <string id="DuplicateMessageId">L'ID messaggio esiste già.</string>
+	<string id="InMaintenance">Il server non è attualmente disponibile per manutenzione. Riprova più tardi.</string>
+    <string id="InvalidStatusMessage">Messaggio di stato non valido.</string>
+    <string id="InvalidVersion">Versione non valida.</string>
+    <string id="SsoLogin">Impossibile aprire busta - Richiesto accesso Single Sign-On.</string>
+    <string id="LocalLogin">Impossibile aprire busta - Richiesto accesso.</string>
+    <string id="SsoError">Impossibile aprire busta - Accesso Single Sign-On non riuscito.</string>
+    <string id="VerifyInvalidSignature">Verifica firma non riuscita.</string>
+    <string id="VerifyInvalidParameters">Alcuni parametri nella configurazione BCE non sono validi.</string>
+    <string id="VerifyRequestFailed">Richiesta per verifica firma non riuscita.</string>
+    <string id="BadOfflinePassword">è stata specificata una passphrase non in linea non valida.</string>
+    <string id="UpdateFailed">Ė stata specificata una passphrase non in linea non valida.</string>
+    <string id="NoPassword">Utente non specificato.</string>
+    <string id="TokenCorrupted">Il token è danneggiato.</string>
+    <string id="locked">Impossibile eseguire la decrittografia del messaggio perché è bloccato.</string>
+    <string id="lockedReason">Motivo del blocco: {0}</string>
+    <string id="aboveLimitEncryptionError">Questo messaggio supera il limite consentito e non può essere crittografato.</string>
+    <string id="aboveLimitDecryptionError">Questo messaggio supera il limite consentito e non può essere decrittografato.</string>
+    <string id="javaIsMissing">Impossibile trovare Java Runtime Environment nel sistema. Eseguire il programma di installazione del plug-in o installare JRE manualmente.</string>
+    <string id="javaIsMissingForEncryptionFunctionality">Installare Java Runtime Environment per crittografare, decrittografare o gestire i messaggi sicuri.</string>
+	<string id="pastExpirationDay">L'orario di scadenza scelta è già trascorso. Scegliere una data valida.</string>
+    <string id="pastReadByDay">L'orario "Letto da" scelto è già trascorso. Scegliere una data valida.</string>
+    <string id="accountBlockedForgetLink">L'account è stato bloccato ed è necessario reimpostare la passphrase. Utilizzare il collegamento Dimenticata la passphrase? per riattivare l'account. {0}Dimenticata la passphrase?{1}</string>
+    <string id="accountBlocked">L'account è stato bloccato  a causa di un numero eccessivo di tentativi di immissione passphrase errata.</string>
+    <string id="lockedEnvelope">La busta è stata bloccata dal server.</string>
+    <string id="errorDuringLoadingMessagesFromKeyServer">Si è verificato un errore durante il caricamento di messaggi dal server chiavi.</string>
+    <string id="BadGateway">Gateway errato: il server proxy ha ricevuto una risposta non valida dal server padre.</string>
+    <string id="KeyserverIsNotReachable">Errore HTTP durante la connessione al server chiavi: host remoto non raggiungibile.</string>
+    <string id="MessageIsExpired">Il messaggio originale è scaduto.</string>
+    <string id="MessageIsLocked">Il messaggio originale è stato bloccato.</string>
+  </group>
+  <group name="Encryption">
+    <string id="failedToValidateConfig">Convalida configurazione per account {0} non riuscita. Impostare i valori di configurazione corretti o contattare l'amministratore.</string>
+    <string id="notValidEncryptionMethod">La decrittografia non è un metodo di crittografia valido. Si consiglia di riconfigurare l'account</string>
+    <string id="decryptSettingsNotFound">Impossibile trovare impostazioni di decrittografia per account: </string>
+    <string id="disablingEncryptionForAccount">Rilevato errore imprevisto nel plug-in. Disabilitare la crittografia per questo account.</string>
+    <string id="noAccountSettingsFound">Impossibile eseguire la crittografia di un'e-mail perché non sono state trovate impostazioni per l'account {0}</string>
+    <string id="readByAvailable">Letto per notifica è ora disponibile nelle impostazioni del server {0}</string>
+    <string id="readByEnabled">Letto per notifica è stato abilitato sul server {0}</string>
+    <string id="readByDisabled">Letto per notifica è stato disabilitato sul server. {0}</string>
+    <string id="BCEApplied">Nuove modifiche sono state correttamente applicate per {0}</string>
+    <string id="BCEFailed">Impossibile applicare nuove impostazioni. Verificare che l'allegato contenga una firma valida.</string>
+    <string id="BCEInvalid">Il file di configurazione di BCE non è valido.
+Contattare l'amministratore.</string>
+    <string id="mismatchUrls">La configurazione BCE deve essere inviata da un server chiavi appropriato.</string>
+    <string id="subjectLengthExceeded">L'oggetto e-mail ha superato la lunghezza massima. Rimuovere {0} carattere{1}.</string>
+    <string id="emailIsNotPresentInSentFolder">Impossibile aprire l'e-mail perché non è presente nella cartella 'Elementi inviati' dell'account o la sincronizzazione dell'e-mail non è ancora completata.</string>
+  </group>
+  <group name="DE.MailOptionsStrings">
+    <string id="windowTitle">Opzioni Crittografia messaggio</string>
+    <string id="replyOptions">Opzioni Risposta</string>
+    <string id="allowReply">Consenti risposta</string>
+    <string id="allowReplyAll">Consenti risposta a tutti</string>
+    <string id="allowForward">Consenti inoltro</string>
+    <string id="expirationLbl">Scadenza</string>
+    <string id="readByLbl">Letto da</string>
+    <string id="OptionHiddenWarn">Tutte le opzioni di crittografia messaggio sono state nascoste dall'amministratore.</string>
+  </group>
+  <group name="DE.MsmStrings">
+    <string id="windowTitle">Gestisci messaggi protetti</string>
+    <string id="changeSettings">Modifica impostazioni</string>
+    <string id="LockChBxTitle">Blocca messaggio selezionato</string>
+    <string id="LockChBxTitleForSeveralMessages">Blocca messaggi selezionati</string>
+    <string id="lockReasonToolTip">Motivo messaggio selezionato è bloccato</string>
+    <string id="lockReasonToolTipForSeveralMessages">Motivo messaggi selezionati sono bloccati</string>
+    <string id="ExpireChbxTitle">Scadenza</string>
+    <string id="OKBtn">OK</string>
+    <string id="CancelBtn">Annulla</string>
+    <string id="ApplylBtn">Applica</string>
+    <string id="ToHeaderTitle">A</string>
+    <string id="SubjectHeaderTitle">Oggetto</string>
+    <string id="SentHeaderTitle">Inviato</string>
+    <string id="ExpiresHeaderTitle">Scade</string>
+    <string id="LockedHeaderTitle">Bloccato</string>
+    <string id="LockedStr">Vero</string>
+    <string id="UnLockedStr">Falso</string>
+  </group>
+  <group name="DE.ManageMessagesStrings">
+    <string id="windowTitle">Gestisci messaggi</string>
+    <string id="showLblTitle">Mostra:</string>
+    <string id="selectedRbtnTitle">Selezionato</string>
+    <string id="refreshBtnToolTipHeader">Aggiorna</string>
+    <string id="refreshBtnToolTipBody">Aggiorna mailing list con nuove voci.</string>
+    <string id="basicSearchTextBoxText">Digitare il testo da cercare</string>
+    <string id="advancedSearchExpanderTitle">Ricerca avanzata</string>
+    <string id="basicSearchExpanderTitle">Ricerca di base</string>
+    <string id="keyword1TextBoxText">Digitare la parola chiave da cercare</string>
+    <string id="Keyword2TextBoxText">Digitare la parola chiave aggiuntiva da cercare</string>
+    <string id="fromLblTitle">Dal</string>
+    <string id="inLblTitle">In</string>
+    <string id="statusLblTitle">Stato</string>
+    <string id="failedAttemptsLblTitle">Operazione non riuscita più volte</string>
+    <string id="clearBtnTitle">Cancella tutte le query di ricerca</string>
+    <string id="anyTitle">Qualsiasi</string>
+    <string id="toTitle">Al</string>
+    <string id="subjectTitle">Oggetto</string>
+    <string id="lockedReasonTitle">Bloccato</string>
+    <string id="allTitle">Tutto</string>
+    <string id="unopenedTitle">Non aperto</string>
+    <string id="openedTitle">Aperto</string>
+    <string id="lockedTitle">Bloccato</string>
+    <string id="expiredTitle">Scaduto</string>
+    <string id="sentTitle">Inviato</string>
+    <string id="expiresTitle">Scade</string>
+    <string id="fromOLTitle">In Outlook</string>
+    <string id="currentPageString">{0} di {1}</string>
+    <string id="mailsAmountStringForLoadingSingular">Visualizzazione di {0} - {1} di {2} messaggi [altri elementi in caricamento, tempo di attesa approssimativo massimo di {3} minuto].</string>
+    <string id="mailsAmountStringForLoadingPlural">Visualizzazione di {0} - {1} di {2} messaggi [altri elementi in caricamento, tempo di attesa approssimativo massimo di {3} minuti].</string>
+    <string id="mailsAmountString">Visualizzazione di {0} - {1} di {2} messaggi.</string>
+	<string id="mailsLoadedDuringSecondRoundString">Tutti i messaggi sono stati caricati. Per visualizzare tutti i messaggi, fare clic sull'icona di aggiornamento della finestra di dialogo.</string>
+    <string id="mailsAmountStringForFiltering">Visualizzazione di {0} - {1} di {2} messaggi [{3} messaggi totali].</string>
+    <string id="lockTextBoxText">Motivo del blocco</string>
+    <string id="lockChBxTitle">Blocca</string>
+    <string id="expireChBxTitle">Scadenza</string>
+    <string id="okBtn">OK</string>
+    <string id="cancelBtn">Annulla</string>
+    <string id="applylBtn">Applica</string>
+    <string id="nextBtnToolTip">Pagina successiva</string>
+    <string id="lastBtnToolTip">Ultima pagina</string>
+    <string id="previousBtnToolTip">Pagina precedente</string>
+    <string id="firstBtnToolTip">Prima pagina</string>
+    <string id="inOutlookToolTiptext">Fare doppio clic per aprire il messaggio</string>
+    <string id="perPageLabel">per pagina</string>
+    <string id="notificationLabel">I messaggi restanti sono caricati in background. Osservare che le funzioni di ricerca e ordinamento sono disabilitate finché tutti i messaggi non sono stati caricati.</string>
+    <string id="manageMessagesDialog">Finestra di dialogo Gestisci messaggi</string>
+    <string id="noMatchesFound">Nessuna corrispondenza trovata.</string>
+    <string id="noItemsToDisplay">Nessun elemento da visualizzare.</string>
+    <string id="manageMessagesToolTip">Apre la finestra di dialogo Gestisci messaggi</string>
+    <string id="refreshLabel">Aggiornare la finestra di dialogo per visualizzare le modifiche più recenti? In questo caso, tutte le modifiche non salvate verranno perse.</string>
+  </group>
+  <group name="Mso.DE">
+    <string id="applyBCE">Questo messaggio contiene un allegato protetto con impostazioni per {0}
+Applicare queste impostazioni?</string>
+    <string id="BCEApplied">Nuove modifiche sono state correttamente applicate per {0}</string>
+    <string id="BCEFailed">Impossibile applicare nuove impostazioni. Verificare che l'allegato contenga una firma valida.</string>
+    <string id="sensitiveDataCleanFailed">Impossibile eliminare completamente la versione decrittografata dell'e-mail corrente.
+ Si può verificare la perdita di dati riservati. Per evitare la perdita di dati, ricercare nuove e-mail create nella cassetta postale. Dall'inizio dell'elenco trovare l'e-mail decrittografata ed eliminarla in modo definitivo.</string>
+    <string id="decryptionGeneralFailure">Potrebbe non essere possibile eseguire la decrittografia di questo messaggio con Cisco Email Security Plug-in. Salvare il messaggio e aprirlo utilizzando il browser.</string>
+    <string id="manageSecureMessageCaption">Gestisci messaggio protetto...</string>
+    <string id="manageSecureMessagesCaption">Gestisci messaggi protetti...</string>
+    <string id="unableToIdentifyOutgoingAcc">Impossibile identificare account della posta in uscita. L'e-mail non può essere crittografata. Provare a utilizzare un altro account o creare una nuova e-mail.</string>
+    <string id="accountIsNotConfigured">Questa e-mail è configurata per essere inviata tramite {0}. Questo account non è configurato per la crittografia.</string>
+    <string id="unableReadAccounts">Errore irreversibile. Il plug-in di crittografia non è in grado di leggere account Outlook. La crittografia non sarà disponibile.</string>
+    <string id="saveMailQuestion">Salvare le modifiche?</string>
+    <string id="sendNotAllowed">La modifica dei destinatari per questo messaggio protetto non è consentita. Questo messaggio verrà inviato ai destinatari originali. Continuare?</string>
+    <string id="wrongSender">Solo i destinatari possono rispondere a questa e-mail o inoltrarla</string>
+    <string id="UsageReminder">Osservare che la crittografia deve essere utilizzata solo per scopi aziendali.</string>
+    <string id="featureIsNotSupported">Questa funzione non è supportata dal server chiavi</string>
+  </group>
+  <group name="Mso.DE.RibbonLabels">
+    <string id="EncryptRibbonGroup">Cisco Email Security</string>
+    <string id="SendEncryptButton">Crittografa messaggio</string>
+    <string id="OpenOptionsWindow">Apri finestra di dialogo Opzioni crittografia e-mail...</string>
+    <string id="ManageSecureMessagesButton">Gestisci messaggio protetto...</string>
+    <string id="ManageSecureMessagesGroup">Cisco Email Security</string>
+  </group>
+  <group name="Mso.DE.RibbonScreentips">
+    <string id="SendEncryptButton">Flag il messaggio da crittografare.</string>
+    <string id="ManageSecureMessagesButton">Apre la finestra di dialogo Gestisci messaggio protetto.</string>
+  </group>
+  <group name="Mso.DE.RibbonSupertips">
+    <string id="SendEncryptButton">Il messaggio crittografato verrà inviato in modo sicuro</string>
+    <string id="ManageSecureMessagesButton">La finestra di dialogo Gestisci messaggio protetto consente di modificare la data di scadenza, che è determinata dalla data e altre opzioni del messaggio protetto.</string>
+  </group>
+  <group name="Mso.DE.Warnings">
+    <string id="sendNotAllowed">La funzionalità di protezione è stata disabilitata per questo messaggio dal mittente.</string>
+  </group>
+  <group name="Report.OptionToolTips">
+    <string id="reportConfigButtonToolTip">Apre la finestra di dialogo Opzione di segnalazione per l'account selezionato</string>
+    <string id="keepReportsToolTip">Conserva una copia del report inviato</string>
+    <string id="showReportSuccessOneToolTip">Visualizza una notifica quando una singola e-mail viene correttamente segnalata</string>
+    <string id="showReportSuccessMultipleToolTip">Visualizza una notifica quando più e-mail vengono correttamente segnalate</string>
+    <string id="reportEnableChBxToolTip">Abilita il plug-in di segnalazione</string>
+    <string id="reportOptionsButtonToolTip">Apre la finestra di dialogo Opzioni di segnalazione</string>
+  </group>
+  <group name="Mso.Report.OptionToolTips">
+    <string id="addExplorerToolTip">Aggiunge la barra degli strumenti di sicurezza alla finestra principale</string>
+    <string id="addInspectorToolTip">Aggiunge la barra degli strumenti di sicurezza alla finestra del messaggio</string>
+    <string id="addContextMenuToolTip">Aggiunge le opzioni di segnalazione messaggio al menu di scelta rapida</string>
+  </group>
+  <group name="Encryption.OptionToolTips">
+    <string id="encryptConfigButtonToolTip">Apre la finestra di dialogo Opzioni di crittografia per l'account selezionato</string>
+    <string id="encryptEnableChBxToolTip">Abilita il plug-in di crittografia</string>
+    <string id="encryptOptionsButtonToolTip">Apre la finestra di dialogo Opzioni di crittografia</string>
+    <string id="useSystemProxyToolTipText">Specifica l'utilizzo delle impostazioni proxy del sistema</string>
+    <string id="noProxyToolTipText">Disabilita le impostazioni proxy</string>
+    <string id="manualProxyToolTipText">Specifica l'utilizzo delle impostazioni proxy manuali</string>
+    <string id="httpProtocolToolTipText">Utilizza il protocollo HTTP</string>
+    <string id="socks4ProtocolToolTipText">Utilizza il protocollo SOCKS4</string>
+    <string id="socks4aProtocolToolTipText">Utilizza il protocollo SOCKS4</string>
+    <string id="socks5ProtocolToolTipText">Utilizza il protocollo SOCKS5</string>
+    <string id="hostToolTipText">Imposta il nome host proxy</string>
+    <string id="portToolTipText">Imposta il numero porta proxy</string>
+    <string id="usernameToolTipText">Imposta il nome utente proxy</string>
+    <string id="passwordToolTipText">Imposta la passphrase proxy</string>
+    <string id="passCacheNeverToolTipText">Non memorizzare mai la passphrase nella cache</string>
+    <string id="passCacheDurToolTipText">Memorizza la passphrase nella cache per un periodo di tempo specificato</string>
+    <string id="passCacheAlwaysToolTipText">Memorizza sempre la passphrase nella cache</string>
+    <string id="serverUrlToolTipText">Imposta l'URL del server chiavi</string>
+    <string id="tokenFileNameToolTipText">Imposta il nome file del token</string>
+    <string id="defaultExpiricyDaysToolTipText">Imposta l'intervallo di scadenza predefinito</string>
+    <string id="defaultReadByDaysToolTipText">Imposta l'intervallo Letto da predefinito</string>
+    <string id="encryptByDefaultToolTipText">Specifica che i messaggi sono crittografati per impostazione predefinita</string>
+    <string id="attachmentNameToolTipText">Imposta il nome dell'allegato</string>
+    <string id="sensitivityToolTipText">Imposta il livello di protezione dei messaggi</string>
+    <string id="sendReturnReceipToolTipText">Richiede una notifica di decrittografia</string>
+    <string id="showEncryptDialogToolTipText">Mostra la finestra di dialogo “Opzioni busta protetta” durante la crittografia</string>
+    <string id="unsecureServerUrlToolTipText">Imposta l'URL del server chiavi non protetto</string>
+    <string id="connectTimeoutToolTipText">Imposta il timeout di connessione</string>
+    <string id="socketTimeoutToolTipText">Imposta il timeout socket</string>
+    <string id="dispRemMeToolTipText">Visualizza la casella di controllo “Memorizza credenziali”</string>
+    <string id="dispAutoOpenToolTipText">Visualizza la casella di controllo “Apertura automatica”</string>
+    <string id="addMessageBarToolTipText">Aggiunge la barra messaggi alla busta</string>
+    <string id="showReplyToAllToolTipText">Visualizza il pulsante Rispondi a tutti nella barra messaggi della busta</string>
+    <string id="openInSameWindToolTipText">Apre i messaggi e-mail nella stessa finestra</string>
+    <string id="dispOpenOfflineToolTipText">Visualizza la casella di controllo “Apri non in linea” sulla busta</string>
+    <string id="dispRemEnvKeyToolTipText">Visualizza la casella di controllo “Memorizza tasto busta” sulla busta</string>
+    <string id="dispEnablePSPToolTipText">Visualizza la casella di controllo “Abilita frase segreta personale” sulla busta</string>
+    <string id="showReplyToolTipText">Visualizza il pulsante Rispondi nella barra messaggi della busta</string>
+    <string id="showForwardToolTipText">Visualizza il pulsante Inoltra nella barra messaggi della busta</string>
+    <string id="suppresAppletToolTipText">Impedisce l'apertura dell'applet</string>
+    <string id="usageReminderToolTipText">Visualizza il promemoria utilizzo crittografia dopo che si fa clic sul pulsante “Crittografa messaggio”</string>
+    <string id="defaultKeyServerChBoxToolTipText">Imposta l'account corrente come predefinito</string>
+    <string id="defaultLocaleToolTipText">Imposta la lingua predefinita per i messaggi in uscita</string>
+    <string id="messageBodyFromKeyServerToolTip">Specifica che il corpo del messaggio verrà sempre ottenuto dal server chiavi</string>
+  </group>
+  <group name="DE.MailOptionsToolTipStrings">
+    <string id="allowReplyCbxToolTip">Consente di rispondere ai messaggi</string>
+    <string id="allowReplyAllCbxToolTip">Consente di rispondere a tutti i messaggi</string>
+    <string id="allowForwardCbxToolTip">Consente l'inoltro dei messaggi</string>
+    <string id="securityCmbxToolTip">Imposta il livello di protezione per il messaggio corrente</string>
+    <string id="expireTimePickerToolTip">Imposta l'ora di scadenza per il messaggio corrente</string>
+    <string id="readByTimePickerToolTip">Imposta l'ora Letto da per il messaggio corrente</string>
+    <string id="expireDatePickerToolTip">Imposta il giorno di scadenza per il messaggio corrente</string>
+    <string id="readByDatePickerToolTip">Imposta il giorno Letto da per il messaggio corrente</string>
+    <string id="expCheckBoxToolTip">Imposta la data di scadenza per il messaggio corrente</string>
+    <string id="readByCheckBoxToolTip">Imposta la data Letto da per il messaggio corrente</string>
+    <string id="lockCheckBoxToolTip">Blocca le voci selezionate</string>
+    <string id="expireCheckBoxToolTip">Imposta le voci selezionate per scadere alla data e ora specificate</string>
+    <string id="lockReasonTextBoxToolTip">Immettere o modificare il motivo per cui le voci selezionate sono bloccate</string>
+    <string id="expireOnDatePickerToolTip">Imposta il giorno di scadenza per le voci selezionate</string>
+    <string id="expireOnTimePickerToolTip">Imposta l'ora di scadenza per le voci selezionate</string>
+  </group>
+  <group name="DE.ManageMessagesToolTipStrings">
+    <string id="selectedToolTipText">Mostra solo voci selezionate</string>
+    <string id="allToolTipText">Mostra tutte le voci</string>
+    <string id="basicSearchTbToolTipText">Testo utilizzato per eseguire una ricerca dei campi "A" e "Oggetto"</string>
+    <string id="advancedSearchToolTipText">Apre la finestra di dialogo Ricerca avanzata</string>
+    <string id="basicSearchToolTipText">Apre la finestra di dialogo Ricerca di base</string>
+    <string id="keyword1ToolTipText">Testo utilizzato per eseguire una ricerca del campo specificato nel menu a discesa "in" corrispondente</string>
+    <string id="keyword2ToolTipText">Testo aggiuntivo utilizzato per eseguire una ricerca del campo specificato nel menu a discesa "in" corrispondente. 
+Se sono specificate entrambe le parole chiave, viene eseguita una ricerca per trovare messaggi e-mail che le contengono entrambe</string>
+    <string id="keyword1ComboBoxToolTip">Definisce il campo in cui verrà eseguita la ricerca della parola chiave primaria</string>
+    <string id="keyword2ComboBoxToolTip">Definisce il campo in cui verrà eseguita la ricerca della parola chiave secondaria</string>
+    <string id="statusToolTipText">Esegui una ricerca dei messaggi con lo stato specificato</string>
+    <string id="failedAttemptsToolTipText">Esegui la ricerca di messaggi con il numero specificato di tentativi non riusciti</string>
+    <string id="clearBtnToolTipText">Cancella tutte le query</string>
+    <string id="fromDateCheckBoxToolTip">Esegui una ricerca dei messaggi inviati, aperti o scaduti dopo la data specificata</string>
+    <string id="toDateCheckBoxToolTip">Esegui una ricerca dei messaggi inviati, aperti o scaduti prima della data specificata</string>
+    <string id="fromTimePickerToolTip">Esegui una ricerca dei messaggi inviati, aperti o scaduti dopo l'ora specificata</string>
+    <string id="toTimePickerToolTip">Esegui una ricerca dei messaggi inviati, aperti o scaduti prima dell'ora specificata</string>
+    <string id="dateComboBoxToolTip">Specifica se una ricerca utilizzando l'intervallo di tempo verrà eseguita sui messaggi inviati, aperti o scaduti</string>
+    <string id="expandToggleButtonToolTip">Comprime la vista di tutte le voci</string>
+    <string id="checkAllToolTip">Seleziona tutte le voci (da bloccare o scadute)</string>
+    <string id="pageSizeComboBox">Imposta il numero di voci visualizzate su ogni pagina</string>
+  </group>
+  <group name="Core.CallHomeForms">
+    <string id="continueBtn">Continua</string>
+    <string id="continueBtnToolTip">Continua a utilizzare Outlook</string>
+    <string id="usageDataTextBlockPart1">I seguenti dati vengono raccolti e memorizzati nei
+server Cisco per l'analisi come dati aggregati:</string>
+    <string id="usageDataTextBlockPart2">Informazioni generali:
+• Identificatore
+  Un identificatore non permanente generato
+  al momento dell'installazione iniziale del plug-in. Viene utilizzato per correlare
+  i report di utilizzo in modo da tenere traccia dell'utilizzo nel tempo.
+  Ė possibile reimpostare l'identificatore nella scheda Opzioni plug-in &gt;
+  Opzioni aggiuntive &gt; Privacy.
+• Versione sistema operativo
+• Versione Outlook
+• Versione plug-in
+• Versione Crittografia SDK
+  La Crittografia SDK è la libreria utilizzata internamente dal
+  plug-in per eseguire la crittografia e decrittografia di messaggi protetti.
+• Lingua sistema operativo
+• Nomi dei plug-in Outlook installati
+
+Per ogni account configurato nel plug-in:
+• Tipo
+• Server
+• Numero di messaggi protetti aperti e inviati
+• Numero totale dei destinatari
+• Conteggi di utilizzo funzione
+  Conteggi del numero di volte le varie funzioni sono
+  state utilizzate.
+• Specifica dell'utilizzo di indirizzi di segnalazione non standard</string>
+    <string id="usageDataDetailsTitle">Dettagli dati utilizzo</string>
+    <string id="remarkTextBlock">Ė anche possibile modificare questa impostazione tramite le opzioni plug-in.</string>
+  </group>
+    <group name="Encryption.RegistrationStrings">
+    <string id="windowTitle">Registrazione nuovo utente</string>
+    <string id="enterPersonalInformation">Inserire le informazioni personali</string>
+    <string id="emailAddress">Indirizzo e-mail</string>
+	<string id="firstName">Nome*</string>
+	<string id="firstNameHint">Nome</string>
+	<string id="firstNameToolTip">Inserire il nome.</string>
+	<string id="lastName">Cognome*</string>
+	<string id="lastNameHint">Cognome</string>
+	<string id="lastNameToolTip">Inserire il cognome.</string>
+	<string id="createPassphrase">Crea una passphrase</string>
+	<string id="passphrase">Passphrase*</string>
+	<string id="passphraseHint">Passphrase</string>
+	<string id="passphraseToolTip">Inserire la passphrase.</string>
+	<string id="confirmPassphrase">Conferma passphrase*</string>
+	<string id="confirmPassphraseHint">Conferma passphrase</string>
+	<string id="confirmPassphraseToolTip">Inserire di nuovo la passphrase.</string>
+	<string id="passphraseLimitationLbl">Inserire almeno 8 caratteri o numeri. Per le passphrase si fa distinzione tra maiuscole e minuscole. La passphrase deve contenere sia lettere che numeri.</string>
+	<string id="selectLanguage">Selezionare una lingua per l'account CRES</string>
+	<string id="language">Lingua*</string>
+	<string id="requiredField">* = campo obbligatorio</string>
+	<string id="registrationHelpLink">Supporto</string>
+	
+	<!--Following 3 elements are joined in one sentence-->
+	<string id="youCanAlsoRegisterLbl">È inoltre possibile registrarsi aprendo un</string>
+	<string id="linkLbl">link</string>
+	<string id="inWebBrowserLbl">in un browser Web</string>
+	<!--Following 2 elements are joined in one sentence-->	
+	<string id="userConsent">Con la registrazione l'utente accetta i</string>
+	<string id="termOfServiceLinkLbl">Termini del servizio di CRES</string>	
+	
+	<string id="personalSecurityPhraseTitle">Frase di sicurezza personale</string>
+	<string id="personalSecurityPhrase">Frase di sicurezza personale*</string>
+	<string id="personalSecurityPhraseToolTip">Inserire la frase di sicurezza personale.</string>
+	<string id="personalSecurityPhraseIconToolTip">Inserire una breve frase nota solo all'utente. Questa frase sarà visualizzata nelle envelope dei messaggi a seguito dell'accesso. Se la frase è visualizzata, l'utente ha la certezza di aver effettuato l'accesso al nostro sito sicuro.</string>
+	<string id="enableMyPersonalSecurityPhrase">Abilita la frase di sicurezza personale</string>
+	<string id="enableMyPersonalSecurityPhraseToolTip">Abilita la frase di sicurezza personale.</string>
+	<string id="selectSecurrityQuestions">Selezionare 3 domande di sicurezza</string>
+	<string id="selectSecurrityQuestionsIconToolTip">Queste domande verranno poste all'utente in caso la passphrase venga dimenticata.</string>
+	<string id="showButton">Mostra</string>
+	<string id="showButtonToolTip">Mostra le risposte alle domande di sicurezza.</string>
+	<string id="hideButton">Nascondi</string>
+	<string id="hideButtonToolTip">Nasconde le risposte alle domande di sicurezza.</string>
+	<string id="question1">Domanda 1*</string>
+	<string id="answer1">Risposta 1*</string>
+	<string id="answer1Hint">Risposta 1</string>
+	<string id="confirmAnswer1">Conferma risposta 1*</string>
+	<string id="confirmAnswer1Hint">Conferma risposta 1</string>
+	<string id="question2">Domanda 2*</string>
+	<string id="answer2">Risposta 2*</string>
+	<string id="answer2Hint">Risposta 2</string>
+	<string id="confirmAnswer2">Conferma risposta 2*</string>
+	<string id="confirmAnswer2Hint">Conferma risposta 2</string>
+	<string id="question3">Domanda 3*</string>
+	<string id="answer3">Risposta 3*</string>
+	<string id="answer3Hint">Risposta 3</string>
+	<string id="confirmAnswer3">Conferma risposta 3*</string>
+	<string id="confirmAnswer3Hint">Conferma risposta 3</string>
+	<string id="questionCustomOption">Selezionare una domanda o inserire una domanda personalizzata...</string>
+	<string id="questionCustomHint">Domanda di sicurezza personale</string>
+	<string id="questionCustomToolTip">Selezionare o inserire la domanda che verrà visualizzata per il recupero della passphrase.</string>
+	<string id="questionNoCustomOption">Selezionare una domanda...</string>
+	<string id="questionNoCustomToolTip">Selezionare la domanda che verrà visualizzata per il recupero della passphrase.</string>
+	<string id="answerToolTip">Inserire la risposta alla domanda selezionata.</string>
+	<string id="finalStepAccActivation">ULTIMA FASE: ATTIVAZIONE DELL'ACCOUNT</string>
+	<string id="yourCiscoRegisteredEnvelope">L'account del servizio Cisco Registered Envelope è stato creato.</string>
+	<string id="instructions">Le istruzioni per l'attivazione dell'account sono state inviate in un'e-mail a {0}.</string>
+	<string id="pleaseCheckYourInbox">Controllare la casella di posta in arrivo. Se l'e-mail di attivazione dell'account non è nella posta in arrivo, controllare la cartella della posta indesiderata.</string>
+	<string id="advancedSettingsBtn">Impostazioni avanzate</string>
+	<string id="advancedSettingsBtnToolTip">Dopo aver compilato il modulo, fare clic qui per procedere con le impostazioni avanzate.</string>
+	<string id="registerBtn">Registra</string>
+	<string id="registerBtnToolTip">Fare clic qui per completare la registrazione.</string>
+	<string id="registerBtnIconToolTip">Effettuare subito la registrazione o fare clic su Impostazioni avanzate per proteggere il proprio account impostando le domande di sicurezza e la frase di sicurezza personale.</string>
+	<string id="cancelBtn">Annulla</string>
+	<string id="cancelBtnToolTip">Fare clic su annulla per annullare la procedura di registrazione.</string>
+	<string id="backBtn">Indietro</string>
+	<string id="backBtnToolTip">Fare clic qui per tornare alla prima pagina. Le informazioni inserite verranno perse.</string>
+	<string id="continueBtn">Continua</string>
+	<string id="continueBtnToolTip">Dopo aver compilato il modulo, fare clic qui per procedere con le impostazioni avanzate.</string>
+	<string id="okBtn">OK</string>
+	<string id="fixError">Correggere il seguente errore:</string>
+	<string id="fixErrors">Correggere i seguenti errori:</string>
+	<string id="fixErrorss">Correggere l'errore o gli errori seguenti:</string>
+	<!--Following 3 elements are joined in one sentence-->
+
+	<string id="GeneralError">Non è possibile effettuare la registrazione. Fare clic sul seguente </string>
+	<string id="GeneralErrorLink">link</string>
+	<string id="GeneralErrorEnd"> per registrarsi o aprire di nuovo un messaggio sicuro.</string>
+	
+	<string id="PassphraseEmptyConstraint">Inserire la passphrase.</string>
+	<string id="PassphraseLengthConstraint">La passphrase deve contenere da {0} a {1} caratteri.</string>
+	<string id="PassphraseAlphanumericConstraint">La passphrase deve essere alfanumerica.</string>
+	<string id="PassphraseUpperLowercasesConstraint">La passphrase deve contenere lettere maiuscole e minuscole.</string>
+	<string id="PassphraseOneSpecialCharacterConstraint">La passphrase deve contenere almeno un carattere speciale.</string>
+	<string id="PassphraseTheSameAsEmailConstraint">La passphrase non può essere uguale all'indirizzo e-mail.</string>
+	<string id="PassphraseAndConfirmationPassphraseDoNotMatch">Le passphrase nuova e quella di conferma non corrispondono. Inserire di nuovo la passphrase.</string>
+	<string id="PassphraseContainCharacterRepeatedMoreThanThreeTimesConstraint">La passphrase non deve contenere un carattere ripetuto più di tre volte consecutive.</string>
+	<string id="PassphraseCiscoConstraint">La passphrase non deve essere 'Cisco', 'ocsic' o parole simili ottenute cambiando il formato maiuscolo/minuscolo delle lettere, o sostituendo 'i' con '1', '|', '!', 'o' con '0', oppure 's' con '$'.</string>
+	<string id="PassphraseCharactersConstraint">La passphrase deve contenere caratteri appartenenti almeno a tre delle seguenti categorie: lettere minuscole, lettere maiuscole, numeri e caratteri speciali.</string>
+	<string id="FirstNameConstraint">È necessario inserire il nome.</string>
+	<string id="LastNameConstraint">È necessario inserire il cognome.</string>
+	<string id="personalPhraseEmptyConstraint">Inserire la frase di sicurezza personale.</string>
+	<string id="quesionsUniquieConstraint">È necessario selezionare tre domande di sicurezza univoche.</string>
+	<string id="quesionEmptyConstraint">Selezionare la domanda di sicurezza {0}.</string>
+	<string id="answerTheSameAsEmailConstraint">La risposta alla domanda di sicurezza {0} non può essere uguale all'indirizzo e-mail dell'utente.</string>
+	<string id="answerAlphanumericConstraint">La risposta alla domanda di sicurezza {0} deve contenere almeno una lettera o un numero.</string>
+	<string id="answerEmptyConstraint">Rispondere alla domanda di sicurezza {0}.</string>
+	<string id="answerAndConfirmationAnswerDoNotMatch">La risposta alla domanda di sicurezza {0} e la relativa conferma {0} non corrispondono.</string>
+  </group>
+</strings>

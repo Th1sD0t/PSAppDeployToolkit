@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    $Id: //prod/main/_is/products/cs_plugin/inst/Files/conf/postx_config/envelopes.xml#33 $
+-->
+
+<!DOCTYPE envelopes
+[
+<!ELEMENT envelopes (envelope+)>
+
+<!ELEMENT envelope (source, TEName, encoding, script, sso, forms, passphrase,
+	  info, buttons, checkboxes, links, key?, addresses, graphic*,
+	  field*)>
+<!ATTLIST envelope name CDATA #REQUIRED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT TEName EMPTY>
+<!ATTLIST TEName name CDATA #REQUIRED>
+
+<!ELEMENT encoding EMPTY>
+<!ATTLIST encoding name CDATA #REQUIRED>
+
+<!ELEMENT script EMPTY>
+<!ATTLIST script
+	  useScript (true|false) "true"
+>
+
+<!ELEMENT sso EMPTY>
+<!ATTLIST sso
+	  enable (true|false) "false"
+>
+
+<!ELEMENT forms EMPTY>
+<!ATTLIST forms
+	  useGetForGPT (true|false) "true"
+>
+
+<!ELEMENT passphrase EMPTY>
+<!ATTLIST passphrase
+	  usePassphrase (true|false) "true"
+>
+
+<!ELEMENT info EMPTY>
+<!ATTLIST info
+	  showSenderAuth (true|false) "true"
+	  showSensitivity (true|false) "true"
+>
+
+<!ELEMENT buttons EMPTY>
+<!ATTLIST buttons
+	  open (true|false) "true"
+	  save (true|false) "true"
+	  openOnline (true|false) "true"
+>
+
+<!ELEMENT checkboxes EMPTY>
+<!ATTLIST checkboxes
+	  openOffline (true|false) "true"
+	  rememberUserKey (true|false) "true"
+	  rememberEnvelopeKey (true|false) "true"
+	  rememberMe (true|false) "true"
+	  enablePSP (true|false) "true"
+	  autoOpen (true|false) "true"
+>
+
+<!ELEMENT links EMPTY>
+<!ATTLIST links
+	  company CDATA #IMPLIED
+	  help CDATA #IMPLIED
+	  notListed CDATA #IMPLIED
+	  forgotPassword CDATA #IMPLIED
+	  passphraseNotShown CDATA #IMPLIED
+>
+
+<!ELEMENT key EMPTY>
+<!ATTLIST key
+	  caseSensitive (true|false) "true"
+	  fieldSeparator CDATA "^"
+>
+
+<!ELEMENT addresses EMPTY>
+<!ATTLIST addresses
+	  mobile CDATA "mobile@res.cisco.com"
+>
+
+<!ELEMENT graphic (source, link?, cache?, explode?, size?, alt?, anchor?)>
+<!ATTLIST graphic name CDATA #REQUIRED>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT cache (#PCDATA)>
+
+<!ELEMENT explode (#PCDATA)>
+
+<!ELEMENT size (#PCDATA)>
+
+<!ELEMENT alt (#PCDATA)>
+
+<!ELEMENT anchor EMPTY>
+<!ATTLIST anchor
+	  classAttr CDATA #IMPLIED
+	  href CDATA #REQUIRED
+	  id CDATA #IMPLIED
+	  name CDATA #IMPLIED
+	  newWindow (true|false) "true"
+	  title CDATA #IMPLIED
+>
+
+<!ELEMENT field (title, entry)>
+<!ATTLIST field
+	  name CDATA #REQUIRED
+	  position (l|t|r|b) "l"
+>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+	  classAttr CDATA #IMPLIED
+	  id CDATA #IMPLIED
+>
+
+<!ELEMENT entry EMPTY>
+<!ATTLIST entry
+	  classAttr CDATA #IMPLIED
+	  id CDATA #IMPLIED
+	  maxLen CDATA #IMPLIED
+	  obscure (true|false) "true"
+	  size CDATA #REQUIRED
+	  title CDATA #IMPLIED
+>
+]>
+<envelopes>
+    <envelope name="Offline">
+	<source>${envelope_root}/offline_envelope/envelope.html</source>
+	<TEName name="postx"/>
+	<encoding name="ISO-8859-1"/>
+	<script
+	    useScript="true"/>
+	<sso
+	    enable="false"/>
+	<forms
+	    useGetForGPT="true"/>
+	<passphrase
+	    usePassphrase="false"/>
+	<info
+	    showSenderAuth="false"
+	    showSensitivity="false"/>
+	<buttons
+	    open="true"
+	    save="false"
+	    openOnline="true"/>
+	<checkboxes
+	    openOffline="false"
+	    rememberUserKey="false"
+	    rememberEnvelopeKey="false"
+	    rememberMe="false"
+	    enablePSP="false"
+	    autoOpen="false"/>
+	<links
+	    company="${__if companyURL}${companyURL}${__else}${keyServerScheme}://${keyServerHost}${__endif}"
+	    help="${__if helpURL}${helpURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=Envelope${__endif}"
+	    notListed="${__if notListedURL}${notListedURL}${__endif}"
+	    forgotPassword="${__if forgotPasswordURL}${forgotPasswordURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/pswdForgot.action${__endif}"
+	    passphraseNotShown="${__if passphraseNotShownURL}${passphraseNotShownURL}${__endif}"/>
+	<key
+	    fieldSeparator="^"
+	    caseSensitive="true"/>
+	<addresses
+	    mobile="mobile@res.cisco.com"/>
+	<graphic name="Help">
+	    <source>${envelope_root}/offline_envelope/help.gif</source>
+	    <link></link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgHelp|html}</alt>
+	    <anchor
+		href="${helpURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="Logo">
+	    <source>${envelope_root}/offline_envelope/ironport_logo.gif</source>
+	    <link></link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgLogo|html}</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="BCEInfo">
+	    <source></source>
+	    <link>https://res.cisco.com/websafe/images/bce/appInfo.gif?lp=${+defaultLocale}</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgBCEInfo|html}</alt>
+	    <anchor
+		href="https://res.cisco.com/websafe/BCEDownloadLink?logoLink=${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="AndroidBCEInfo">
+		<source></source>
+		<link>${+graphicURL}/websafe/BCEDownloadLink/Android?logoLink=${companyURL}</link>
+		<cache>true</cache>
+		<explode>false</explode>
+		<size></size>
+		<alt></alt>
+		<anchor
+				href=""
+				name=""
+				newWindow="true"
+				id=""
+				classAttr=""
+				title=""/>
+	</graphic>
+	<graphic name="IOSBCEInfo">
+		<source></source>
+		<link>${+graphicURL}/websafe/BCEDownloadLink/iOS?logoLink=${companyURL}</link>
+		<cache>true</cache>
+		<explode>false</explode>
+		<size></size>
+		<alt></alt>
+		<anchor
+				href=""
+				name=""
+				newWindow="true"
+				id=""
+				classAttr=""
+				title=""/>
+	</graphic>
+	<graphic name="Postmark">
+	    <source>${envelope_root}/offline_envelope/postmark.gif</source>
+	    <link></link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgPostmark|html}</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="PostmarkLeft">
+	    <source>${envelope_root}/offline_envelope/postmarkLeft.gif</source>
+	    <link></link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>Ironport Email Encryption</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="Provider">
+	    <source>${envelope_root}/offline_envelope/CRES.gif</source>
+	    <link></link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>Ironport Email Encryption</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="FlapCorner">
+	    <source>${envelope_root}/offline_envelope/flap_corner.gif</source>
+	    <link></link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgFlapCorner|html}</alt>
+	    <anchor
+		href=""
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<field name="Password" position="l">
+	    <title id="text_i18n.authframe.safr.field.password" classAttr="text">
+		${i18n.authframe.safr.field.password|html}
+	    </title>
+	    <entry
+		size="20"
+		maxLen="127"
+		obscure="true"
+		id="passwordInput1"
+		classAttr="text"
+		title=""/>
+	</field>
+    </envelope>
+    <envelope name="Registered">
+	<source>${envelope_root}/registered_envelope/envelope.html</source>
+	<TEName name="postx"/>
+	<encoding name="ISO-8859-1"/>
+	<script
+	    useScript="true"/>
+	<sso
+	    enable="false"/>
+	<forms
+	    useGetForGPT="true"/>
+	<passphrase
+	    usePassphrase="true"/>
+	<info
+	    showSenderAuth="true"
+	    showSensitivity="true"/>
+	<buttons
+	    open="true"
+	    save="false"
+	    openOnline="true"/>
+	<checkboxes
+	    openOffline="false"
+	    rememberUserKey="false"
+	    rememberEnvelopeKey="false"
+	    rememberMe="true"
+	    enablePSP="true"
+	    autoOpen="false"/>
+	<links
+	    company="${__if companyURL}${companyURL}${__else}${keyServerScheme}://${keyServerHost}${__endif}"
+	    help="${__if helpURL}${helpURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=RegEnvelope${__endif}"
+	    notListed="${__if notListedURL}${notListedURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=AddrNotShown${__endif}"
+	    forgotPassword="${__if forgotPasswordURL}${forgotPasswordURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/pswdForgot.action${__endif}"
+	    passphraseNotShown="${__if passphraseNotShownURL}${passphraseNotShownURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=PPNotShown${__endif}"/>
+	<key
+	    fieldSeparator="^"
+	    caseSensitive="true"/>
+	<addresses
+	    mobile="mobile@res.cisco.com"/>
+	<graphic name="Help">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/help.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgHelp|html}</alt>
+	    <anchor
+		href="${helpURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="Logo">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/customer-logo.gif?f=1</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgLogo|html}</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="BCEInfo">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/images/bce/appInfo.gif?lp=${+defaultLocale}</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgBCEInfo|html}</alt>
+	    <anchor
+		href="${+graphicURL}/websafe/BCEDownloadLink?logoLink=${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="AndroidBCEInfo">
+		<source></source>
+		<link>${+graphicURL}/websafe/BCEDownloadLink/Android?logoLink=${companyURL}</link>
+		<cache>true</cache>
+		<explode>false</explode>
+		<size></size>
+		<alt></alt>
+		<anchor
+				href=""
+				name=""
+				newWindow="true"
+				id=""
+				classAttr=""
+				title=""/>
+	</graphic>
+	<graphic name="IOSBCEInfo">
+		<source></source>
+		<link>${+graphicURL}/websafe/BCEDownloadLink/iOS?logoLink=${companyURL}</link>
+		<cache>true</cache>
+		<explode>false</explode>
+		<size></size>
+		<alt></alt>
+		<anchor
+				href=""
+				name=""
+				newWindow="true"
+				id=""
+				classAttr=""
+				title=""/>
+	</graphic>
+	<graphic name="Postmark">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/postmark.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgPostmark|html}</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="PostmarkLeft">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/postmarkLeft.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>Ironport Email Encryption</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="Provider">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/CRES.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>Ironport Email Encryption</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="FlapCorner">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/images/flap_corner.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgFlapCorner|html}</alt>
+	    <anchor
+		href=""
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<field name="Password" position="l">
+	    <title id="text_i18n.authframe.safr.field.password" classAttr="text">
+		${i18n.authframe.safr.field.password|html}
+	    </title>
+	    <entry
+		size="20"
+		maxLen="127"
+		obscure="true"
+		id="passwordInput1"
+		classAttr="text"
+		title=""/>
+	</field>
+    </envelope>
+    <envelope name="CRES">
+	<source>${envelope_root}/cres_envelope/envelope.html</source>
+	<TEName name="postx"/>
+	<encoding name="ISO-8859-1"/>
+	<script
+	    useScript="true"/>
+	<sso
+	    enable="false"/>
+	<forms
+	    useGetForGPT="true"/>
+	<passphrase
+	    usePassphrase="true"/>
+	<info
+	    showSenderAuth="true"
+	    showSensitivity="true"/>
+	<buttons
+	    open="true"
+	    save="false"
+	    openOnline="true"/>
+	<checkboxes
+	    openOffline="false"
+	    rememberUserKey="false"
+	    rememberEnvelopeKey="false"
+	    rememberMe="true"
+	    enablePSP="true"
+	    autoOpen="false"/>
+	<links
+	    company="${__if companyURL}${companyURL}${__else}${keyServerScheme}://${keyServerHost}${__endif}"
+	    help="${__if helpURL}${helpURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=RegEnvelope${__endif}"
+	    notListed="${__if notListedURL}${notListedURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=AddrNotShown${__endif}"
+	    forgotPassword="${__if forgotPasswordURL}${forgotPasswordURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/pswdForgot.action${__endif}"
+	    passphraseNotShown="${__if passphraseNotShownURL}${passphraseNotShownURL}${__else}${keyServerScheme}://${keyServerHost}/websafe/help?topic=PPNotShown${__endif}"/>
+	<key
+	    fieldSeparator="^"
+	    caseSensitive="true"/>
+	<addresses
+	    mobile="mobile@res.cisco.com"/>
+	<graphic name="Help">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/help.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgHelp|html}</alt>
+	    <anchor
+		href="${helpURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="Logo">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/customer-logo.gif?f=1</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgLogo|html}</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="BCEInfo">
+	    <source></source>
+	    <link>https://res.cisco.com/websafe/images/bce/appInfo.gif?lp=${+defaultLocale}</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgBCEInfo|html}</alt>
+	    <anchor
+		href="https://res.cisco.com/websafe/BCEDownloadLink?logoLink=${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="AndroidBCEInfo">
+		<source></source>
+		<link>${+graphicURL}/websafe/BCEDownloadLink/Android?logoLink=${companyURL}</link>
+		<cache>true</cache>
+		<explode>false</explode>
+		<size></size>
+		<alt></alt>
+		<anchor
+				href=""
+				name=""
+				newWindow="true"
+				id=""
+				classAttr=""
+				title=""/>
+	</graphic>
+	<graphic name="IOSBCEInfo">
+		<source></source>
+		<link>${+graphicURL}/websafe/BCEDownloadLink/iOS?logoLink=${companyURL}</link>
+		<cache>true</cache>
+		<explode>false</explode>
+		<size></size>
+		<alt></alt>
+		<anchor
+				href=""
+				name=""
+				newWindow="true"
+				id=""
+				classAttr=""
+				title=""/>
+	</graphic>
+	<graphic name="Postmark">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/postmark.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgPostmark|html}</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="PostmarkLeft">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/postmarkLeft.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgPostmark|html}</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="Provider">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/logo/${+resourceHash}/branding/CRES.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgProvider|html}</alt>
+	    <anchor
+		href="${companyURL}"
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<graphic name="FlapCorner">
+	    <source></source>
+	    <link>${+graphicURL}/websafe/images/flap_corner.gif</link>
+	    <cache>true</cache>
+	    <explode>false</explode>
+	    <size></size>
+	    <alt>${+altImgFlapCorner|html}</alt>
+	    <anchor
+		href=""
+		name=""
+		newWindow="true"
+		id=""
+		classAttr=""
+		title=""/>
+	</graphic>
+	<field name="Password" position="l">
+	    <title id="text_i18n.authframe.safr.field.password" classAttr="text">
+		${i18n.authframe.safr.field.password|html}
+	    </title>
+	    <entry
+		size="20"
+		maxLen="127"
+		obscure="true"
+		id="passwordInput1"
+		classAttr="text"
+		title=""/>
+	</field>
+    </envelope>
+</envelopes>

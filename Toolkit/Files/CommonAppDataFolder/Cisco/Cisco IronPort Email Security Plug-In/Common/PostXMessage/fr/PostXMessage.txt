@@ -1,0 +1,11 @@
+Vous avez reçu un message sécurisé
+
+Ouvrez la pièce jointe, ${AttachmentName}, pour lire votre message sécurisé.
+Vous êtes invité à ouvrir (afficher) le fichier ou à l'enregistrer (télécharger) sur votre ordinateur. Pour obtenir des résultats optimaux, enregistrez d'abord le fichier, puis ouvrez-le dans un navigateur Web. Pour un accès à partir d'un appareil mobile, transférez ce message à ${MOBILE_EMAIL} en vue de recevoir une URL de connexion mobile.
+
+Si vous avez des questions concernant la validité de ce message, contactez directement l'expéditeur.
+
+Si vous êtes un nouvel utilisateur, vous devrez vous inscrire après avoir ouvert la pièce jointe. Pour plus d'informations, cliquez sur le lien Aide suivant.
+Aide - ${HTTPS_URL}/websafe/help?topic=RegEnvelope
+À propos de ${FULL_SERVICE_NAME} - ${HTTPS_URL}/websafe/about 
+

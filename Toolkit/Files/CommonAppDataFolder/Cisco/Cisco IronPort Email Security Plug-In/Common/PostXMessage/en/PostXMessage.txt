@@ -1,0 +1,14 @@
+You have received a secure message
+
+Read your secure message by opening the attachment, ${AttachmentName}.
+You will be prompted to open (view) the file or save (download) it to
+your computer. For best results, save the file first, then open it in a
+Web browser. For access from a mobile device, forward this message to
+${MOBILE_EMAIL} to receive a mobile login URL.
+
+If you have concerns about the validity of this message, contact the sender directly.
+
+First time users - need to register after opening the attachment. For more
+information, see the following Help link.
+Help - ${HTTPS_URL}/websafe/help?topic=RegEnvelope
+About ${FULL_SERVICE_NAME} - ${HTTPS_URL}/websafe/about 

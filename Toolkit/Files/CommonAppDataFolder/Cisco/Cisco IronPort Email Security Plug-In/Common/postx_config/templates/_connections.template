@@ -1,0 +1,52 @@
+<proxies>
+	<httpConnection name="default">
+		<className>com.postx.comm.http.HttpConnectionApache</className>
+		<max_host_connections>5</max_host_connections>
+		<max_total_connections>5</max_total_connections>
+		<so_timeout>30000</so_timeout>
+		<connection_timeout>20000</connection_timeout>
+		<accept_untrusted_certificates>${accept_untrusted_certificates}</accept_untrusted_certificates>
+	</httpConnection>
+	<httpConnection name="Apache">
+		<className>com.postx.comm.http.HttpConnectionApache</className>
+		<max_host_connections>5</max_host_connections>
+		<max_total_connections>5</max_total_connections>
+		<so_timeout/>
+		<tcp_nodelay/>
+		<so_sndbuf/>
+		<so_rcvbuf/>
+		<so_linger/>
+		<connection_timeout/>
+		<stale_connection_check/>
+		<accept_untrusted_certificates/>
+	</httpConnection>
+	<httpConnection name="TinySSL">
+		<className>com.postx.comm.http.HttpConnectionTinySSL</className>
+		<so_keepalive/>
+		<oobinline/>
+		<so_rcvbuf/>
+		<so_reuseaddr/>
+		<so_sndbuf/>
+		<so_linger/>
+		<so_timeout/>
+		<tcp_nodelay/>
+		<connection_timeout/>
+		<accept_untrusted_certificates/>
+	</httpConnection>
+	<httpConnection name="Java">
+		<className>com.postx.comm.http.HttpConnectionJava</className>
+		<so_keepalive/>
+		<oobinline/>
+		<so_rcvbuf/>
+		<so_reuseaddr/>
+		<so_sndbuf/>
+		<so_linger/>
+		<so_timeout/>
+		<tcp_nodelay/>
+		<connection_timeout/>
+		<accept_untrusted_certificates/>
+		<!-- Comma separated list of TLS protocols - see Java SSL documentation and Java SSLSocket setEnabledProtocols for more information -->
+        <enabledProtocols>TLSv1</enabledProtocols>
+	</httpConnection>
+${config}
+</proxies>

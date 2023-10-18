@@ -1,0 +1,15 @@
+	<graphic name="${Name}">
+	    <source>${source}</source>
+	    <link>${link}</link>
+	    <cache>${cache}</cache>
+	    <explode>${explode}</explode>
+	    <size>${size}</size>
+	    <alt>${altText}</alt>
+	    <anchor
+		href="${anchorHref}"
+		name="${anchorName}"
+		newWindow="${anchorNewWindow}"
+		id="${anchorID}"
+		classAttr="${anchorClass}"
+		title="${anchorTitle}"/>
+	</graphic>

@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings language="英文">
+  <group name="Diagnostic">
+    <string id="windowTitle">Cisco Email Security Plug-In 诊断</string>
+    <string id="inProgressMessage">进行中...</string>
+    <string id="goToReportButton">转到报告</string>
+    <string id="okButton">确定</string>
+    <string id="cancelButton">取消</string>
+    <string id="resultMessage">诊断数据已保存至 {0}。您现在可以将这些数据发送给系统管理员或 Cisco Email Security Plug-In 联系人。</string>
+    <string id="errorMessage">诊断过程中出现错误：
+{0}</string>
+    <string id="messageBoxTitle">Cisco Email Security Plug-In</string>
+  </group>
+  <group name="Core">
+    <string id="localizationReadingError">Cisco Email Security Plug-In 本地化文件初始化过程中出现错误。可本地化的元素已设为默认值。</string>
+    <string id="saveConfigError">保存 {0} 配置设置时出现错误。</string>
+    <string id="configFileNotFound">未找到 {0} 配置文件。设置已设为默认值。</string>
+    <string id="configReadingError">{0} 配置文件初始化过程中出现错误。某些设置已设为默认值。</string>
+    <string id="log4netXmlError">很抱歉，无法读取日志记录。已恢复为默认日志记录值。</string>
+    <string id="errorHelpNotFound">很抱歉， Cisco 文件夹中没有帮助文件。</string>
+    <string id="generalError">出现错误。
+如果此消息多次出现，请在“选项”窗口中启动诊断工具，或启动诊断工具独立应用程序</string>
+    <string id="logFilePathError">日志文件的路径不正确，无法保存</string>
+    <string id="noBuildForUpdate">您的计算机上已安装了 Cisco Email Security Plug-In 的最新版本。</string>
+    <string id="applyBCE">该邮件包含安全附件，其中有适用于“{0}”的设置
+是否应用这些设置？</string>
+    <string id="BCEHasWrongStructure">BCE 配置文件格式不正确。详情请查看日志文件。</string>
+    <string id="BceHasInvalidValues">BCE 配置文件包含无效的值。详情请查看日志文件。</string>
+    <string id="ErrorDuringBCEValidation">验证 BCE 配置文件时出现错误。</string>
+    <string id="errorConfigLoad">{0} 配置文件初始化过程中出现错误。某些设置已设为默认值。</string>
+    <string id="cannotGenerateNewPath">无法为配置文件生成新路径。配置不会被保存。</string>
+    <string id="errorCode">错误代码：{0}</string>
+  </group>
+  <group name="Core.Dialog">
+    <string id="dialogCaption">Cisco Email Security Plug-In</string>
+    <string id="OKButton">确定</string>
+    <string id="applyButton">应用</string>
+    <string id="cancelButton">取消</string>
+    <string id="yesButton">是</string>
+    <string id="noButton">否</string>
+    <string id="applyCommonSettings">应用通用插件设置</string>
+    <string id="showDetailsButton">详细信息</string>
+    <string id="dontShowCheckboxCaption">不再显示此消息。</string>
+    <string id="logFileOpenDialogCaption">选择日志文件</string>
+    <string id="enableButton">启用</string>
+    <string id="optionsTabCaption">Cisco Email Security</string>
+    <string id="pluginOptionsCaption">插件选项</string>
+    <string id="pluginOptionsToolTip">打开“插件选项”对话框</string>
+    <string id="applyCommonSettingsToolTip">应用 BCE 中的通用插件设置</string>
+    <string id="dontShowCheckboxToolTip">阻止此消息再次显示</string>
+    <string id="showDetailsToolTip">显示此错误的详细信息</string>
+  </group>
+  <group name="Core.Options">
+    <string id="loggingGroupTitle">日志记录</string>
+    <string id="logFileLabel">日志文件名称：</string>
+    <string id="logLevelLabel">日志级别：</string>
+    <string id="diagnosticButton">运行诊断</string>
+    <string id="diagnosticOptionsElementName">诊断</string>
+    <string id="diagnosticOptionsElementDescription">诊断工具会收集与插件相关的所有信息</string>
+    <string id="helpButton">帮助</string>
+    <string id="aboutButton">关于</string>
+    <string id="extendedLogLevel">已扩展</string>
+    <string id="normalLogLevel">普通</string>
+    <string id="addExplorerToolbar">在主窗口中添加安全工具栏</string>
+    <string id="addInspectorToolbar">在邮件窗口中添加安全工具栏</string>
+    <string id="addContextMenu">在右键菜单中添加邮件报告选项</string>
+    <string id="reportingTabTitle">报告</string>
+    <string id="aboutButtonToolTip">打开“关于”对话框</string>
+    <string id="helpButtonToolTip">打开“帮助”</string>
+    <string id="languagesComboBoxToolTip">显示可用语言的列表并从中选择语言</string>
+    <string id="diagnosticOptionsButtonToolTip">运行诊断功能</string>
+    <string id="logingEnableChBxToolTip">启用日志记录</string>
+    <string id="selectLogButtonToolTip">浏览至日志文件所在的位置</string>
+    <string id="logLevelComboToolTip">选择日志级别</string>
+    <string id="additionalOptionsElementName">其他</string>
+    <string id="additionalOptionsElementDescription">您可以通过此设置配置其他插件选项</string>
+    <string id="additionalOptionsElementButton">其他选项...</string>
+    <string id="additionalOptionsWindowTitle">其他选项</string>
+    <string id="additionalOptionsButtonToolTip">打开“其他选项”对话框</string>
+    <string id="loggingTabName">日志记录</string>
+    <string id="usageDataTabName">发送使用情况数据</string>
+    <string id="loggingTabDescription">日志文件记录并列出所有发生过的活动</string>
+    <string id="usageDataTabDescription">是否要向 Cisco 发送匿名使用情况数据，帮助我们改善 Cisco Email Security Plug-In？</string>
+    <string id="enableLoggingChBx">启用日志记录</string>
+    <string id="enableUsageDataChBx">向 Cisco 发送匿名使用情况数据</string>
+    <string id="readMoreLink">了解更多</string>
+    <string id="usageDataEnableChBxToolTip">允许向 Cisco 发送匿名使用情况数据</string>
+    <string id="readMoreToolTip">打开使用情况数据详情</string>
+    <string id="privacyTabPage">隐私</string>
+    <string id="uuidLabel">标识符</string>
+    <string id="uuidDescriptionLabel">首次安装插件时生成的非永久标识符，用于关联多个使用情况报告，以跟踪一段时间内的使用情况。</string>
+    <string id="passLabel">通行短语</string>
+    <string id="passDescriptionLabel">如果按此按钮，已缓存的所有帐户的所有通行短语都会被删除。</string>
+    <string id="resetUuidButton">重置标识符</string>
+    <string id="clearPassButton">清除所有通行短语</string>
+    <string id="resetUuidButtonToolTip">重置标识符</string>
+    <string id="clearPassButtonToolTip">清除所有帐户的所有口通行短语</string>
+    <string id="uuidIsReset">您的标识符已重置。</string>
+    <string id="uuidIsNotReset">标识符重置失败。</string>
+    <string id="passIsCleared">已清除所有帐户的所有通行短语。</string>
+  </group>
+  <group name="Core.AboutBox">
+    <string id="firstTextPart">Cisco Email Security Plug-In
+版本：{0}
+最后更新时间：{1}</string>
+    <string id="secondTextPart">本产品包含加密功能，进口、出口、转让和使用受美国和所在国家/地区法律约束。交付 Cisco 加密产品并不意味着第三方有权进口、出口、分发或使用此加密功能。进口商、出口商、总代理商和用户均需遵守美国和所在国家/地区的法律。使用此产品即表示您同意遵守适用法律和法规。若您无法遵守美国和所在国家/地区的法律，请立即退还此产品。 
+
+如需约束 Cisco 加密产品的美国法律的汇总，请访问：
+http://tools.cisco.com/legal/export/pepd/Search.do</string>
+    <string id="thirdTextPart">警告：本计算机程序受版权法和国际条约保护。未经授权复制或分发本程序或本程序中的任何部分，可能会受到严厉的民事和刑事制裁，而且会在法律许可的范围内受到最大可能的起诉。
+	
+版权所有 © 2011—2016 思科系统公司和/或其附属公司。版权所有。</string>
+    <string id="helpLinkText">如需进一步帮助，请访问：</string>
+  </group>
+  <group name="Core.UpdateNotificationForm">
+    <string id="dialogBody">已推出新版本 ({0})</string>
+    <string id="whatsNewString">此版本的新功能：</string>
+    <string id="automaticallyCheckForUpdates">自动检查更新</string>
+    <string id="download">下载</string>
+    <string id="skipThisVersion">跳过此版本</string>
+    <string id="checkForUpdates">检查更新</string>
+    <string id="unableConnectToRemoteServer">无法连接远程服务器</string>
+    <string id="invalidJsonResponse">远程服务器未提供有效更新信息</string>
+    <string id="checkForUpdatesButtonToolTip">检查插件是否有新版本</string>
+    <string id="closeButtonToolTip">关闭此对话框</string>
+    <string id="automaticallyCheckBoxToolTip">启用自动检查更新</string>
+    <string id="downloadButtonToolTip">下载更新</string>
+    <string id="skipVersionButtonToolTip">跳过使用当前最新版本</string>
+    <string id="outlookVersionUnsupportedString">插件 {0} 不支持您的 Outlook 版本。
+您必须安装 {1} 或更高版本。</string>
+    <string id="windowsVersionUnsupportedString">插件 {0} 不支持您的 Windows 版本。
+您必须安装 {1} 或更高版本。</string>
+    <string id="outlookAndWindowsVersionUnsupportedString">插件 {0} 不支持您的 Windows 和 Outlook 版本。
+您必须分别安装 {1} 或更高版本，以及 {2} 或更高版本。</string>
+  </group>
+  <group name="Mso">
+    <string id="unableLoadPlugin">无法加载适用于 Outlook 的 Cisco Email Security Plug-In。</string>
+    <string id="errorShuttingDown">关闭适用于 Outlook 的 Cisco Email Security Plug-In 时出现错误。</string>
+    <string id="errorOracleConnector">Cisco Email Security Plug-In 不支持适用于 Outlook 的 Oracle 连接器。因此，此插件将被禁用。
+如果您不想再看到此信息，请卸载 Cisco Email Security Plug-In。</string>
+  </group>
+  <group name="Mso.Options">
+    <string id="restartToApplySettings">您必须重新启动 Outlook 以应用所做更改。</string>
+    <string id="tabTitle">Cisco Email Security</string>
+  </group>
+  <group name="Encrypt.Options">
+    <string id="flagHeaderLabel">Flag X-header 名称/值：</string>
+    <string id="subjectRadioLabel">Flag 主题文本</string>
+    <string id="flagHeaderRadioLabel">Flag X-header</string>
+    <string id="EncryptionCaption">Flag 加密</string>
+    <string id="flagHeaderLimitations">请注意，标头名称应以“x-”字符串开头。
+标头长度最少 4 个字符，最多 253 个字符。</string>
+    <string id="subjectToolTipText">${subject} 将替换为原始主题。</string>
+    <string id="flagSensitivityLabel">Flag 敏感性标头</string>
+    <string id="subjectRbToolTipText">使用主题文本标记邮件</string>
+    <string id="headerRbToolTipText">使用 x-header 标记邮件</string>
+    <string id="sensitivityRbToolTipText">使用敏感性标头标记邮件</string>
+  </group>
+  <group name="Report.Dialogs">
+    <string id="progressCaption">Cisco Email Security Plug-In</string>
+    <string id="progressLabel">正在报告第 {0} 封邮件（共 {1} 封）...</string>
+    <string id="blockSenderMultipleError">您一次只能选择一封邮件以屏蔽发件人。</string>
+    <string id="reportSuccessOne">报告已生成并已提交给 Outlook 发送。</string>
+    <string id="reportSuccessMultiple">已生成 {0} 份报告并且这些报告已提交给 Outlook 发送。</string>
+    <string id="reportErrorOne">无法报告此邮件。</string>
+    <string id="reportErrorMultiple">无法报告 {0} 封邮件。</string>
+    <string id="reportSuccessAndErrorsMultiples">邮件总数：{0}
+成功报告的邮件数量：{1}
+无法报告的邮件数量：{2}</string>
+    <string id="invalidAddress">“{0}”报告类型的地址无效。请更新配置文件。</string>
+    <string id="reportNoHeaderErrorSingle">无法报告没有 Internet 邮件头的邮件。</string>
+    <string id="reportNoHeaderErrorMultiple">无法报告 {0} 封没有 Internet 邮件头的邮件。</string>
+    <string id="reportTooHugeErrorSingle">邮件过大。</string>
+    <string id="reportTooHugeErrorMultiple">{0} 封邮件过大。</string>
+    <string id="reportNotMailErrorSingle">所选项不是邮件。</string>
+    <string id="reportNotMailErrorMultiple">所选的 {0} 项不是邮件。</string>
+    <string id="reportGeneralError">请检查下列事项：
+- 确保 BCE 帐户设置正确无误。
+- 检查网络连接是否正常。
+- 确认与邮件服务器的连接正常。此连接可能会意外终止。
+- 验证防火墙软件配置正确。
+- 检查杀毒软件的设置是否正确。</string>
+  </group>
+  <group name="Report.Options">
+    <string id="reportingGroupTitle">垃圾邮件和威胁报告</string>
+    <string id="keepReportsLabel">保存已发送报告的副本</string>
+    <string id="showReportSuccessOneLabel">成功报告邮件时显示通知</string>
+    <string id="showReportSuccessMultipleLabel">成功报告多封邮件时显示通知</string>
+    <string id="optionsElementName">报告</string>
+    <string id="optionsElementDescription">您可以通过报告功能向 Cisco 系统提交有关未经收件人许可的邮件或威胁邮件的反馈</string>
+    <string id="optionsElementButton">报告选项...</string>
+    <string id="optionsWindowTitle">报告选项</string>
+    <string id="topPanelText">系统已列出您的 Outlook 帐户。您可以为每个帐户应用不同的报告选项。</string>
+    <string id="topPanelHeaderText">报告帐户</string>
+    <string id="encryptConfigButtonText">选项...</string>
+    <string id="addressColumnHeaderText">帐户地址</string>
+    <string id="reportingOptionsTitle">报告选项 - {0}</string>
+  </group>
+  <group name="Mso.Report">
+    <string id="contextMenuCaption">标记为...</string>
+    <string id="restartOutlook">请重新启动 Outlook。
+您似乎添加了一个 Outlook 帐户。如果不重新启动 Outlook，适用于 Outlook 的 Cisco Email Security Spam Plug-In 可能无法正常工作。</string>
+  </group>
+  <group name="Mso.Report.Button.Cations">
+    <string id="blockSender">屏蔽发件人</string>
+    <string id="spam">垃圾邮件</string>
+    <string id="ham">非垃圾邮件</string>
+    <string id="virus">病毒</string>
+    <string id="phish">网络钓鱼</string>
+    <string id="marketing">营销邮件</string>
+  </group>
+  <group name="Mso.Report.Button.ToolTips">
+    <string id="blockSender">将此发件人添加到您的发件人屏蔽名单</string>
+    <string id="spam">将邮件报告为垃圾邮件</string>
+    <string id="ham">将邮件报告为非垃圾邮件</string>
+    <string id="virus">将邮件报告为病毒</string>
+    <string id="phish">将邮件报告为网络钓鱼尝试</string>
+    <string id="marketing">将邮件报告为营销邮件</string>
+  </group>
+  <group name="Mso.Report.Button.Ribbons">
+    <string id="spamGroup">Cisco Email Security</string>
+  </group>
+  <group name="Encryption.Options">
+    <string id="deEnabled">启用加密</string>
+    <string id="optionsElementName">加密</string>
+    <string id="optionsElementDescription">利用加密功能，您可以发送使用 Cisco 加密技术的加密邮件</string>
+    <string id="optionsElementButton">加密选项...</string>
+    <string id="optionsWindowTitle">加密选项</string>
+    <string id="serverUrl">服务器 URL</string>
+    <string id="tokenFileName">令牌文件名</string>
+    <string id="defaultExpiricyDays">默认到期期限（天）</string>
+    <string id="defaultReadByDays">默认阅读期限（天）</string>
+    <string id="cachePassword">记住通行短语</string>
+    <string id="showEncryptDialog">在邮件加密期间显示对话框</string>
+    <string id="generalTab">常规</string>
+    <string id="connectionTab">连接</string>
+    <string id="useSystemProxy">使用系统代理设置</string>
+    <string id="noProxy">无代理</string>
+    <string id="manualProxy">手动配置代理：</string>
+    <string id="protocol">协议</string>
+    <string id="httpProtocol">HTTP</string>
+    <string id="socks4Protocol">SOCKS4</string>
+    <string id="socks4aProtocol">SOCKS4a</string>
+    <string id="socks5Protocol">SOCKS5</string>
+    <string id="host">主机</string>
+    <string id="port">端口</string>
+    <string id="username">用户名</string>
+    <string id="password">通行短语</string>
+    <string id="emptyFieldsError">主机和端口字段不能为空</string>
+    <string id="wrongAttachmentNameError">信封附件名称不能为空并且必须包含有效文件名字符。</string>
+    <string id="emptyTextFieldError">选项 {0} 不能为空。</string>
+    <string id="encryptByDefaultCheckBox">默认情况下加密</string>
+    <string id="attachmentNameLabel">附件名称</string>
+    <string id="sensitivityLabel">邮件安全级别</string>
+    <string id="sendReturnReceipCheckBox">发送回执</string>
+    <string id="unsecureServerUrlLabel">未受安全保护的服务器 URL</string>
+    <string id="connectTimeoutLabel">连接超时（毫秒）</string>
+    <string id="socketTimeoutLabel">套接字超时 (毫秒)</string>
+    <string id="dispRemMeCheckBox">显示“记住我”</string>
+    <string id="dispAutoOpenCheckBox">显示“自动打开”</string>
+    <string id="addMessageBarCheckBox">添加邮件栏</string>
+    <string id="showReplyToAllCheckBox">在邮件栏中显示“回复全部”按钮</string>
+    <string id="openInSameWindCheckBox">在同一个窗口中打开</string>
+    <string id="dispOpenOfflineCheckBox">显示“离线打开”复选框</string>
+    <string id="dispRemEnvKeyCheckBox">显示“记住信封密钥”</string>
+    <string id="dispEnablePSPCheckBox">显示“启用个人安全口令”</string>
+    <string id="showReplyCheckBox">在邮件栏中显示“回复”按钮</string>
+    <string id="showForwardCheckBox">在邮件栏中显示“转发”按钮</string>
+    <string id="suppresAppletCheckBox">阻止打开小程序</string>
+    <string id="topPanelText">系统已列出您的 Outlook 帐户。您可以为每个帐户应用不同的加密选项。</string>
+    <string id="topPanelHeaderText">加密帐户</string>
+    <string id="encryptConfigButtonText">选项...</string>
+    <string id="addressColumnHeaderText">加密帐户地址</string>
+    <string id="typeColumnHeaderText">类型</string>
+    <string id="keyServerColumnHeaderText">密钥服务器</string>
+    <string id="encryptionOptionsTitle">加密选项 - {0}</string>
+    <string id="passCacheNeverText">从不</string>
+    <string id="passCacheDurLabelText">分钟</string>
+    <string id="passCacheAlwaysText">始终</string>
+    <string id="advancedTab">高级</string>
+    <string id="passCacheDurToolTip">介于 {0} 分钟（含）到 {1} 分钟（含）之间</string>
+    <string id="usageReminderCheckBox">显示加密使用情况提醒</string>
+    <string id="defaultKeyServerCheckBox">用作默认加密帐户</string>
+    <string id="makeThisAccountDefaultQuestion">Fidelity 是目前的默认加密帐户。是否将此帐户设为默认帐？</string>
+    <string id="alwaysUseMessageBodyFromKeyServer">始终使用来自密钥服务器的邮件正文</string>
+    <string id="defaultLanguageForOutgoingMessages">外发邮件的默认语言</string>
+    <string id="turnOffLocalizedEnvelopesAlert">如果关闭此功能，您将使用来自插件的邮件正文
+模板列表，此列表与密钥服务器的列表有所不同</string>
+	<string id="useKeyServerDefault">使用默认密钥服务器</string>
+  </group>
+  <group name="DE.DecryptPassFormStrings">
+    <string id="windowTitle">输入通行短语</string>
+    <string id="SensitivityLowDesc">邮件会以安全方式传输，但不需要使用通行短语。</string>
+    <string id="FlagDesc">该邮件将被标记且不需要使用通行短语。</string>
+    <string id="SensitivityHighDesc">根据为此邮件设置的安全级别，此邮件始终需要使用通行短语。</string>
+    <string id="SensitivityMedium">中</string>
+    <string id="SensitivityLow">低</string>
+    <string id="SensitivityHigh">高</string>
+    <string id="address">邮件地址*</string>
+    <string id="password">通行短语*</string>
+    <string id="AcknowledgeButton">确认</string>
+    <string id="RegisterButton">注册</string>
+    <string id="messageSecurity">邮件安全级别：{0}</string>
+    <string id="requiredLegend">* - 必填</string>
+    <string id="rememberPassword">记住通行短语</string>
+    <string id="accountDoesNotExist">请指定或输入适当的邮件帐户。</string>
+    <string id="addressComboBoxToolTip">选择一个帐户</string>
+    <string id="passwordTextBoxToolTip">所选帐户的通行短语</string>
+    <string id="remPassCheckBoxToolTip">记住帐户通行短语</string>
+    <string id="decryptionMessage">请稍候。</string>
+	<string id="addressIsNotListed">地址未列入列表</string>
+  </group>
+  <group name="DE.SendOnlineFormStrings">
+    <string id="windowTitle">安全信封选项</string>
+    <string id="defaultExpiricyTime">到期日期</string>
+    <string id="requestReadReceipt">请求解密通知</string>
+    <string id="bodyMessageLabel">Cisco 安全信封的收件人会在打开信封时看到以下消息</string>
+    <string id="hideEncryptDialog">下次不再显示此对话框</string>
+    <string id="sendButton">发送</string>
+    <string id="hideEncryptDialogToolTip">阻止此对话框再次显示</string>
+    <string id="sendButtonToolTip">发送加密邮件</string>
+    <string id="locEnvBodyMessageLabel">收件人将会收到与他们在密钥服务器上所选的语言对应的邮件正文。原始邮件可能与此模板不同</string>
+  </group>
+  <group name="DE.EncryptionProcessFormStrings">
+    <string id="message">正在进行加密。请稍候。</string>
+  </group>
+  <group name="DE.PostXErrorCodesStrings">
+    <string id="GeneralEncryptError">加密期间出现错误。</string>
+    <string id="GeneralDecryptError">解密期间出现错误。</string>
+    <string id="SystemError">系统故障。</string>
+    <string id="Unimplemented">功能未执行。</string>
+    <string id="Failed">守护程序命令失败。</string>
+    <string id="BadEnvelopeConfigFile">信封配置文件有误。</string>
+    <string id="BadConfig">加密过程中出现错误：发现无效的 SDK 配置。</string>
+    <string id="HttpFailureUnknown">连接服务器时出现 HTTP 错误。</string>
+    <string id="HttpFailureDns">连接服务器时出现 HTTP 错误：无法解析 DNS 名称。</string>
+    <string id="HttpFailureOpen">连接服务器时出现 HTTP 错误：无法建立 IP 连接。</string>
+    <string id="HttpFailureTlsOpen">连接服务器时出现 HTTP 错误：无法协商 TLS 连接。</string>
+    <string id="HttpFailureRequest">连接服务器时出现 HTTP 错误：发生请求时出现错误。</string>
+    <string id="HttpFailureResponse">连接服务器时出现 HTTP 错误：读取回应时出现错误。</string>
+    <string id="HttpFailureTlsClose">连接服务器时出现 HTTP 错误：无法中断 TLS 连接。</string>
+    <string id="HttpFailureClose">连接服务器时出现 HTTP 错误：无法关闭套接字。</string>
+    <string id="MaxMemoryReached">内存已达到上限。</string>
+    <string id="OutOfMemory">内存不足异常。</string>
+    <string id="NoRecipients">加密期间出现错误：未指定收件人。</string>
+    <string id="BadRcpt">加密期间出现错误：RCPT 字段指定的邮件无效。</string>
+    <string id="BadTo">加密期间出现错误：“收件人”字段指定的邮件无效。</string>
+    <string id="BadCc">加密期间出现错误：CC 字段指定的邮件无效。</string>
+    <string id="BadBcc">加密期间出现错误：BCC 字段指定的邮件无效。</string>
+    <string id="BadFrom">加密期间出现错误：“发件人”字段指定的邮件无效。</string>
+    <string id="BadPropertyFile">加密期间出现错误：指定的信封生成器属性文件无效。</string>
+    <string id="UuidFailed">加密期间出现错误：无法创建唯一标识符。</string>
+    <string id="BuildFailure">加密期间出现错误：无法生成信封。</string>
+    <string id="badAttachments">加密期间出现错误：发现无效的附件。</string>
+    <string id="BadReplyUrl">加密期间出现错误：指定的回复 URL 无效。</string>
+    <string id="BadRegister">加密期间出现错误：指定的注册 URL 无效。</string>
+    <string id="BadToken">加密期间出现错误：指定的令牌无效。</string>
+    <string id="BadMimemessage">加密期间出现错误：MIME 消息有误。</string>
+    <string id="BadShaedKey">加密期间出现错误：指定的加密通行短语有误。</string>
+    <string id="UnknownAlgorithm">加密期间出现错误：指定了未知演算法。</string>
+    <string id="BadReplyto">加密期间出现错误：“回复至”字段指定的邮件无效。</string>
+    <string id="EncryptionFailure">加密期间出现错误：有一个加密失败。</string>
+    <string id="KeyserverUnreachable">加密期间出现错误：无法访问密匙服务器。</string>
+    <string id="BadPassword">您输入的通行短语不正确。</string>
+    <string id="MalformedRequest">无法打开信封 - 发送给服务器的请求格式不正确。</string>
+    <string id="ServerError">无法打开信封 - 内部服务器错误。</string>
+    <string id="Expired">此邮件已到期，因此无法解密。请与发件人联系了解详情。</string>
+    <string id="PermanentLocked">信封已被管理员永久锁定。</string>
+    <string id="TemporaryLocked">信封被暂时锁定，无法打开。</string>
+    <string id="NoRecordFound">未找到指定信封的密匙服务器记录。</string>
+    <string id="NoLoginSession">无登录会话处于活动状态。</string>
+    <string id="FailedToUpdateDb">无法更新密钥库数据库。</string>
+    <string id="NotRegistered">只有在打开第一个安全信封完成注册后，此功能才可用。</string>
+    <string id="NotRegisteredRegisterLink">只有在完成注册后，此功能才可用。请点击{0}此处{1}进行注册。</string>
+	<string id="AuthenticationFailed">密钥服务器无法对身份验证所用的令牌进行验证。</string>
+    <string id="AccesscheckFailed">检查密钥服务器访问权限失败。</string>
+    <string id="ExceedMaxFailedOpens">打开尝试失败次数过多。</string>
+    <string id="RecipientNotSentEnvelope">此信封未发送给此收件人。</string>
+    <string id="RecipientSuspended">您的帐户已被暂停。</string>
+	<string id="RecipientSuspendedWithTime">您的帐户已挂起。请在 {0} 分钟后重试。</string>
+    <string id="RecipientNotActivated">收件人的用户帐户未激活。</string>
+    <string id="EnvelopeLocked">信封已被服务器锁定。</string>
+    <string id="RecipientNotIdentified">无法识别收件人。</string>
+    <string id="InvalidSession">会话已到期。请重新打开邮件。</string>
+    <string id="PollFailed">轮询失败。</string>
+    <string id="RecipientBlocked">收件人用户帐户被屏蔽。</string>
+    <string id="RecipientLocked">您的帐户已被锁定。请与您的管理员联系，了解更多信息。</string>
+    <string id="PasswordExpired">口令已到期。要重置口令，请通过 websafe 登录。</string>
+    <string id="InsufficientSecurity">邮件安全级别太低。</string>
+    <string id="ExceedMaximumSecurity">邮件安全级别超过了允许的最高级别。</string>
+    <string id="InvalidFrom">“发件人”地址无效。</string>
+    <string id="InvalidRecipient">“收件人”地址无效。</string>
+    <string id="RequestAborted">请求已被取消。</string>
+    <string id="DuplicateMessageId">邮件 ID 已存在。</string>
+	<string id="InMaintenance">由于维护，服务器当前不可用。请稍后重试。</string>
+    <string id="InvalidStatusMessage">状态信息无效。</string>
+    <string id="InvalidVersion">版本无效。</string>
+    <string id="SsoLogin">无法打开信封 - 需要单点登录。</string>
+    <string id="LocalLogin">无法打开信封 - 需要登录。</string>
+    <string id="SsoError">无法打开信封 - 单点登录失败。</string>
+    <string id="VerifyInvalidSignature">签名验证失败。</string>
+    <string id="VerifyInvalidParameters">BCE 配置的某些参数无效。</string>
+    <string id="VerifyRequestFailed">签名验证请求失败。</string>
+    <string id="BadOfflinePassword">指定的离线通行短语无效。</string>
+    <string id="UpdateFailed">指定的离线通行短语无效。</string>
+    <string id="NoPassword">未指定用户。</string>
+    <string id="TokenCorrupted">您的令牌已损坏。</string>
+    <string id="locked">此邮件已被锁定，因此无法解密。</string>
+    <string id="lockedReason">锁定原因：{0}</string>
+    <string id="aboveLimitEncryptionError">此邮件超过了规定的限制，因此无法加密。</string>
+    <string id="aboveLimitDecryptionError">此邮件超过了规定的限制，因此无法解密。</string>
+    <string id="javaIsMissing">在您的系统中未找到 Java Runtime Environment。请运行插件安全程序或手动安装 JRE。</string>
+    <string id="javaIsMissingForEncryptionFunctionality">请安装 Java 运行时环境来加密、解密或管理安全邮件。</string>
+	<string id="pastExpirationDay">您选择的到期日期已过。请选择有效日期。</string>
+    <string id="pastReadByDay">您选择的“阅读期限”时间已过。请选择有效日期。</string>
+    <string id="accountBlockedForgetLink">您的帐户已被锁定，您必须重置通行短语。请使用“忘记通行短语”链接重新激活您的帐户。{0}忘记通行短语？{1}</string>
+    <string id="accountBlocked">由于通行短语尝试失败次数过多，您的帐户已被锁定。</string>
+    <string id="lockedEnvelope">信封已被服务器锁定。</string>
+    <string id="errorDuringLoadingMessagesFromKeyServer">从密匙服务器加载邮件时出现错误。</string>
+    <string id="BadGateway">网关错误：代理服务器从上游服务器收到无效的回应。</string>
+    <string id="KeyserverIsNotReachable">连接密钥服务器时出现 HTTP 错误：无法访问远程主机。</string>
+    <string id="MessageIsExpired">原始邮件已到期。</string>
+    <string id="MessageIsLocked">原始邮件已被锁定。</string>
+  </group>
+  <group name="Encryption">
+    <string id="failedToValidateConfig">对帐户 {0} 的配置验证失败。请选择正确配置值，或与您的管理员联系。</string>
+    <string id="notValidEncryptionMethod">“解密”不是有效的加密方法。请考虑重新配置帐户</string>
+    <string id="decryptSettingsNotFound">找不到帐户的解密设置：</string>
+    <string id="disablingEncryptionForAccount">插件发生意外错误。正在禁用此帐户的加密功能。</string>
+    <string id="noAccountSettingsFound">由于未找到“{0}”帐户的设置，无法对邮件进行加密</string>
+    <string id="readByAvailable">您的服务器 {0} 的设置现已可启用已读通知。</string>
+    <string id="readByEnabled">您的服务器 {0} 已启用已读通知</string>
+    <string id="readByDisabled">您的服务器 {0} 已禁用已读通知</string>
+    <string id="BCEApplied">“{0}”已成功应用新更改</string>
+    <string id="BCEFailed">无法应用新设置。请验证附件具备有效签名。</string>
+    <string id="BCEInvalid">BCE 配置文件无效。
+请与管理员联系。</string>
+    <string id="mismatchUrls">BCE 配置应由适当的密钥服务器发送</string>
+    <string id="subjectLengthExceeded">邮件主题超过长度上限。请删除 {0} 个字符{1}。</string>
+    <string id="emailIsNotPresentInSentFolder">无法在此对话框中打开邮件，因为帐户的“已发送内容”文件夹中没有此邮件，或邮件同步尚未完成。</string>
+  </group>
+  <group name="DE.MailOptionsStrings">
+    <string id="windowTitle">加密邮件选项</string>
+    <string id="replyOptions">回复选项</string>
+    <string id="allowReply">允许回复</string>
+    <string id="allowReplyAll">允许全部回复</string>
+    <string id="allowForward">允许转发</string>
+    <string id="expirationLbl">有效期</string>
+    <string id="readByLbl">阅读期限</string>
+    <string id="OptionHiddenWarn">所有邮件加密选项已被您的管理员隐藏。</string>
+  </group>
+  <group name="DE.MsmStrings">
+    <string id="windowTitle">管理安全邮件</string>
+    <string id="changeSettings">更改设置</string>
+    <string id="LockChBxTitle">锁定所选邮件</string>
+    <string id="LockChBxTitleForSeveralMessages">锁定所选邮件</string>
+    <string id="lockReasonToolTip">所选邮件被锁定的原因</string>
+    <string id="lockReasonToolTipForSeveralMessages">所选邮件被锁定的原因</string>
+    <string id="ExpireChbxTitle">到期</string>
+    <string id="OKBtn">确定</string>
+    <string id="CancelBtn">取消</string>
+    <string id="ApplylBtn">应用</string>
+    <string id="ToHeaderTitle">收件人</string>
+    <string id="SubjectHeaderTitle">主题</string>
+    <string id="SentHeaderTitle">已发送</string>
+    <string id="ExpiresHeaderTitle">到期</string>
+    <string id="LockedHeaderTitle">已锁定</string>
+    <string id="LockedStr">True</string>
+    <string id="UnLockedStr">False</string>
+  </group>
+  <group name="DE.ManageMessagesStrings">
+    <string id="windowTitle">管理邮件</string>
+    <string id="showLblTitle">显示：</string>
+    <string id="selectedRbtnTitle">已选</string>
+    <string id="refreshBtnToolTipHeader">刷新</string>
+    <string id="refreshBtnToolTipBody">用新条目更新邮件列表。</string>
+    <string id="basicSearchTextBoxText">输入内容进行搜索</string>
+    <string id="advancedSearchExpanderTitle">高级搜索</string>
+    <string id="basicSearchExpanderTitle">基本搜索</string>
+    <string id="keyword1TextBoxText">输入关键字进行搜索</string>
+    <string id="Keyword2TextBoxText">输入其他关键字进行搜索</string>
+    <string id="fromLblTitle">从</string>
+    <string id="inLblTitle">搜索范围</string>
+    <string id="statusLblTitle">状态</string>
+    <string id="failedAttemptsLblTitle">失败次数超过</string>
+    <string id="clearBtnTitle">清除所有搜索查询</string>
+    <string id="anyTitle">任何</string>
+    <string id="toTitle">收件人</string>
+    <string id="subjectTitle">主题</string>
+    <string id="lockedReasonTitle">已锁定</string>
+    <string id="allTitle">全部</string>
+    <string id="unopenedTitle">未打开</string>
+    <string id="openedTitle">已打开</string>
+    <string id="lockedTitle">已锁定</string>
+    <string id="expiredTitle">已到期</string>
+    <string id="sentTitle">已发送</string>
+    <string id="expiresTitle">到期</string>
+    <string id="fromOLTitle">在 Outlook 中</string>
+    <string id="currentPageString">第 {1} 页（共 {0} 页）</string>
+    <string id="mailsAmountStringForLoadingSingular">正在显示第 {0} - {1} 封邮件，共 {2} 封 [其他内容正在加载，最长需要等待约 {3} 分钟]。</string>
+    <string id="mailsAmountStringForLoadingPlural">正在显示第 {0} - {1} 封邮件，共 {2} 封 [其他内容正在加载，最长需要等待约 {3} 分钟]。</string>
+    <string id="mailsAmountString">正在显示第 {0} - {1} 封邮件，共 {2} 封。</string>
+	<string id="mailsLoadedDuringSecondRoundString">已加载所有邮件。要显示所有邮件，请点击对话框刷新图标。</string>
+    <string id="mailsAmountStringForFiltering">正在显示第 {0} - {1} 封邮件，共 {2} 封 [总共 {3} 封邮件]。</string>
+    <string id="lockTextBoxText">锁定原因</string>
+    <string id="lockChBxTitle">锁定</string>
+    <string id="expireChBxTitle">到期</string>
+    <string id="okBtn">确定</string>
+    <string id="cancelBtn">取消</string>
+    <string id="applylBtn">应用</string>
+    <string id="nextBtnToolTip">下一页</string>
+    <string id="lastBtnToolTip">末页</string>
+    <string id="previousBtnToolTip">上一页</string>
+    <string id="firstBtnToolTip">首页</string>
+    <string id="inOutlookToolTiptext">双击打开邮件</string>
+    <string id="perPageLabel">每页</string>
+    <string id="notificationLabel">剩余邮件正在后台加载。请注意：在所有邮件加载完毕之前，搜索和排序功能会被禁用。</string>
+    <string id="manageMessagesDialog">“管理邮件”对话框</string>
+    <string id="noMatchesFound">没有找到匹配项。</string>
+    <string id="noItemsToDisplay">没有可显示的内容。</string>
+    <string id="manageMessagesToolTip">打开“管理邮件”对话框</string>
+    <string id="refreshLabel">是否要刷新对话框以查看最新更改？请注意，所有未保存的更改都会在刷新后丢失。</string>
+  </group>
+  <group name="Mso.DE">
+    <string id="applyBCE">该邮件包含安全附件，其中有适用于“{0}”的设置
+是否应用这些设置？</string>
+    <string id="BCEApplied">“{0}”已成功应用新更改</string>
+    <string id="BCEFailed">无法应用新设置。请验证附件具备有效签名。</string>
+    <string id="sensitiveDataCleanFailed">无法彻底删除当前邮件的解密版本。
+这可能会造成敏感数据丢失。为防止数据丢失，请搜索您邮箱中新创建的邮件。在列表顶部找到已解密的邮件，并将其永久删除。</string>
+    <string id="decryptionGeneralFailure">此邮件无法使用 Cisco Email Security Plug-In 解密。请保存此邮件并使用您的浏览器将其打开。</string>
+    <string id="manageSecureMessageCaption">管理安全邮件...</string>
+    <string id="manageSecureMessagesCaption">管理安全邮件...</string>
+    <string id="unableToIdentifyOutgoingAcc">无法识别外发帐户。无法对此邮件进行加密。请尝试使用其他帐户或创建新邮件。</string>
+    <string id="accountIsNotConfigured">此邮件被配置为通过 {0} 发送。此帐户为配置加密功能。</string>
+    <string id="unableReadAccounts">出现严重错误。加密插件无法读取 Outlook 帐户。无法进行加密。</string>
+    <string id="saveMailQuestion">您要保存更改吗？</string>
+    <string id="sendNotAllowed">不允许更改此安全邮件的收件人。此邮件将发送给原始接收人。是否继续？</string>
+    <string id="wrongSender">只有收件人才能恢复或转发此邮件</string>
+    <string id="UsageReminder">请注意，加密应当只用于商业目的。</string>
+    <string id="featureIsNotSupported">您的密钥服务器不支持此功能</string>
+  </group>
+  <group name="Mso.DE.RibbonLabels">
+    <string id="EncryptRibbonGroup">Cisco Email Security</string>
+    <string id="SendEncryptButton">邮件加密</string>
+    <string id="OpenOptionsWindow">打开“加密邮件选项”对话框...</string>
+    <string id="ManageSecureMessagesButton">管理安全邮件...</string>
+    <string id="ManageSecureMessagesGroup">Cisco Email Security</string>
+  </group>
+  <group name="Mso.DE.RibbonScreentips">
+    <string id="SendEncryptButton">将邮件标记为需要加密。</string>
+    <string id="ManageSecureMessagesButton">打开“管理安全邮件”对话框。</string>
+  </group>
+  <group name="Mso.DE.RibbonSupertips">
+    <string id="SendEncryptButton">加密邮件将以安全方式发送</string>
+    <string id="ManageSecureMessagesButton">您可以在“管理安全邮件”对话框中更改到期日期，此日期由安全邮件的日期和其他相关选项共同决定。</string>
+  </group>
+  <group name="Mso.DE.Warnings">
+    <string id="sendNotAllowed">发件人已禁用此邮件的安全功能。</string>
+  </group>
+  <group name="Report.OptionToolTips">
+    <string id="reportConfigButtonToolTip">打开所选帐户的“报告选项”对话框</string>
+    <string id="keepReportsToolTip">保存已发送报告的副本</string>
+    <string id="showReportSuccessOneToolTip">成功报告邮件时显示通知</string>
+    <string id="showReportSuccessMultipleToolTip">成功报告多封邮件时显示通知</string>
+    <string id="reportEnableChBxToolTip">启用报告插件</string>
+    <string id="reportOptionsButtonToolTip">打开“报告选项”对话框</string>
+  </group>
+  <group name="Mso.Report.OptionToolTips">
+    <string id="addExplorerToolTip">在主窗口中添加安全工具栏</string>
+    <string id="addInspectorToolTip">在邮件窗口中添加安全工具栏</string>
+    <string id="addContextMenuToolTip">在右键菜单中添加邮件报告选项</string>
+  </group>
+  <group name="Encryption.OptionToolTips">
+    <string id="encryptConfigButtonToolTip">打开所选帐户的“加密选项”对话框</string>
+    <string id="encryptEnableChBxToolTip">启用加密插件</string>
+    <string id="encryptOptionsButtonToolTip">打开“加密选项”对话框</string>
+    <string id="useSystemProxyToolTipText">指定使用系统代理设置</string>
+    <string id="noProxyToolTipText">禁用代理设置</string>
+    <string id="manualProxyToolTipText">指定使用手动代理设置</string>
+    <string id="httpProtocolToolTipText">使用 HTTP 协议</string>
+    <string id="socks4ProtocolToolTipText">使用 SOCKS4 协议</string>
+    <string id="socks4aProtocolToolTipText">使用 SOCKS4a 协议</string>
+    <string id="socks5ProtocolToolTipText">使用 SOCKS5 协议</string>
+    <string id="hostToolTipText">设置代理主机名称</string>
+    <string id="portToolTipText">设置代理端口号</string>
+    <string id="usernameToolTipText">设置代理用户名</string>
+    <string id="passwordToolTipText">设置代理通行短语</string>
+    <string id="passCacheNeverToolTipText">从不缓存通行短语</string>
+    <string id="passCacheDurToolTipText">通行短语缓存指定时间</string>
+    <string id="passCacheAlwaysToolTipText">始终缓存通行短语</string>
+    <string id="serverUrlToolTipText">设置密钥服务器 URL</string>
+    <string id="tokenFileNameToolTipText">设置令牌文件名</string>
+    <string id="defaultExpiricyDaysToolTipText">设置默认到期间隔</string>
+    <string id="defaultReadByDaysToolTipText">设置默认阅读期限间隔</string>
+    <string id="encryptByDefaultToolTipText">指定在默认情况下对邮件进行加密</string>
+    <string id="attachmentNameToolTipText">设置附件名称</string>
+    <string id="sensitivityToolTipText">设置邮件安全级别</string>
+    <string id="sendReturnReceipToolTipText">要求解密通知</string>
+    <string id="showEncryptDialogToolTipText">在加密过程中显示“安全信封选项”对话框</string>
+    <string id="unsecureServerUrlToolTipText">设置未受安全保护的密钥服务器的 URL</string>
+    <string id="connectTimeoutToolTipText">设置连接超时时间</string>
+    <string id="socketTimeoutToolTipText">设置套接字超时时间</string>
+    <string id="dispRemMeToolTipText">显示“记住我”复选框</string>
+    <string id="dispAutoOpenToolTipText">显示“自动打开”复选框</string>
+    <string id="addMessageBarToolTipText">在信封中添加邮件栏</string>
+    <string id="showReplyToAllToolTipText">在信封的邮件栏中显示“回复全部”按钮</string>
+    <string id="openInSameWindToolTipText">在同一个窗口中打开邮件</string>
+    <string id="dispOpenOfflineToolTipText">在信封上显示“离线打开”复选框</string>
+    <string id="dispRemEnvKeyToolTipText">在信封上显示“记住信封密钥”复选框</string>
+    <string id="dispEnablePSPToolTipText">在信封上显示“启用个人安全口令”复选框</string>
+    <string id="showReplyToolTipText">在信封的邮件栏中显示“回复”按钮</string>
+    <string id="showForwardToolTipText">在信封的邮件栏中显示“转发”按钮</string>
+    <string id="suppresAppletToolTipText">阻止打开小程序</string>
+    <string id="usageReminderToolTipText">点击“邮件加密”按钮后显示加密使用情况提醒</string>
+    <string id="defaultKeyServerChBoxToolTipText">将当前帐户设为默认帐户</string>
+    <string id="defaultLocaleToolTipText">设置外发邮件的默认语言</string>
+    <string id="messageBodyFromKeyServerToolTip">指定始终从密钥服务器获取邮件正文</string>
+  </group>
+  <group name="DE.MailOptionsToolTipStrings">
+    <string id="allowReplyCbxToolTip">允许回复邮件</string>
+    <string id="allowReplyAllCbxToolTip">允许回复所有邮件</string>
+    <string id="allowForwardCbxToolTip">允许转发邮件</string>
+    <string id="securityCmbxToolTip">设置当前邮件的安全级别</string>
+    <string id="expireTimePickerToolTip">设置当前邮件的到期日期</string>
+    <string id="readByTimePickerToolTip">设置当前邮件的阅读期限（时间）</string>
+    <string id="expireDatePickerToolTip">设置当前邮件的到期期限（天）</string>
+    <string id="readByDatePickerToolTip">设置当前邮件的阅读期限（天）</string>
+    <string id="expCheckBoxToolTip">设置当前邮件的到期日期</string>
+    <string id="readByCheckBoxToolTip">设置当前邮件的阅读期限（日期）</string>
+    <string id="lockCheckBoxToolTip">锁定所选条目</string>
+    <string id="expireCheckBoxToolTip">将所选条目设为在指定的日期和时间到期</string>
+    <string id="lockReasonTextBoxToolTip">输入或更改锁定所选条目的原因</string>
+    <string id="expireOnDatePickerToolTip">设置所选条目的到期期限（天）</string>
+    <string id="expireOnTimePickerToolTip">设置所选条目的到期日期</string>
+  </group>
+  <group name="DE.ManageMessagesToolTipStrings">
+    <string id="selectedToolTipText">只显示选中的条目</string>
+    <string id="allToolTipText">显示所有条目</string>
+    <string id="basicSearchTbToolTipText">用于对“收件人”和“主题”字段执行搜索的文字</string>
+    <string id="advancedSearchToolTipText">打开“高级搜索”对话框</string>
+    <string id="basicSearchToolTipText">打开“基本搜索”对话框</string>
+    <string id="keyword1ToolTipText">用于对相应“搜索范围”下拉菜单中指定的字段执行搜索的文字</string>
+    <string id="keyword2ToolTipText">其他用于对相应“搜索范围”下拉菜单中指定的字段执行搜索的文字。 
+如果同时指定两个关键字，则所执行的搜索会寻找同时包含这两个关键字的邮件。</string>
+    <string id="keyword1ComboBoxToolTip">定义要针对哪个字段执行主要关键词搜索</string>
+    <string id="keyword2ComboBoxToolTip">定义要针对哪个字段执行次要关键词搜索</string>
+    <string id="statusToolTipText">搜索具有指定状态的邮件</string>
+    <string id="failedAttemptsToolTipText">搜索失败尝试达到指定次数的邮件</string>
+    <string id="clearBtnToolTipText">清除所有查询</string>
+    <string id="fromDateCheckBoxToolTip">搜索在指定日期后发送、打开或到期的邮件</string>
+    <string id="toDateCheckBoxToolTip">搜索在指定日期前发送、打开或到期的邮件</string>
+    <string id="fromTimePickerToolTip">搜索在指定时间后发送、打开或到期的邮件</string>
+    <string id="toTimePickerToolTip">搜索在指定时间前发送、打开或到期的邮件</string>
+    <string id="dateComboBoxToolTip">指定在搜索进行发送、打开或到期的邮件时，是否使用时间间隔</string>
+    <string id="expandToggleButtonToolTip">折叠所有条目视图</string>
+    <string id="checkAllToolTip">选择所有条目（被锁定或到期）</string>
+    <string id="pageSizeComboBox">设置每页显示的条目数量</string>
+  </group>
+  <group name="Core.CallHomeForms">
+    <string id="continueBtn">继续</string>
+    <string id="continueBtnToolTip">继续使用 Outlook</string>
+    <string id="usageDataTextBlockPart1">以下数据由  Cisco  服务器收集和
+存储，用于与以下数据一起进行分析：</string>
+    <string id="usageDataTextBlockPart2">基本信息：
+• 标识符
+  首次安装插件时生成的非永久标识符，
+  用于关联多个使用情况报告，
+  以跟踪一段时间内的使用情况。
+  您可以在“插件选项”&gt;
+  “其他选项”&gt;“隐私”选项卡上重置标识符。
+• 操作系统版本
+• Outlook 版本
+• 插件版本
+• 加密 SDK 版本
+  加密 SDK 是插件加密和解密
+  安全邮件时在内部使用的库。
+• 操作系统语言
+• 已安装的 Outlook 插件名称
+
+插件中配置的每个帐户包含以下信息：
+• 类型
+• 服务器
+• 已打开和已发送的安全邮件数
+• 收件人总数
+• 功能使用次数
+  各项功能的使用次数。
+• 是否使用非标准报告地址</string>
+    <string id="usageDataDetailsTitle">使用情况数据详情</string>
+    <string id="remarkTextBlock">您也可以通过插件选项更改此设置。</string>
+  </group>
+    <group name="Encryption.RegistrationStrings">
+    <string id="windowTitle">新用户注册</string>
+    <string id="enterPersonalInformation">输入个人信息</string>
+    <string id="emailAddress">电邮地址</string>
+	<string id="firstName">名字*</string>
+	<string id="firstNameHint">名字</string>
+	<string id="firstNameToolTip">输入名字。</string>
+	<string id="lastName">姓氏*</string>
+	<string id="lastNameHint">姓氏</string>
+	<string id="lastNameToolTip">输入姓氏。</string>
+	<string id="createPassphrase">创建口令</string>
+	<string id="passphrase">口令*</string>
+	<string id="passphraseHint">口令</string>
+	<string id="passphraseToolTip">输入口令。</string>
+	<string id="confirmPassphrase">确认口令*</string>
+	<string id="confirmPassphraseHint">确认口令</string>
+	<string id="confirmPassphraseToolTip">再次输入口令。</string>
+	<string id="passphraseLimitationLbl">至少输入 8 个字母或数字。口令区分大小写。口令必须同时包含字母和数字。</string>
+	<string id="selectLanguage">选择 CRES 帐户的语言</string>
+	<string id="language">语言*</string>
+	<string id="requiredField">* = 必填字段</string>
+	<string id="registrationHelpLink">帮助</string>
+	
+	<!--Following 3 elements are joined in one sentence-->
+	<string id="youCanAlsoRegisterLbl">您也可以通过在浏览器打开</string>
+	<string id="linkLbl">链接</string>
+	<string id="inWebBrowserLbl">进行注册</string>
+	<!--Following 2 elements are joined in one sentence-->	
+	<string id="userConsent">通过注册，您同意 CRES 的</string>
+	<string id="termOfServiceLinkLbl">服务条款</string>	
+	
+	<string id="personalSecurityPhraseTitle">个人安全短语</string>
+	<string id="personalSecurityPhrase">个人安全短语*</string>
+	<string id="personalSecurityPhraseToolTip">输入个人安全短语。</string>
+	<string id="personalSecurityPhraseIconToolTip">输入只有您知道的短语。此短语将在您登录时出现在邮件信封上。当您看到短语时，便知道您在登录我们的安全站点。</string>
+	<string id="enableMyPersonalSecurityPhrase">启用我的个人安全短语</string>
+	<string id="enableMyPersonalSecurityPhraseToolTip">启用我的个人安全短语。</string>
+	<string id="selectSecurrityQuestions">选择 3 个安全问题</string>
+	<string id="selectSecurrityQuestionsIconToolTip">如果您忘记了口令，则系统将来会用这些问题向您提问。</string>
+	<string id="showButton">显示</string>
+	<string id="showButtonToolTip">显示安全问题的答案。</string>
+	<string id="hideButton">隐藏</string>
+	<string id="hideButtonToolTip">隐藏安全问题的答案。</string>
+	<string id="question1">问题 1*</string>
+	<string id="answer1">答案 1*</string>
+	<string id="answer1Hint">答案 1</string>
+	<string id="confirmAnswer1">确认答案 1*</string>
+	<string id="confirmAnswer1Hint">确认答案 1</string>
+	<string id="question2">问题 2*</string>
+	<string id="answer2">答案 2*</string>
+	<string id="answer2Hint">答案 2</string>
+	<string id="confirmAnswer2">确认答案 2*</string>
+	<string id="confirmAnswer2Hint">确认答案 2</string>
+	<string id="question3">问题 3*</string>
+	<string id="answer3">答案 3*</string>
+	<string id="answer3Hint">答案 3</string>
+	<string id="confirmAnswer3">确认答案 3*</string>
+	<string id="confirmAnswer3Hint">确认答案 3</string>
+	<string id="questionCustomOption">选择一个问题或输入您自己的安全问题…</string>
+	<string id="questionCustomHint">您自己的安全问题</string>
+	<string id="questionCustomToolTip">选择或输入在恢复口令时将向您提出的问题。</string>
+	<string id="questionNoCustomOption">选择问题…</string>
+	<string id="questionNoCustomToolTip">选择在恢复口令时将向您提出的问题。</string>
+	<string id="answerToolTip">输入所选问题的答案。</string>
+	<string id="finalStepAccActivation">最终步骤：帐户激活</string>
+	<string id="yourCiscoRegisteredEnvelope">已成功创建思科注册信封服务帐户。</string>
+	<string id="instructions">用于激活帐户的说明已通过邮件发送到 {0}。</string>
+	<string id="pleaseCheckYourInbox">请检查收件箱。如果您没有看到帐户激活邮件，请检查垃圾邮件文件夹。</string>
+	<string id="advancedSettingsBtn">高级设置</string>
+	<string id="advancedSettingsBtnToolTip">在填写表单后，请点击此处继续执行高级设置。</string>
+	<string id="registerBtn">注册</string>
+	<string id="registerBtnToolTip">单击此处以完成注册。</string>
+	<string id="registerBtnIconToolTip">立即注册，或者点击“高级设置”以通过设置安全问题和个人安全短语来保护帐户。</string>
+	<string id="cancelBtn">取消</string>
+	<string id="cancelBtnToolTip">点击“取消”可取消注册过程。</string>
+	<string id="backBtn">返回</string>
+	<string id="backBtnToolTip">点击此处可返回到第一页。所输入的信息将丢失。</string>
+	<string id="continueBtn">继续</string>
+	<string id="continueBtnToolTip">在填写表单后，请点击此处继续执行高级设置。</string>
+	<string id="okBtn">确定</string>
+	<string id="fixError">请修复以下错误：</string>
+	<string id="fixErrors">请修复以下错误：</string>
+	<string id="fixErrorss">请修改以下错误：</string>
+	<!--Following 3 elements are joined in one sentence-->
+
+	<string id="GeneralError">无法注册。点击以下 </string>
+	<string id="GeneralErrorLink">链接</string>
+	<string id="GeneralErrorEnd"> 可注册或再次打开安全邮件。</string>
+	
+	<string id="PassphraseEmptyConstraint">输入口令。</string>
+	<string id="PassphraseLengthConstraint">口令长度必须介于{0} 到 {1} 个字符之间。</string>
+	<string id="PassphraseAlphanumericConstraint">口令必须由字母数字字符组成。</string>
+	<string id="PassphraseUpperLowercasesConstraint">口令必须包含大写和小写字母。</string>
+	<string id="PassphraseOneSpecialCharacterConstraint">口令必须至少包含一个特殊字符。</string>
+	<string id="PassphraseTheSameAsEmailConstraint">口令不能与邮件地址相同。</string>
+	<string id="PassphraseAndConfirmationPassphraseDoNotMatch">新口令和确认口令不匹配。请再次输入口令。</string>
+	<string id="PassphraseContainCharacterRepeatedMoreThanThreeTimesConstraint">密码不得包含连续重复三次以上的字符。</string>
+	<string id="PassphraseCiscoConstraint">口令不得是 'Cisco'、'ocsic' 或任何类似单词（通过更改字母的大小写或者将'i' 替换为'1'、'|'、'!'，将'o' 替换为'0'或将's' 替换为'$'）。</string>
+	<string id="PassphraseCharactersConstraint">口令必须至少包含以下三类字符：小写字母、大写字母、数字和特殊字符。</string>
+	<string id="FirstNameConstraint">必须输入名字。</string>
+	<string id="LastNameConstraint">必须输入姓氏。</string>
+	<string id="personalPhraseEmptyConstraint">输入个人安全短语。</string>
+	<string id="quesionsUniquieConstraint">必须选择三个唯一的安全问题。</string>
+	<string id="quesionEmptyConstraint">选择安全问题 {0}。</string>
+	<string id="answerTheSameAsEmailConstraint">安全问题 {0} 的答案不能与邮件地址相同。</string>
+	<string id="answerAlphanumericConstraint">安全问题 {0} 的答案必须至少包含一个字母或数字。</string>
+	<string id="answerEmptyConstraint">回答安全问题 {0}。</string>
+	<string id="answerAndConfirmationAnswerDoNotMatch">安全问题 {0} 的答案和确认答案 {0} 不匹配。</string>
+  </group>
+</strings>

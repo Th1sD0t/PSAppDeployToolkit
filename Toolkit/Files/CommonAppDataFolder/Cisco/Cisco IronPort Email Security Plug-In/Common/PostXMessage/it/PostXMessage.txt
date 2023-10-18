@@ -1,0 +1,10 @@
+﻿Hai ricevuto un messaggio sicuro
+
+Apri l'allegato ${AttachmentName} per leggere il messaggio sicuro.
+Apri (Visualizza) il file o salvalo (Scarica) sul computer. Per una procedura ottimale, salva il file prima di aprirlo in un browser Web. Per accedervi da un dispositivo mobile, inoltra il messaggio a ${MOBILE_EMAIL} al fine di ricevere un URL per l'accesso mobile.
+
+Se hai dubbi sulla validità del messaggio, contatta direttamente il mittente.
+
+Gli utenti al primo utilizzo devono eseguire la registrazione subito dopo aver aperto l'allegato. Per ulteriori informazioni, visita il collegamento alla Guida indicato di seguito.
+Guida: ${HTTPS_URL}/websafe/help?topic=RegEnvelope
+Informazioni su ${FULL_SERVICE_NAME}: ${HTTPS_URL}/websafe/about 

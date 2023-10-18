@@ -1,0 +1,6 @@
+	<proxy name="${Name}">
+		<className>${ClassName}</className>
+		<proxyHost>${Host}</proxyHost>
+		<proxyPort>${Port}</proxyPort>
+		<proxyUser>${UserName}</proxyUser>
+	</proxy>

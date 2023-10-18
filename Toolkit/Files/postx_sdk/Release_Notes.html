@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html lang=en>
+    <head>
+    <!--
+      $Id: //prod/main/_is/products/cs_plugin/inst/Files/postx_sdk/Release_Notes.html#33 $
+
+      Copyright (c) 2006, 2007 PostX Corporation. All rights reserved.
+      Copyright (c) 2007, 2008, 2010 Cisco Systems, Inc. All rights reserved.
+    -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>IronPort SDK, Version 6.4 Release Notes</title>
+	<script type="text/javascript" language="JavaScript">
+	    <!--
+	    function createURL()
+	    {
+		var td = document.getElementsByTagName('td');
+
+		for (var i = 0; i < td.length; i++)
+		{
+		    if (td[i].className == 'bug')
+			td[i].innerHTML = td[i].innerHTML.replace(/(\d+)/,
+			    '<' + 'a href="http://bugzilla.postx/bugzilla/show_bug.cgi?id=$1">$1<' + '/a>');
+		}
+	    }
+	    -->
+	</script>
+    </head>
+    <body onload="createURL()">
+	<h1>IronPort SDK, Version 6.4 Release Notes</h1>
+	<hr>
+
+	<p>For general information about the IronPort SDK, please refer to the IronPort Systems website at <a href="http://www.ironport.com/">http://www.ironport.com</a>.</p>
+
+	<h2>Table of contents</h2>
+	<ol>
+	    <li><a href="#about">About this release</a></li>
+	    <li><a href="#notes">Upgrade notes</a></li>
+	    <li><a href="#issues">Known issues</a></li>
+	</ol>
+
+	<h2><a name="about"></a>1. About this release</h2>
+	<p>IronPort software release version numbers consist of three numeric values, separated by periods, as in
+	<i>major.minor.update</i>. A change in the <i>major.minor</i> revision level indicates significant
+	improvements in functionality. Updates generally consist of bug fixes to the base code at the same release level and
+	compatible extensions to existing functionality.</p>
+
+	<p>From time to time, IronPort may skip one or more numbers. This may reflect a release that was distributed to a
+	limited number of customers or a number that was reserved for another purpose
+	but never used. Releases and updates are installed only at the customer's request.</p>
+
+	<h3>About the IronPort SDK 6.4 release</h3>
+	<p>IronPort SDK 6.4 is a generally available release. It supersedes IronPort SDK 6.3 and all previous releases.
+	The IronPort SDK 6.4 release notes are included below for convenience.</p>
+
+	<h3>Significant changes in IronPort SDK 6.4</h3>
+
+	<table border="1">
+	    <tr>
+		<th>IronPort Reference</th>
+		<th>Description</th>
+	    </tr>
+	    <tr>
+		<td class="bug">7619</td>
+		<td>Added ability to set GPT Base URL as a X-Header</td>
+	    </tr>
+	</table>
+
+	<h3>Significant changes in PostX SDK 6.3</h3>
+
+	<table border="1">
+	    <tr>
+		<th>PostX Reference</th>
+		<th>Description</th>
+	    </tr>
+	    <tr>
+		<td class="bug">7503</td>
+		<td>Certain RFC 2047 encoded strings aren't decoded correctly</td>
+	    </tr>
+	    <tr>
+		<td class="bug">7237</td>
+		<td>
+		    Added EnvelopeBuilder.addSMTPRecipient(String) method to add all RCPT headers from SMTP.  This
+		    method should be used add the RCPT headers instead of addTo, addBCC, and/or addCC.
+		</td>
+	    </tr>
+	    <tr>
+		<td class="bug">7058</td>
+		<td>Fixed Out of Memory Error when opening large messages using the Applet</td>
+	    </tr>
+	    <tr>
+		<td class="bug">7123</td>
+		<td>Fixed problem of sending or receiving large messages using in the C++ Remote API</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6928.6</td>
+		<td>Added support for enabling of additonal features using X-PostX headers in the MIME message</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6928.5</td>
+		<td>Added template parameters for key server host in envelopes.xml</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6928.4</td>
+		<td>Added auto reload of modified envelopes.xml</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6717</td>
+		<td>Corrected issue of CRC32 not being reset when running consecuative command using the Python Remote API</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6793</td>
+		<td>Changed the name of the applet from PostX Tools to Envelope Tools and the version from 4.5.2 to 4.5.3. Most future applet changes will affect only the most recent version.</td>
+	    </tr>
+	</table>
+
+	<h3>Significant changes in PostX SDK 6.2.8i</h3>
+
+	<table border="1">
+	    <tr>
+		<th>PostX Reference</th>
+		<th>Description</th>
+	    </tr>
+	    <tr>
+		<td class="bug">6459</td>
+		<td>Improved Java detection which improves the usability when java is not detected in the browser</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6607</td>
+		<td>Added maximum memory flag to pxdaemon. Added return status for out of memory and memory limit reached.</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6737</td>
+		<td>Improved the no JS message so it always display as requested, even without CSS</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6795</td>
+		<td>Revied envelope buttons styles for consistency with WebSafe</td>
+	    </tr>
+	</table>
+
+	<h3>Significant changes in PostX SDK 6.2.8h</h3>
+
+	<table border="1">
+	    <tr>
+		<th>PostX Reference</th>
+		<th>Description</th>
+	    </tr>
+	    <tr>
+		<td class="bug">6206</td>
+		<td>Fixed issue where envelope profile is limited to only alpha-numeric characters</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6441</td>
+		<td>Added Remote SDK classs for the status, log level, stop daemon, and activate key for C++ and Java</td>
+	    </tr>
+	</table>
+
+
+	<h3>Significant changes in PostX SDK 6.2.8g</h3>
+
+	<table border="1">
+	    <tr>
+		<th>PostX Reference</th>
+		<th>Description</th>
+	    </tr>
+	    <tr>
+		<td class="bug">4805.1</td>
+		<td>Added API for decryption of envelope using password or session key</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4805.2</td>
+		<td>Added Remote C++ API for decryption of envelope</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4805.3</td>
+		<td>Added ability to set recipient when decrypting envelope</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5277</td>
+		<td>Added ability to specify the authentication provider name in envelope properties file</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5281</td>
+		<td>Added ability to specify a password for build offline envelopes. Exposed additional envelope builder property parameters.</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5410</td>
+		<td>Adding caching of envelope properties files and ability to set various envelope builder properties</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5433</td>
+		<td>Replace LocalEnvelopeBuilder.setConfigPath() with LocalConfig.setConfigPath()</td>
+	    </tr>
+	    <tr>
+		<td class="bug">3510</td>
+		<td>Fixed proxy</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5521</td>
+		<td>Renamed HttpPost to HttpConnection in PostX configuration file, connections.xml</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5456</td>
+		<td>Added Python remote API for Activate Key, Stop Daemon, Daemon Status, Decrypt Envelope, and Change Logging</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5650</td>
+		<td>Changed the stop daemon command to return when all commands have been completed</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5766</td>
+		<td>Deprecated envelope builder properties <i>hostname</i>, <i>secureport</i>, and <i>unsecureport</i> and replaced with <i>external.secure.url</i>, <i>external.unsecure.url</i>, and <i>internal.url</i></td>
+	    </tr>
+	    <tr>
+		<td class="bug">5382.1</td>
+		<td>Fixed problem in build envelope with MIME message using the UTF-8 charset</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5382.2</td>
+		<td>Fixed problem of default log level is always ERROR regardless what is configured in the log4j configuration</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5382.3</td>
+		<td>Added ${ProfileName} variable to envelopes.xml configuration file</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5944</td>
+		<td>Fixed problem with ${Id} variable in envelopes.xml always uses 1</td>
+	    </tr>
+	    <tr>
+		<td class="bug">5971</td>
+		<td>Fixed always returning 202 (Token Corrupted) in case of error</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6188</td>
+		<td>Fixed issue with Secure Forward not working with non-default token.  Fixed issue of $localtime and $localdate appearing during SecureForward.</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6260</td>
+		<td>Configuring key server URL with a trailing slash breaks secure reply</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6261</td>
+		<td>UTF-8 characters in email address not preserved during forward or reply</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6314</td>
+		<td>The Envelope shows the wrong character in the subject when it contains latin characters.</td>
+	    </tr>
+	    <tr>
+		<td class="bug">6387</td>
+		<td>GCJ daemon does not work with some SSL certificates</td>
+	    </tr>
+	</table>
+
+
+	<h3>Significant changes in PostX SDK 1.3</h3>
+	<table border="1">
+	    <tr>
+		<th>PostX Reference</th>
+		<th>Description</th>
+	    </tr>
+	    <tr>
+		<td class="bug">4636.1</td>
+		<td>Remote Envelope Builder in Python</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4636.2</td>
+		<td>Support for keyserver token alias string for Linux/FreeBSD pxdaemon</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4636.2</td>
+		<td>Disable auto refresh of cached which caused <i>java.awt.AWTError</i> only in the Linux/FreeBSD pxdaemon.
+	    </tr>
+	    <tr>
+		<td class="bug">4636.3</td>
+		<td>Added activation key to retrieve key server token string</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4636.3</td>
+		<td>Remote Envelope Builder in C++</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4636.6</td>
+		<td>Changed OutOfMemoryError to close socket connection and thread in pxdaemon</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4791</td>
+		<td>Added method setFlags in EnvelopeBuilder which has support for dot-stuff MIME messages
+	    </tr>
+	</table>
+
+	<h3>Significant changes in PostX SDK 1.2</h3>
+	<table border="1">
+	    <tr>
+		<th>PostX Reference</th>
+		<th>Description</th>
+	    </tr>
+	    <tr>
+		<td class="bug">4289.28</td>
+		<td>Improved performance with the key server using Apache Commons HTTP client 3.0</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4289.25</td>
+		<td>Improved logging using Apache Jakarta Log4j</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4289.20</td>
+		<td>Defining <i>keyserver.tokenaliasname</i> and <i>keyserver.tokenaliasaccount</i> in the envelope properties file has been deprecated. Only <i>keyserver.token</i> needs to be defined.</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4289.33</td>
+		<td>Added licenses files in release</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4289.31</td>
+		<td>PostX Daemon returns error codes instead of exiting when processing bad mime messages</td>
+	    </tr>
+	    <tr>
+		<td class="bug">4289.22</td>
+		<td>Miscellaneous bug fixes</td>
+	    </tr>
+	</table>
+
+	<h2><a name="notes"></a>2. Upgrade notes</h2>
+	<p>PostX SDK 6.2.8h has new configurations and the
+	daemon uses new shared libraries. Be sure to replace the entire
+	PostX configuration file and libraries when updating the PostX SDK daemon.</p>
+
+	<h2><a name="issues"></a>3. Known issues</h2>
+	<p> PostX SDK daemon for Linux and FreeBSD only supports the following character sets.</p>
+
+	<ul>
+	    <li>Cp855</li>
+	    <li>Cp857</li>
+	    <li>Cp860</li>
+	    <li>Cp861</li>
+	    <li>Cp862</li>
+	    <li>Cp863</li>
+	    <li>Cp864</li>
+	    <li>Cp865</li>
+	    <li>Cp866</li>
+	    <li>Cp869</li>
+	    <li>Cp874</li>
+	    <li>ISO-8859-1</li>
+	    <li>ISO-8859-13</li>
+	    <li>ISO-8859-15</li>
+	    <li>ISO-8859-2</li>
+	    <li>ISO-8859-3</li>
+	    <li>ISO-8859-4</li>
+	    <li>ISO-8859-5</li>
+	    <li>ISO-8859-6</li>
+	    <li>ISO-8859-7</li>
+	    <li>ISO-8859-8</li>
+	    <li>ISO-8859-9</li>
+	    <li>KOI8-R</li>
+	    <li>UnicodeLittle</li>
+	    <li>US-ASCII</li>
+	    <li>UTF-16</li>
+	    <li>UTF-16BE</li>
+	    <li>UTF-16LE</li>
+	    <li>UTF-8</li>
+	    <li>windows-1250</li>
+	    <li>windows-1251</li>
+	    <li>windows-1252</li>
+	    <li>windows-1253</li>
+	    <li>windows-1254</li>
+	    <li>windows-1257</li>
+	</ul>
+    </body>
+</html>

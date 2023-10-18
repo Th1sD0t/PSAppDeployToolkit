@@ -1,0 +1,11 @@
+Ha recibido un mensaje seguro
+
+Lea el mensaje seguro abriendo el documento adjunto, ${AttachmentName}.
+Se le solicitará que abra (vea) el archivo o que lo guarde (descargue) en su equipo. Para obtener resultados óptimos, guarde primero el archivo y, a continuación, ábralo en su explorador de la web. Para obtener acceso desde un dispositivo móvil, reenvíe este mensaje a ${MOBILE_EMAIL} para recibir una URL de inicio de sesión móvil.
+
+Si tiene alguna duda acerca de la validez de este mensaje, póngase en contacto directamente con el remitente.
+
+Usuarios principiantes: deberán registrarse una vez que hayan abierto el documento adjunto. Para obtener más información, haga clic en el enlace Ayuda.
+Ayuda - ${HTTPS_URL}/websafe/help?topic=RegEnvelope
+Acerca de ${FULL_SERVICE_NAME} - ${HTTPS_URL}/websafe/about 
+

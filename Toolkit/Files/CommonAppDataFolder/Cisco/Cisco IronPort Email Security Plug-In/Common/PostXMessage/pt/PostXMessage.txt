@@ -1,0 +1,10 @@
+﻿Você recebeu uma mensagem segura
+
+Leia sua mensagem segura abrindo o anexo, ${AttachmentName}.
+Você receberá uma solicitação para abrir (exibir) o arquivo ou salvá-lo (baixá-lo) no seu computador. Para obter os melhores resultados, salve-o primeiro e abra-o em um navegador da Web. Para acessar a partir de um dispositivo móvel, encaminhe esta mensagem para ${MOBILE_EMAIL} para receber um URL de login móvel.
+
+Se você tiver preocupações sobre a validade dessa mensagem, entre em contato com o remetente diretamente.
+
+Usuários iniciantes - precisam efetuar o registro após abrir o anexo. Para obter mais informações, veja o seguinte link de Ajuda.
+Ajuda - ${HTTPS_URL}/websafe/help?topic=RegEnvelope
+Sobre ${FULL_SERVICE_NAME} - ${HTTPS_URL}/websafe/about 

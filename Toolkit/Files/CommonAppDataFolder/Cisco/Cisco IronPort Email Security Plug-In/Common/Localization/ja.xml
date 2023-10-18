@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings language="日本語">
+  <group name="Diagnostic">
+    <string id="windowTitle">Cisco Email Security Plug-In診断</string>
+    <string id="inProgressMessage">診断中...</string>
+    <string id="goToReportButton">レポート処理に進む</string>
+    <string id="okButton">OK</string>
+    <string id="cancelButton">キャンセル</string>
+    <string id="resultMessage">診断データが{0}に保存されました。 これで、診断データをシステム管理者またはCisco Email Security Plug-In担当者に送信できる状態になりました。</string>
+    <string id="errorMessage">診断プロセスでエラーが発生しました: {0}</string>
+    <string id="messageBoxTitle">Cisco Email Securityプラグイン</string>
+  </group>
+  <group name="Core">
+    <string id="localizationReadingError">Cisco Email Securityプラグインのローカリゼーションファイルを初期化する処理で、エラーが発生しました。 ローカライズ可能要素がデフォルト値に戻されました。</string>
+    <string id="saveConfigError">{0}構成設定情報を保存する処理で、エラーが発生しました。</string>
+    <string id="configFileNotFound">{0}構成ファイルが見つかりませんでした。 設定情報がデフォルト値に戻されました。</string>
+    <string id="configReadingError">エラーは{0}構成ファイルの初期化中に発生しました。
+一部の設定は既定値に設定されました。</string>
+    <string id="log4netXmlError">ログを読み取れませんでした。 ロギング設定情報がデフォルト値に戻されました。</string>
+    <string id="errorHelpNotFound">Ciscoフォルダにヘルプファイルがありません。</string>
+    <string id="generalError">エラーが発生しました。 このメッセージが2回以上表示された場合、[オプション]ウィンドウから、または直接診断ツールを起動してください</string>
+    <string id="logFilePathError">ログファイルへのパスが誤っているので保存できません</string>
+    <string id="noBuildForUpdate">Cisco Email Security Plug-inの最終バージョンが既にマシンにインストールされています。</string>
+    <string id="applyBCE">このメッセージは{0}の設定をした安全な添付ファイルを含んでいます。これらの設定を適用しますか？</string>
+    <string id="BCEHasWrongStructure">BCE設定ファイルのフォーマットが間違っています。詳細はログファイルに示されています。</string>
+    <string id="BceHasInvalidValues">BCE設定ファイルに無効な値があります。詳細はログファイルに示されています。</string>
+    <string id="ErrorDuringBCEValidation">BCE設定ファイルの検証中にエラーが発生しました。</string>
+    <string id="errorConfigLoad">{0}設定ファイルの初期化中にエラーが発生しました。 一部の設定は既定値に設定されました。</string>
+    <string id="cannotGenerateNewPath">設定ファイルのための新しいパスを作ることができません。設定は保存されません。</string>
+    <string id="errorCode">エラーコード: {0}</string>
+  </group>
+  <group name="Core.Dialog">
+    <string id="dialogCaption">Cisco Email Security Plug-In</string>
+    <string id="OKButton">OK</string>
+    <string id="applyButton">適用</string>
+    <string id="cancelButton">キャンセル</string>
+    <string id="yesButton">はい</string>
+    <string id="noButton">いいえ</string>
+    <string id="applyCommonSettings">一般的なプラグイン設定を使用</string>
+    <string id="showDetailsButton">詳細</string>
+    <string id="dontShowCheckboxCaption">今後このメッセージを表示しない。</string>
+    <string id="logFileOpenDialogCaption">ログファイルを選択してください</string>
+    <string id="enableButton">有効にする</string>
+    <string id="optionsTabCaption">Cisco Email Security</string>
+    <string id="pluginOptionsCaption">プラグインオプション</string>
+    <string id="pluginOptionsToolTip">プラグインオプションのダイアログを開きます</string>
+    <string id="applyCommonSettingsToolTip">BCEからの一般的なプラグイン設定を適用します</string>
+    <string id="dontShowCheckboxToolTip">再びこのメッセージが表示されないようにします</string>
+    <string id="showDetailsToolTip">このエラーの詳細が表示されます</string>
+  </group>
+  <group name="Core.Options">
+    <string id="loggingGroupTitle">ロギング</string>
+    <string id="logFileLabel">ログファイル名:</string>
+    <string id="logLevelLabel">ログレベル:</string>
+    <string id="diagnosticButton">診断を実行</string>
+    <string id="diagnosticOptionsElementName">診断</string>
+    <string id="diagnosticOptionsElementDescription">診断ツールを実行すると、プラグインに関するすべての情報が収集されます</string>
+    <string id="helpButton">ヘルプ</string>
+    <string id="aboutButton">バージョン情報</string>
+    <string id="extendedLogLevel">拡張</string>
+    <string id="normalLogLevel">標準</string>
+    <string id="addExplorerToolbar">メインウィンドウにセキュリティツールバーを追加します</string>
+    <string id="addInspectorToolbar">メッセージウィンドウにセキュリティツールバーを追加します</string>
+    <string id="addContextMenu">右クリックメニューにメッセージレポートオプションを追加する</string>
+    <string id="reportingTabTitle">レポート</string>
+    <string id="aboutButtonToolTip">[バージョン情報]ダイアログを開きます</string>
+    <string id="helpButtonToolTip">[ヘルプ]を開きます</string>
+    <string id="languagesComboBoxToolTip">利用可能な言語リストが表示されます</string>
+    <string id="diagnosticOptionsButtonToolTip">診断機能を実行します</string>
+    <string id="logingEnableChBxToolTip">ログインを有効にします</string>
+    <string id="selectLogButtonToolTip">ログファイルの場所を検索します</string>
+    <string id="logLevelComboToolTip">ログのレベルを選択します</string>
+    <string id="additionalOptionsElementName">追加</string>
+    <string id="additionalOptionsElementDescription">追加のプラグインオプションの設定を許可します</string>
+    <string id="additionalOptionsElementButton">追加オプション...</string>
+    <string id="additionalOptionsWindowTitle">追加オプション</string>
+    <string id="additionalOptionsButtonToolTip">[追加オプション]ダイアログを開きます</string>
+    <string id="loggingTabName">ロギング</string>
+    <string id="usageDataTabName">使用状況データの送信</string>
+    <string id="loggingTabDescription">ログファイルはすべての発生したアクションを記録し表示します</string>
+    <string id="usageDataTabDescription">匿名の使用状況データをCiscoに送信してCisco Email Security Plug-inの改善に役立てますか?</string>
+    <string id="enableLoggingChBx">ロギングを有効にする</string>
+    <string id="enableUsageDataChBx">匿名の使用状況データをCiscoに送信する</string>
+    <string id="readMoreLink">詳細情報</string>
+    <string id="usageDataEnableChBxToolTip">Ciscoへの匿名の使用状況データの送信を許可します</string>
+    <string id="readMoreToolTip">使用状況データの詳細を開きます</string>
+    <string id="privacyTabPage">プライバシー</string>
+    <string id="uuidLabel">識別子</string>
+    <string id="uuidDescriptionLabel">プラグインが初めてインストールされた際に生成される非永続的な識別子です。使用状況レポートの関連付けに使用され、時間とともに変化する使用状況を追跡できます。</string>
+    <string id="passLabel">パスフレーズ</string>
+    <string id="passDescriptionLabel">このボタンを押すと、すべてのアカウントのキャッシュ済みパスフレーズがすべて削除されます。</string>
+    <string id="resetUuidButton">識別子をリセット</string>
+    <string id="clearPassButton">すべてのパスフレーズを消去</string>
+    <string id="resetUuidButtonToolTip">識別子をリセットします</string>
+    <string id="clearPassButtonToolTip">すべてのアカウントのすべてのパスフレーズを消去します</string>
+    <string id="uuidIsReset">識別子がリセットされました。</string>
+    <string id="uuidIsNotReset">識別子をリセットできませんでした。</string>
+    <string id="passIsCleared">すべてのアカウントのすべてのパスフレーズが消去されました。</string>
+  </group>
+  <group name="Core.AboutBox">
+    <string id="firstTextPart">Cisco Email Security Plug-In　
+バージョン: {0}
+最終更新日: {1}</string>
+    <string id="secondTextPart">本製品には暗号化機能が含まれており、米国、輸出入、配布及び使用の国での法律を順守に従うものとします。Cisco暗号製品の発送は輸出入配布及び記号化の使用に対する第三者の権限を含みません。輸出入業者、配布者、ユーザーは米国法と地方州法の遵守に責任を負います。製品を使用する際には関係法令の順守に同意する必要があります。お客様が米国と地方州法を守らない場合、製品を至急返却してください。Cisco暗号製品を管理するアメリカ合衆国法の要約は次のサイトで見つけられます。http://tools.cisco.com/legal/export/pepd/Search.do</string>
+    <string id="thirdTextPart">警告: このコンピュータ プログラムは著作権法と国際条約によって保護されています。このプログラムの許可されていない複製または配布またはそのいかなる部分も、民事上及び刑事上の重罰に至る可能性があり、法の下に最大限可能な限り起訴されます。
+	
+Copyright © 2011—2016 Cisco Systems, Inc. and/or its affiliates.All rights reserved.</string>
+    <string id="helpLinkText">ご不明な点がございましたら、こちらにアクセスしてください</string>
+  </group>
+  <group name="Core.UpdateNotificationForm">
+    <string id="dialogBody">新しいバージョン{0}が利用できます</string>
+    <string id="whatsNewString">このバージョンの新機能:</string>
+    <string id="automaticallyCheckForUpdates">更新を自動的に確認する</string>
+    <string id="download">ダウンロード</string>
+    <string id="skipThisVersion">このバージョンをスキップする</string>
+    <string id="checkForUpdates">更新の確認</string>
+    <string id="unableConnectToRemoteServer">リモートサーバーに接続できません</string>
+    <string id="invalidJsonResponse">リモートサーバーは、有効な更新情報を提供していません</string>
+    <string id="checkForUpdatesButtonToolTip">プラグインの新しいバージョンをチェックします</string>
+    <string id="closeButtonToolTip">このダイアログボックスを閉じます</string>
+    <string id="automaticallyCheckBoxToolTip">更新の自動チェックを可能にします</string>
+    <string id="downloadButtonToolTip">更新をダウンロードします</string>
+    <string id="skipVersionButtonToolTip">現在利用可能なバージョンの使用をスキップします</string>
+    <string id="outlookVersionUnsupportedString">Outlookのバージョンがプラグイン{0}ではサポートされていません。
+{1}以降のバージョンをインストールする必要があります。</string>
+    <string id="windowsVersionUnsupportedString">Windowsのバージョンがプラグイン{0}ではサポートされていません。
+{1}以降のバージョンをインストールする必要があります。</string>
+    <string id="outlookAndWindowsVersionUnsupportedString">WindowsおよびOutlookのバージョンがプラグイン{0}ではサポートされていません。
+{1}および{2}以降のバージョンをインストールする必要があります。</string>
+  </group>
+  <group name="Mso">
+    <string id="unableLoadPlugin">Cisco Email Security Plug-In for Outlookをロードできませんでした。</string>
+    <string id="errorShuttingDown">Cisco Email Security Plug-In for Outlookを終了中にエラーが発生しました。</string>
+    <string id="errorOracleConnector">Cisco Email Security Plug-InはOutlookのOracle Connectorをサポートしていないため、無効になります。
+このメッセージが再度表示されないようにするには、プラグインをアンインストールしてください。</string>
+  </group>
+  <group name="Mso.Options">
+    <string id="restartToApplySettings">変更を適用するにはOutlookを再起動する必要があります。</string>
+    <string id="tabTitle">Cisco Email Security</string>
+  </group>
+  <group name="Encrypt.Options">
+    <string id="flagHeaderLabel">X-header 名/値にフラグを付ける</string>
+    <string id="subjectRadioLabel">件名テキストにフラグを付ける</string>
+    <string id="flagHeaderRadioLabel">X-header にフラグを付ける</string>
+    <string id="EncryptionCaption">暗号化にフラグを付ける</string>
+    <string id="flagHeaderLimitations">ヘッダー名は"x-"文字で始まる必要があります。
+ヘッダーの文字数は最小4文字、最大253文字である必要があります。</string>
+    <string id="subjectToolTipText">${subject}は元の件名に置き換えられています。</string>
+    <string id="flagSensitivityLabel">Sensitivity ヘッダーにフラグを付ける</string>
+    <string id="subjectRbToolTipText">メッセージのフラグ付けに件名テキストを使用します</string>
+    <string id="headerRbToolTipText">メッセージのフラグ付けにX-headerを使用します</string>
+    <string id="sensitivityRbToolTipText">メッセージのフラグ付けにSensitivityヘッダーを使用します</string>
+  </group>
+  <group name="Report.Dialogs">
+    <string id="progressCaption">Cisco Email Security Plug-In</string>
+    <string id="progressLabel">メッセージをレポートしています（{0}/{1} 件）...</string>
+    <string id="blockSenderMultipleError">送信者をブロックする場合、一度に 1 件のメッセージしか選択できません。</string>
+    <string id="reportSuccessOne">レポートが生成され配信用にOutlookに送信されました。</string>
+    <string id="reportSuccessMultiple">{0}件のレポートが生成され配信用にOutlookに送信されました。</string>
+    <string id="reportErrorOne">このメッセージのレポートに失敗しました。</string>
+    <string id="reportErrorMultiple">{0}件のメッセージのレポートに失敗しました。</string>
+    <string id="reportSuccessAndErrorsMultiples">合計メール数 : {0}
+正常にレポートされたメール数: {1}
+レポートに失敗したメール数: {2}</string>
+    <string id="invalidAddress">レポート タイプ"{0}"に対するアドレスが無効です。設定ファイルを更新してください。</string>
+    <string id="reportNoHeaderErrorSingle">インターネットヘッダーがないメールはレポートできません。</string>
+    <string id="reportNoHeaderErrorMultiple">インターネット ヘッダーがない{0} 件のメールをレポートできません。</string>
+    <string id="reportTooHugeErrorSingle">このメッセージは大きすぎます。</string>
+    <string id="reportTooHugeErrorMultiple">{0}件のメッセージが大きすぎます。</string>
+    <string id="reportNotMailErrorSingle">選択されているアイテムはメールではありません。</string>
+    <string id="reportNotMailErrorMultiple">選択されている{0}件のアイテムはメールではありません。</string>
+    <string id="reportGeneralError">次のことを確認してください:
+-BCEアカウントの設定が正しい。
+-ネットワークに接続されている。
+-メールサーバーへの接続が正常に動作している。予期せず終了する可能性があります。
+-ファイアウォールソフトウェアが正しく設定されている
+-ウイルス対策ソフトウェアの設定が正しい。</string>
+  </group>
+  <group name="Report.Options">
+    <string id="reportingGroupTitle">スパムと脅威のレポート</string>
+    <string id="keepReportsLabel">送信したレポートのコピーを保管する</string>
+    <string id="showReportSuccessOneLabel">1件のメールが正常にレポートされたときに通知を表示する</string>
+    <string id="showReportSuccessMultipleLabel">複数のメールが正常にレポートされたときに通知を表示する</string>
+    <string id="optionsElementName">レポート</string>
+    <string id="optionsElementDescription">レポートによって、迷惑メールや脅威メールに関するフィードバックをCiscoに送信できます</string>
+    <string id="optionsElementButton">レポートオプション...</string>
+    <string id="optionsWindowTitle">レポートオプション</string>
+    <string id="topPanelText">Outlookのアカウントが一覧表示されています。各アカウントごとに、それぞれ異なるレポート設定を適用することができます。</string>
+    <string id="topPanelHeaderText">レポートアカウント</string>
+    <string id="encryptConfigButtonText">オプション...</string>
+    <string id="addressColumnHeaderText">アカウントの住所</string>
+    <string id="reportingOptionsTitle">レポートオプション - {0}</string>
+  </group>
+  <group name="Mso.Report">
+    <string id="contextMenuCaption">マーキング種別...</string>
+    <string id="restartOutlook">Outlookを再起動してください。Outlookアカウントが追加されたようです。
+Cisco Email Security Spam Plug-In for Outlookは、Outlookを再起動しないと正常に動作しない可能性があります。</string>
+  </group>
+  <group name="Mso.Report.Button.Cations">
+    <string id="blockSender">送信者をブロック</string>
+    <string id="spam">スパム</string>
+    <string id="ham">スパムではない</string>
+    <string id="virus">ウイルス</string>
+    <string id="phish">フィッシング</string>
+    <string id="marketing">マーケティング</string>
+  </group>
+  <group name="Mso.Report.Button.ToolTips">
+    <string id="blockSender">この送信者をブロック済み送信者リストに追加します</string>
+    <string id="spam">メッセージをスパムとしてレポートします</string>
+    <string id="ham">メッセージをスパムではないとレポートします</string>
+    <string id="virus">メッセージをウイルスとしてレポートします</string>
+    <string id="phish">メッセージをフィッシング詐欺としてレポートします</string>
+    <string id="marketing">メッセージをマーケティングとしてレポートします</string>
+  </group>
+  <group name="Mso.Report.Button.Ribbons">
+    <string id="spamGroup">Cisco Email Security</string>
+  </group>
+  <group name="Encryption.Options">
+    <string id="deEnabled">暗号化を有効にする</string>
+    <string id="optionsElementName">暗号化</string>
+    <string id="optionsElementDescription">Cisco暗号化技術を使って、暗号化された電子メールを送ることができます</string>
+    <string id="optionsElementButton">暗号化のオプション...</string>
+    <string id="optionsWindowTitle">暗号化のオプション</string>
+    <string id="serverUrl">サーバURL</string>
+    <string id="tokenFileName">トークンファイル名</string>
+    <string id="defaultExpiricyDays">デフォルトの有効期間（日数）</string>
+    <string id="defaultReadByDays">デフォルトの開封期間（日数）</string>
+    <string id="cachePassword">パスフレーズを保存する</string>
+    <string id="showEncryptDialog">メッセージの暗号化中にダイアログを表示する</string>
+    <string id="generalTab">全般</string>
+    <string id="connectionTab">接続</string>
+    <string id="useSystemProxy">システムのプロキシ設定を使用する</string>
+    <string id="noProxy">プロキシなし</string>
+    <string id="manualProxy">手動でのプロキシ設定:</string>
+    <string id="protocol">プロトコル</string>
+    <string id="httpProtocol">HTTP</string>
+    <string id="socks4Protocol">SOCKS4</string>
+    <string id="socks4aProtocol">SOCKS4a</string>
+    <string id="socks5Protocol">SOCKS5</string>
+    <string id="host">ホスト</string>
+    <string id="port">ポート</string>
+    <string id="username">ユーザ名</string>
+    <string id="password">パスフレーズ</string>
+    <string id="emptyFieldsError">[ホスト]および[ポート]フィールドは必ず入力してください</string>
+    <string id="wrongAttachmentNameError">エンベロープの添付ファイル名は空白にできず、無効な文字を使ってはいけません。</string>
+    <string id="emptyTextFieldError">オプション{0}は空にできません。</string>
+    <string id="encryptByDefaultCheckBox">デフォルトで暗号化する</string>
+    <string id="attachmentNameLabel">添付ファイル名</string>
+    <string id="sensitivityLabel">メッセージセキュリティ</string>
+    <string id="sendReturnReceipCheckBox">返信確認メッセージを送信する</string>
+    <string id="unsecureServerUrlLabel">セキュリティで保護されていないサーバのURL</string>
+    <string id="connectTimeoutLabel">接続タイムアウト(ms)</string>
+    <string id="socketTimeoutLabel">ソケットのタイムアウト(ms)</string>
+    <string id="dispRemMeCheckBox">「情報をコンピュータに保存する」を表示する</string>
+    <string id="dispAutoOpenCheckBox">「自動的に開く」を表示する</string>
+    <string id="addMessageBarCheckBox">メッセージバーを追加する</string>
+    <string id="showReplyToAllCheckBox">メッセージバーに「全員に返信」ボタンを表示する</string>
+    <string id="openInSameWindCheckBox">同じウインドウで開く</string>
+    <string id="dispOpenOfflineCheckBox">「オフラインで開く」チェックボックスを表示する</string>
+    <string id="dispRemEnvKeyCheckBox">「エンベロープキーを保存する」を表示する</string>
+    <string id="dispEnablePSPCheckBox">「個人セキュリティフレーズを有効にする」を表示する</string>
+    <string id="showReplyCheckBox">メッセージバーに「返信」ボタンを表示する</string>
+    <string id="showForwardCheckBox">メッセージバーに 「転送」ボタンを表示する</string>
+    <string id="suppresAppletCheckBox">アプレットが動作しないようにする</string>
+    <string id="topPanelText">Outlookアカウントがリストされています。これらの各アカウントに対して、異なる暗号化設定
+を適用できます。</string>
+    <string id="topPanelHeaderText">暗号化アカウント</string>
+    <string id="encryptConfigButtonText">オプション...</string>
+    <string id="addressColumnHeaderText">暗号アカウントアドレス</string>
+    <string id="typeColumnHeaderText">タイプ</string>
+    <string id="keyServerColumnHeaderText">キーサーバ</string>
+    <string id="encryptionOptionsTitle">暗号化オプション- {0}</string>
+    <string id="passCacheNeverText">キャッシュしない</string>
+    <string id="passCacheDurLabelText">分</string>
+    <string id="passCacheAlwaysText">常に保存</string>
+    <string id="advancedTab">詳細設定</string>
+    <string id="passCacheDurToolTip">{0}分～{1}分の間（包括的）</string>
+    <string id="usageReminderCheckBox">暗号化の使用リマインダの表示</string>
+    <string id="defaultKeyServerCheckBox">デフォルトの暗号化アカウントとして使用する</string>
+    <string id="makeThisAccountDefaultQuestion">現在、Fidelityがデフォルトの暗号化アカウントです。このアカウントをデフォルトにしますか？</string>
+    <string id="alwaysUseMessageBodyFromKeyServer">常にキーサーバのメッセージ本文を使用する</string>
+    <string id="defaultLanguageForOutgoingMessages">送信メッセージのデフォルト言語</string>
+    <string id="turnOffLocalizedEnvelopesAlert">この機能をオフにするとプラグインのメッセージ本文テンプレートの
+リストを使用することになります。このリストはキーサーバのリストとは異なります</string>
+	<string id="useKeyServerDefault">キーサーバデフォルトを使用</string>
+  </group>
+  <group name="DE.DecryptPassFormStrings">
+    <string id="windowTitle">パスフレーズを入力してください</string>
+    <string id="SensitivityLowDesc">メッセージは安全に送信されましたが、
+パスフレーズは必要としません。</string>
+    <string id="FlagDesc">メッセージにはフラグが付けられて、パスフレーズを必要としません。</string>
+    <string id="SensitivityHighDesc">このメッセージに設定されたセキュリティレベルにより、パスフレーズが常に必要です。</string>
+    <string id="SensitivityMedium">中</string>
+    <string id="SensitivityLow">低</string>
+    <string id="SensitivityHigh">高</string>
+    <string id="address">電子メール アドレス*</string>
+    <string id="password">パスフレーズ*</string>
+    <string id="AcknowledgeButton">確認</string>
+    <string id="RegisterButton">登録</string>
+    <string id="messageSecurity">メッセージセキュリティ: {0}</string>
+    <string id="requiredLegend">* - 必須</string>
+    <string id="rememberPassword">パスフレーズを保存する</string>
+    <string id="accountDoesNotExist">適切な電子メールアカウントを指定または入力してください。</string>
+    <string id="addressComboBoxToolTip">アカウントを選択する</string>
+    <string id="passwordTextBoxToolTip">選択したアカウントのパスフレーズ</string>
+    <string id="remPassCheckBoxToolTip">アカウントのパスフレーズを保存する</string>
+    <string id="decryptionMessage">しばらくお待ちください。</string>
+	<string id="addressIsNotListed">アドレスがリストにありません</string>
+  </group>
+  <group name="DE.SendOnlineFormStrings">
+    <string id="windowTitle">セキュアエンベロープのオプション</string>
+    <string id="defaultExpiricyTime">有効期限日</string>
+    <string id="requestReadReceipt">復号通知を要求する</string>
+    <string id="bodyMessageLabel">Ciscoセキュアエンベロープの受信者に対して、開封前に次のメッセージが表示されます</string>
+    <string id="hideEncryptDialog">今後このダイアログボックスを表示しない</string>
+    <string id="sendButton">送信</string>
+    <string id="hideEncryptDialogToolTip">このダイアログボックスが再び表示されないようにします</string>
+    <string id="sendButtonToolTip">暗号化された電子メールを送信します</string>
+    <string id="locEnvBodyMessageLabel">受信者はキーサーバで選択した言語でメッセージ本文を受信します。元のメッセージはこのテンプレートと異なる場合があります</string>
+  </group>
+  <group name="DE.EncryptionProcessFormStrings">
+    <string id="message">暗号化しています。 しばらくお待ちください。</string>
+  </group>
+  <group name="DE.PostXErrorCodesStrings">
+    <string id="GeneralEncryptError">暗号化処理でエラーが発生しました。</string>
+    <string id="GeneralDecryptError">復号処理でエラーが発生しました。</string>
+    <string id="SystemError">システム障害。</string>
+    <string id="Unimplemented">機能が実装されていません。</string>
+    <string id="Failed">Daemonコマンドが失敗しました。</string>
+    <string id="BadEnvelopeConfigFile">エンベロープの設定ファイルが正しくありません。</string>
+    <string id="BadConfig">暗号化中にエラーが発生しました。無効なsdk設定が検出されました。</string>
+    <string id="HttpFailureUnknown">サーバに接続中、HTTPエラーが発生しました。</string>
+    <string id="HttpFailureDns">サーバに接続中、HTTPエラーが発生しました: DNS名を解決できませんでした。</string>
+    <string id="HttpFailureOpen">サーバに接続中、HTTPエラーが発生しました: IP接続を確立できませんでした。</string>
+    <string id="HttpFailureTlsOpen">サーバに接続中、HTTPエラーが発生しました: TLS接続をネゴシエートできませんでした。</string>
+    <string id="HttpFailureRequest">サーバに接続中、HTTPエラーが発生しました: 要求送信中にエラーが発生しました。</string>
+    <string id="HttpFailureResponse">サーバに接続中、HTTPエラーが発生しました: 応答の読み取り中にエラーが発生しました。</string>
+    <string id="HttpFailureTlsClose">サーバに接続中、HTTPエラーが発生しました: TLS接続を切断できませんでした。</string>
+    <string id="HttpFailureClose">サーバに接続中、HTTPエラーが発生しました: ソケットを閉じることができませんでした。</string>
+    <string id="MaxMemoryReached">最大メモリに達しました。</string>
+    <string id="OutOfMemory">メモリー不足。</string>
+    <string id="NoRecipients">暗号化中にエラーが発生しました: 受信者が指定されていません。</string>
+    <string id="BadRcpt">暗号化中にエラーが発生しました: [受信者]フィールドで指定されている電子メール アドレスが無効です。</string>
+    <string id="BadTo">暗号化中にエラーが発生しました: [宛先]フィールドで指定されている電子メール アドレスが無効です。</string>
+    <string id="BadCc">暗号化中にエラーが発生しました: [CC]フィールドで指定されている電子メール アドレスが無効です。</string>
+    <string id="BadBcc">暗号化中にエラーが発生しました: [BCC]フィールドで指定されている電子メール アドレスが無効です。</string>
+    <string id="BadFrom">暗号化処理中にエラーが発生しました: [送信者]フィールドで指定されている電子メール アドレスが無効です。</string>
+    <string id="BadPropertyFile">暗号化中にエラーが発生しました: 無効なエンベロープビルダーのプロパティファイルが指定されています。</string>
+    <string id="UuidFailed">暗号化中にエラーが発生しました: 固有の識別子を作成できません。</string>
+    <string id="BuildFailure">暗号化中にエラーが発生しました: エンベロープを構築できません。</string>
+    <string id="badAttachments">暗号化中にエラーが発生しました: 無効な添付ファイル検出されました。</string>
+    <string id="BadReplyUrl">暗号化中にエラーが発生しました: 無効な返信URLが指定されています。</string>
+    <string id="BadRegister">暗号化中にエラーが発生しました: 無効な登録URLが指定されています。</string>
+    <string id="BadToken">暗号化中にエラーが発生しました: 無効なトークンが指定されています。</string>
+    <string id="BadMimemessage">暗号化中にエラーが発生しました: MIMEメッセージのエラーです。</string>
+    <string id="BadShaedKey">暗号化中にエラーが発生しました: 間違った暗号化パスフレーズが指定されています。</string>
+    <string id="UnknownAlgorithm">暗号化中にエラーが発生しました: 不明なアルゴリズムが指定されています。</string>
+    <string id="BadReplyto">暗号化中にエラーが発生しました: 無効な電子メールが[返信先]フィールドに指定されています。</string>
+    <string id="EncryptionFailure">暗号化中にエラーが発生しました: 暗号化が失敗しました。</string>
+    <string id="KeyserverUnreachable">暗号化中にエラーが発生しました: キーサーバに接続できません。</string>
+    <string id="BadPassword">入力したパスフレーズが間違っています。</string>
+    <string id="MalformedRequest">エンベロープを開くことができません - 不正なリクエストがサーバに送信されました。</string>
+    <string id="ServerError">エンベロープを開くことができません -  内部サーバエラーが発生しました。</string>
+    <string id="Expired">期限が切れているため、メッセージを復号できません。 詳細については送信者にお問い合わせください。</string>
+    <string id="PermanentLocked">エンベロープは恒久的に管理者によってロックされています。</string>
+    <string id="TemporaryLocked">エンベロープは一時的にロックされているため開くことができません。</string>
+    <string id="NoRecordFound">指定されたエンベロープのキーサーバ記録が見つかりませんでした。</string>
+    <string id="NoLoginSession">アクティブ中のログインセッションはありません。</string>
+    <string id="FailedToUpdateDb">キーストアのデータベースの更新に失敗しました。</string>
+    <string id="NotRegistered">この機能は、セキュリティで保護された最初のエンベロープを開いて登録を完了するまでは利用できません。</string>
+    <string id="NotRegisteredRegisterLink">この機能が利用可能になるのは、登録が完了してからです。登録するには{0}ここ{1}をクリックします。</string>
+	<string id="AuthenticationFailed">キーサーバは認証に使用されたトークンを検証できませんでした。</string>
+    <string id="AccesscheckFailed">キーサーバへのアクセスチェックに失敗しました。</string>
+    <string id="ExceedMaxFailedOpens">開封試行回数が多すぎます。</string>
+    <string id="RecipientNotSentEnvelope">このエンベロープはこの受信者に送信されませんでした。</string>
+    <string id="RecipientSuspended">アカウントが一時停止されています。</string>
+	<string id="RecipientSuspendedWithTime">アカウントが一時停止されています。{0}分後に再試行してください。</string>
+    <string id="RecipientNotActivated">受信者のユーザアカウントがアクティブ化されていません。</string>
+    <string id="EnvelopeLocked">エンベロープはサーバによってロックされています。</string>
+    <string id="RecipientNotIdentified">受信者を識別できません。</string>
+    <string id="InvalidSession">セッションの期限が切れました。メッセージを再度開いてください。</string>
+    <string id="PollFailed">ポーリングに失敗しました。</string>
+    <string id="RecipientBlocked">受信者のユーザアカウントがブロックされました。</string>
+    <string id="RecipientLocked">アカウントがロックされています。詳細については管理者にお問い合わせください。</string>
+    <string id="PasswordExpired">パスフレーズの期限が切れています。パスフレーズをリセットするには、WebSafeからログインします。</string>
+    <string id="InsufficientSecurity">メッセージのセキュリティレベルが低すぎます。</string>
+    <string id="ExceedMaximumSecurity">メッセージのセキュリティレベルが、許可されている最高レベルを超えています。</string>
+    <string id="InvalidFrom">差出人のアドレスが無効です。</string>
+    <string id="InvalidRecipient">受信者のアドレスが無効です。</string>
+    <string id="RequestAborted">要求がキャンセルされました。</string>
+    <string id="DuplicateMessageId">メッセージIDは既に存在しています。</string>
+	<string id="InMaintenance">サーバはメンテナンスのため現在使用できません。後で再試行してください。</string>
+    <string id="InvalidStatusMessage">ステータスメッセージが無効です。</string>
+    <string id="InvalidVersion">バージョンが無効です。</string>
+    <string id="SsoLogin">エンベロープを開くことができません - シングルサインオンのログインが必要です。</string>
+    <string id="LocalLogin">エンベロープを開くことができません - ログインが必要です。</string>
+    <string id="SsoError">エンベロープを開くことができません - シングルサインオンのログインに失敗しました。</string>
+    <string id="VerifyInvalidSignature">署名の検証に失敗しました。</string>
+    <string id="VerifyInvalidParameters">BCE設定の一部のパラメータが無効です。</string>
+    <string id="VerifyRequestFailed">署名検証の要求に失敗しました。</string>
+    <string id="BadOfflinePassword">無効なオフラインパスフレーズが指定されました。</string>
+    <string id="UpdateFailed">無効なオフラインパスフレーズが指定されました。</string>
+    <string id="NoPassword">ユーザが指定されていません。</string>
+    <string id="TokenCorrupted">トークンが破損しています。</string>
+    <string id="locked">このメッセージはロックされているため復号化できません。</string>
+    <string id="lockedReason">ロック理由: {0}</string>
+    <string id="aboveLimitEncryptionError">このメッセージは許容制限を超えており暗号化できません。</string>
+    <string id="aboveLimitDecryptionError">このメッセージは許容制限を超えており復号化できません。</string>
+    <string id="javaIsMissing">JAVAランタイム環境がシステム内で見つかりません。
+プラグインインストーラを実行するか、JREを手動でインストールしてください。</string>
+    <string id="javaIsMissingForEncryptionFunctionality">セキュアメッセージの暗号化、復号化、または管理を行うために、Java Runtime Environmentをインストールしてください。</string>
+	<string id="pastExpirationDay">選択した有効期間は既に経過しています。有効な日付を選択してください。</string>
+    <string id="pastReadByDay">選択した "開封期間" が既に経過しています。有効な日付を選択してください。</string>
+    <string id="accountBlockedForgetLink">アカウントがブロックされています。パスフレーズをリセットする必要があります。[パスフレーズを忘れた場合]のリンクを使用して、アカウントを再度有効化してください。 {0}パスフレーズを忘れた場合{1}</string>
+    <string id="accountBlocked">間違ったパスフレーズが何度も入力されたため、アカウントがブロックされています。</string>
+    <string id="lockedEnvelope">エンベロープはサーバによりロックされています。</string>
+    <string id="errorDuringLoadingMessagesFromKeyServer">キーサーバからメッセージをロード中にエラーが発生しました。</string>
+    <string id="BadGateway">不正なゲートウェイ: プロキシサーバはアップストリームサーバから無効な応答を受け取りました。</string>
+    <string id="KeyserverIsNotReachable">キーサーバへ接続中、HTTPエラーが発生しました: リモートホストに接続できません。</string>
+    <string id="MessageIsExpired">元のメッセージの期限が切れました。</string>
+    <string id="MessageIsLocked">元のメッセージがロックされました。</string>
+  </group>
+  <group name="Encryption">
+    <string id="failedToValidateConfig">アカウント{0}の設定検証に失敗しました。
+正しい値で設定するか、管理者にお問い合わせください。</string>
+    <string id="notValidEncryptionMethod">復号化は有効な暗号化方法ではありません。
+アカウントの再設定を検討してください。</string>
+    <string id="decryptSettingsNotFound">アカウントの復号化設定を見つけることができません: </string>
+    <string id="disablingEncryptionForAccount">プラグインに予期しないエラーが発生しました。
+このアカウントの暗号化を無効にします。</string>
+    <string id="noAccountSettingsFound">アカウント{0}の設定が見つからなかったため、電子メールの暗号化に失敗しました</string>
+    <string id="readByAvailable">開封期間通知がサーバ{0}の設定で利用可能です</string>
+    <string id="readByEnabled">開封期間通知がサーバ{0}で有効になりました</string>
+    <string id="readByDisabled">開封期間通知がサーバ{0}で無効になりました</string>
+    <string id="BCEApplied">新しい変更が{0}に正常に適用されました</string>
+    <string id="BCEFailed">新しい設定を適用できませんでした。 添付ファイルに有効な署名があることを確認してください。</string>
+    <string id="BCEInvalid">BCE設定ファイルが無効です。
+管理者にお問い合わせください。</string>
+    <string id="mismatchUrls">BCE設定は適切なキーサーバから送信される必要があります。</string>
+    <string id="subjectLengthExceeded">電子メールの件名が最大文字数を超えています。{0}文字削除してください{1}。</string>
+    <string id="emailIsNotPresentInSentFolder">このダイアログから電子メールを開くことができません。電子メールがアカウントの'送信済み'フォルダに存在しないか、電子メールの同期が完了していません。</string>
+  </group>
+  <group name="DE.MailOptionsStrings">
+    <string id="windowTitle">暗号化メールオプション</string>
+    <string id="replyOptions">返信オプション</string>
+    <string id="allowReply">返信を許可</string>
+    <string id="allowReplyAll">全員に返信を許可</string>
+    <string id="allowForward">転送を許可</string>
+    <string id="expirationLbl">有効期間</string>
+    <string id="readByLbl">開封期間</string>
+    <string id="OptionHiddenWarn">すべてのメール暗号化オプションが管理者により非表示にされています。</string>
+  </group>
+  <group name="DE.MsmStrings">
+    <string id="windowTitle">セキュアなメッセージの管理</string>
+    <string id="changeSettings">設定の変更</string>
+    <string id="LockChBxTitle">選択したメッセージをロックする</string>
+    <string id="LockChBxTitleForSeveralMessages">選択したメッセージをロックする</string>
+    <string id="lockReasonToolTip">選択したメッセージのロック理由</string>
+    <string id="lockReasonToolTipForSeveralMessages">選択したメッセージのロック理由</string>
+    <string id="ExpireChbxTitle">有効期限</string>
+    <string id="OKBtn">OK</string>
+    <string id="CancelBtn">キャンセル</string>
+    <string id="ApplylBtn">適用</string>
+    <string id="ToHeaderTitle">宛先</string>
+    <string id="SubjectHeaderTitle">件名</string>
+    <string id="SentHeaderTitle">送信済み</string>
+    <string id="ExpiresHeaderTitle">期限切れ</string>
+    <string id="LockedHeaderTitle">ロック済み</string>
+    <string id="LockedStr">真</string>
+    <string id="UnLockedStr">偽</string>
+  </group>
+  <group name="DE.ManageMessagesStrings">
+    <string id="windowTitle">メッセージの管理</string>
+    <string id="showLblTitle">表示:</string>
+    <string id="selectedRbtnTitle">選択済み</string>
+    <string id="refreshBtnToolTipHeader">更新</string>
+    <string id="refreshBtnToolTipBody">新しいエントリでメールリストを更新します。</string>
+    <string id="basicSearchTextBoxText">入力して検索</string>
+    <string id="advancedSearchExpanderTitle">高度な検索</string>
+    <string id="basicSearchExpanderTitle">基本検索</string>
+    <string id="keyword1TextBoxText">検索キーワードを入力してください</string>
+    <string id="Keyword2TextBoxText">検索する追加キーワードを入力してください</string>
+    <string id="fromLblTitle">差出人</string>
+    <string id="inLblTitle">検索対象</string>
+    <string id="statusLblTitle">ステータス</string>
+    <string id="failedAttemptsLblTitle">失敗回数</string>
+    <string id="clearBtnTitle">すべての検索クエリを消去</string>
+    <string id="anyTitle">任意</string>
+    <string id="toTitle">宛先</string>
+    <string id="subjectTitle">件名</string>
+    <string id="lockedReasonTitle">ロック済み</string>
+    <string id="allTitle">すべて</string>
+    <string id="unopenedTitle">未読</string>
+    <string id="openedTitle">既読</string>
+    <string id="lockedTitle">ロック済み</string>
+    <string id="expiredTitle">期限切れ</string>
+    <string id="sentTitle">送信済み</string>
+    <string id="expiresTitle">期限切れ</string>
+    <string id="fromOLTitle">Outlook</string>
+    <string id="currentPageString">{0}/{1}</string>
+    <string id="mailsAmountStringForLoadingSingular">{0}を表示中 - {1}/{2}メッセージ [他のアイテムをロードしています。最大待ち時間はおよそ{3}分です]</string>
+    <string id="mailsAmountStringForLoadingPlural">{0}を表示中 - {1}/{2}メッセージ [他のアイテムをロードしています。最大待ち時間はおよそ{3}分です]</string>
+    <string id="mailsAmountString">{0}を表示中 - {1}/{2}メッセージ。</string>
+	<string id="mailsLoadedDuringSecondRoundString">すべてのメッセージがロードされました。すべてのメッセージを表示するには、ダイアログの更新アイコンをクリックしてください。</string>
+    <string id="mailsAmountStringForFiltering">{0}を表示中 - {1}/{2}メッセージ[全メッセージ件数:{3}]。</string>
+    <string id="lockTextBoxText">ロック理由</string>
+    <string id="lockChBxTitle">ロック</string>
+    <string id="expireChBxTitle">有効期限</string>
+    <string id="okBtn">OK</string>
+    <string id="cancelBtn">キャンセル</string>
+    <string id="applylBtn">適用</string>
+    <string id="nextBtnToolTip">次のページ</string>
+    <string id="lastBtnToolTip">最後のページ</string>
+    <string id="previousBtnToolTip">前のページ</string>
+    <string id="firstBtnToolTip">最初のページ</string>
+    <string id="inOutlookToolTiptext">メッセージをダブルクリックして開きます</string>
+    <string id="perPageLabel">１ページあたり</string>
+    <string id="notificationLabel">残りのメッセージはバックグラウンドで読み込んでいます。注: すべてのメッセージの読み込みが完了するまで検索や並べ替えはできません。</string>
+    <string id="manageMessagesDialog">[メッセージの管理]ダイアログ</string>
+    <string id="noMatchesFound">一致するものが見つかりません。</string>
+    <string id="noItemsToDisplay">表示する項目がありません。</string>
+    <string id="manageMessagesToolTip">[メッセージの管理]ダイアログを開きます</string>
+    <string id="refreshLabel">ダイアログを更新して最新の変更を反映しますか? 注: 更新すると、保存していない変更はすべて失われます。</string>
+  </group>
+  <group name="Mso.DE">
+    <string id="applyBCE">このメッセージには{0}の設定で安全な添付ファイルが含まれています。これらの設定を適用しますか？</string>
+    <string id="BCEApplied">{0}に新しい変更が正常に適用されました</string>
+    <string id="BCEFailed">新しい設定の適用に失敗しました。
+添付ファイルに有効な署名があることを確認してください。</string>
+    <string id="sensitiveDataCleanFailed">このメールを復号化したメールを完全に消去することができません。
+機密データ損失の可能性があります。
+データ損失を避けるため、新しく作成されたメールをメールボックス内で検索し、
+そのリスト内で一番上の復号化電子メールを完全に削除してください。</string>
+    <string id="decryptionGeneralFailure">このメッセージはCisco Email Security Plug-inで復号化できませんでした。
+このメッセージを保存し、ブラウザを使って開いてください。</string>
+    <string id="manageSecureMessageCaption">セキュアなメッセージの管理...</string>
+    <string id="manageSecureMessagesCaption">セキュアなメッセージの管理...</string>
+    <string id="unableToIdentifyOutgoingAcc">発信アカウントを識別できません。
+このメールは暗号化できません。別のアカウントを使うか、または新しいメールを作成してください。</string>
+    <string id="accountIsNotConfigured">このメールは{0}経由で送信されるように設定されています。このアカウントは暗号化用に設定されていません。</string>
+    <string id="unableReadAccounts">致命的なエラーです。暗号化プラグインは、Outlookアカウントを読み取ることができません。
+暗号化を利用できません。</string>
+    <string id="saveMailQuestion">変更を保存しますか?</string>
+    <string id="sendNotAllowed">このセキュアなメッセージの受信者を変更することはできません。
+このメッセージは元の受信者に送信されます。
+続行しますか?</string>
+    <string id="wrongSender">受信者のみがこのメールを返信または転送できます</string>
+    <string id="UsageReminder">注: 暗号化はビジネス目的のみにご使用ください。</string>
+    <string id="featureIsNotSupported">この機能はキーサーバでサポートされていません</string>
+  </group>
+  <group name="Mso.DE.RibbonLabels">
+    <string id="EncryptRibbonGroup">Cisco Email Security</string>
+    <string id="SendEncryptButton">メッセージの暗号化</string>
+    <string id="OpenOptionsWindow">[暗号化メールオプション]ダイアログを開く...</string>
+    <string id="ManageSecureMessagesButton">セキュアなメッセージの管理...</string>
+    <string id="ManageSecureMessagesGroup">Cisco Email Security</string>
+  </group>
+  <group name="Mso.DE.RibbonScreentips">
+    <string id="SendEncryptButton">暗号化するメッセージにフラグを付けます。</string>
+    <string id="ManageSecureMessagesButton">[セキュアなメッセージの管理]ダイアログを開きます。</string>
+  </group>
+  <group name="Mso.DE.RibbonSupertips">
+    <string id="SendEncryptButton">暗号化されたメッセージはセキュアな方法で送信されます</string>
+    <string id="ManageSecureMessagesButton">[セキュアなメッセージの管理]ダイアログでは、セキュアメッセージの有効期間やその他のオプションを変更できます。</string>
+  </group>
+  <group name="Mso.DE.Warnings">
+    <string id="sendNotAllowed">このメッセージのセキュア機能は送信者により無効にされています。</string>
+  </group>
+  <group name="Report.OptionToolTips">
+    <string id="reportConfigButtonToolTip">選択したアカウントの[レポートオプション]ダイアログを開きます</string>
+    <string id="keepReportsToolTip">レポートしたメッセージを保存します</string>
+    <string id="showReportSuccessOneToolTip">1つの電子メールが正常にレポートされたときに通知を表示します</string>
+    <string id="showReportSuccessMultipleToolTip">複数の電子メールが正常にレポートされたときに通知を表示します</string>
+    <string id="reportEnableChBxToolTip">レポートプラグインを有効にします</string>
+    <string id="reportOptionsButtonToolTip">[レポートオプション]ダイアログを開きます</string>
+  </group>
+  <group name="Mso.Report.OptionToolTips">
+    <string id="addExplorerToolTip">メインウィンドウにセキュリティツールバーを追加します</string>
+    <string id="addInspectorToolTip">メッセージウィンドウにセキュリティツールバーを追加します</string>
+    <string id="addContextMenuToolTip">右クリックメニューにメッサージのレポートオプションを追加します</string>
+  </group>
+  <group name="Encryption.OptionToolTips">
+    <string id="encryptConfigButtonToolTip">選択したアカウントの暗号化オプションダイアログを開きます</string>
+    <string id="encryptEnableChBxToolTip">暗号化プラグインを有効にします</string>
+    <string id="encryptOptionsButtonToolTip">暗号化オプションダイアログを開きます</string>
+    <string id="useSystemProxyToolTipText">システムのプロキシ設定を使用することを指定します</string>
+    <string id="noProxyToolTipText">プロキシ設定を無効にします</string>
+    <string id="manualProxyToolTipText">手動のプロキシ設定を使用することを指定します</string>
+    <string id="httpProtocolToolTipText">HTTPプロトコルを使用します</string>
+    <string id="socks4ProtocolToolTipText">SOCKS4プロトコルを使用します</string>
+    <string id="socks4aProtocolToolTipText">SOCKS4aプロトコルを使用します</string>
+    <string id="socks5ProtocolToolTipText">SOCKS5プロトコルを使用します</string>
+    <string id="hostToolTipText">プロキシのホスト名を設定します</string>
+    <string id="portToolTipText">プロキシのポート番号を設定します</string>
+    <string id="usernameToolTipText">プロキシのユーザ名を設定します</string>
+    <string id="passwordToolTipText">プロキシのパスフレーズを設定します</string>
+    <string id="passCacheNeverToolTipText">パスフレーズをキャッシュしません</string>
+    <string id="passCacheDurToolTipText">指定した期間パスフレーズをキャッシュします</string>
+    <string id="passCacheAlwaysToolTipText">常にパスフレーズをキャッシュします</string>
+    <string id="serverUrlToolTipText">キーサーバのURLを設定します</string>
+    <string id="tokenFileNameToolTipText">トークンファイル名を設定します</string>
+    <string id="defaultExpiricyDaysToolTipText">デフォルトの期限間隔を設定します</string>
+    <string id="defaultReadByDaysToolTipText">デフォルトの開封期間を設定します</string>
+    <string id="encryptByDefaultToolTipText">デフォルトでメッセージが暗号化されるように指定します</string>
+    <string id="attachmentNameToolTipText">添付ファイル名を設定します</string>
+    <string id="sensitivityToolTipText">メッセージのセキュリティレベルを設定します</string>
+    <string id="sendReturnReceipToolTipText">復号通知を要求します</string>
+    <string id="showEncryptDialogToolTipText">暗号化中に「セキュアエンベロープオプション」ダイアログを表示します</string>
+    <string id="unsecureServerUrlToolTipText">セキュリティ保護されていないキーサーバのURLを設定します</string>
+    <string id="connectTimeoutToolTipText">接続タイムアウト時間を設定します</string>
+    <string id="socketTimeoutToolTipText">ソケットのタイムアウト時間を設定します</string>
+    <string id="dispRemMeToolTipText">"情報をコンピュータに保存する"のチェックボックスを表示します</string>
+    <string id="dispAutoOpenToolTipText">"自動的に開く"チェックボックスを表示します</string>
+    <string id="addMessageBarToolTipText">エンベロープにメッセージバーを追加します</string>
+    <string id="showReplyToAllToolTipText">エンベロープのメッセージバーに[全員に返信]ボタンを表示します</string>
+    <string id="openInSameWindToolTipText">電子メールメッセージを同じウィンドウで開きます</string>
+    <string id="dispOpenOfflineToolTipText">エンベロープに"オフラインで開く"チェックボックスを表示します</string>
+    <string id="dispRemEnvKeyToolTipText">エンベロープに"エンベロープキーを記憶する"チェックボックスを表示します</string>
+    <string id="dispEnablePSPToolTipText">エンベロープに"個人セキュリティフレーズを有効にする"チェックボックスを表示します</string>
+    <string id="showReplyToolTipText">エンベロープのメッセージバーに[返信]ボタンを表示します</string>
+    <string id="showForwardToolTipText">エンベロープのメッセージバーに[転送]ボタンを表示します</string>
+    <string id="suppresAppletToolTipText">アプレットが動作しないようにします</string>
+    <string id="usageReminderToolTipText">「メッセージの暗号化」ボタンをクリックした後に、暗号化の使用リマインダが表示されます</string>
+    <string id="defaultKeyServerChBoxToolTipText">現在のアカウントをデフォルトに設定します</string>
+    <string id="defaultLocaleToolTipText">送信メッセージのデフォルト言語を設定します</string>
+    <string id="messageBodyFromKeyServerToolTip">メッセージ本文が常にキーサーバから取得されるように指定します</string>
+  </group>
+  <group name="DE.MailOptionsToolTipStrings">
+    <string id="allowReplyCbxToolTip">メッセージへの返信を許可します</string>
+    <string id="allowReplyAllCbxToolTip">すべてのメッセージへの返信を許可します</string>
+    <string id="allowForwardCbxToolTip">メッセージの転送を許可します</string>
+    <string id="securityCmbxToolTip">現在のメッセージのセキュリティレベルを設定します</string>
+    <string id="expireTimePickerToolTip">現在のメッセージの有効期限時刻を設定します</string>
+    <string id="readByTimePickerToolTip">現在のメッセージの開封期限時刻を設定します</string>
+    <string id="expireDatePickerToolTip">現在のメッセージの有効期限日を設定します</string>
+    <string id="readByDatePickerToolTip">現在のメッセージの開封期限日を設定します</string>
+    <string id="expCheckBoxToolTip">現在のメッセージの有効期限日を設定します</string>
+    <string id="readByCheckBoxToolTip">現在のメッセージの開封期限日を設定します</string>
+    <string id="lockCheckBoxToolTip">選択したエントリをロックします</string>
+    <string id="expireCheckBoxToolTip">選択したエントリが指定した日時に期限切れになるように設定します</string>
+    <string id="lockReasonTextBoxToolTip">選択したエントリのロック理由を入力/変更してください</string>
+    <string id="expireOnDatePickerToolTip">選択したエントリの有効期限日を設定してください</string>
+    <string id="expireOnTimePickerToolTip">選択したエントリの有効期限時刻を設定してください</string>
+  </group>
+  <group name="DE.ManageMessagesToolTipStrings">
+    <string id="selectedToolTipText">選択したエントリだけを表示します</string>
+    <string id="allToolTipText">すべてのエントリを表示します</string>
+    <string id="basicSearchTbToolTipText">「宛先」と「件名」フィールド内の検索に使うテキスト</string>
+    <string id="advancedSearchToolTipText">[高度な検索]ダイアログを開きます</string>
+    <string id="basicSearchToolTipText">[基本検索]ダイアログを開きます</string>
+    <string id="keyword1ToolTipText">"検索対象"ドロップダウンメニューで指定されたフィールド内の検索に使うテキスト</string>
+    <string id="keyword2ToolTipText">"検索対象"ドロップダウンメニューで指定されたフィールド内の検索に使う追加のテキストです。
+両方のキーワードを指定した場合、両方のキーワードを含む電子メールメッセージが検索されます</string>
+    <string id="keyword1ComboBoxToolTip">プライマリキーワードが検索されるフィールドを指定します</string>
+    <string id="keyword2ComboBoxToolTip">セカンダリキーワードが検索されるフィールドを指定します</string>
+    <string id="statusToolTipText">指定したステータスのメッセージを検索します</string>
+    <string id="failedAttemptsToolTipText">指定した失敗試行回数のあるメッセージを検索します</string>
+    <string id="clearBtnToolTipText">すべてのクエリを消去します</string>
+    <string id="fromDateCheckBoxToolTip">指定した日付の後に、送信、開封、もしくは期限切れになったメッセージを検索します</string>
+    <string id="toDateCheckBoxToolTip">指定した日付の前に、送信、開封、または期限切れになったメッセージを検索します</string>
+    <string id="fromTimePickerToolTip">指定した時刻の後に、送信、開封、または、期限切れになったメッセージを検索します</string>
+    <string id="toTimePickerToolTip">指定した時刻の前に、送信、開封、または期限切れになったメッセージを検索します</string>
+    <string id="dateComboBoxToolTip">送信、開封、または期限切れになったメッセージの検索に、時間間隔を使うかどうかを指定します</string>
+    <string id="expandToggleButtonToolTip">すべてのエントリの表示を折りたたみます</string>
+    <string id="checkAllToolTip">すべてのエントリ(ロックまたは期限切れ)を選択します</string>
+    <string id="pageSizeComboBox">各ページに表示されるエントリの数を設定します</string>
+  </group>
+  <group name="Core.CallHomeForms">
+    <string id="continueBtn">続行</string>
+    <string id="continueBtnToolTip">Outlookでの作業を継続します</string>
+    <string id="usageDataTextBlockPart1">以下のデータは集計分析のためにCiscoサーバに収集され保存されます:</string>
+    <string id="usageDataTextBlockPart2">一般情報:
+• 識別子
+  プラグインが初めてインストールされたときに生成される
+  非永続的な識別子です。使用状況レポートの関連付けに
+  のみ使用され、時間とともに変化する使用状況を追跡できます。
+  識別子は[プラグインオプション] &gt;
+  [追加オプション] &gt; [プライバシー]タブでリセットできます。
+• OSバージョン
+• Outlookバージョン
+• プラグインバージョン
+• 暗号化SDKバージョン
+  暗号化SDKは、プラグインによるセキュアメッセージの
+  暗号化および復号化の際に内部で使用されるライブラリです。
+• OS言語
+• インストール済みのOutlookプラグインの名前
+
+プラグイン内に設定されている各アカウントの場合:
+• タイプ
+• サーバ
+• 開封済みおよび送信済みのセキュアメッセージの数
+• 受信者の総数
+• 機能の使用回数
+  さまざまな機能が使用された回数です。
+• 非標準のレポートアドレスが使用されているかどうか</string>
+    <string id="usageDataDetailsTitle">使用状況データの詳細</string>
+    <string id="remarkTextBlock">この設定はプラグインオプションを使用して変更することもできます。</string>
+  </group>
+    <group name="Encryption.RegistrationStrings">
+    <string id="windowTitle">新規ユーザ登録</string>
+    <string id="enterPersonalInformation">個人情報を入力してください</string>
+    <string id="emailAddress">電子メール アドレス</string>
+	<string id="firstName">名*</string>
+	<string id="firstNameHint">名</string>
+	<string id="firstNameToolTip">名を入力してください。</string>
+	<string id="lastName">姓*</string>
+	<string id="lastNameHint">姓</string>
+	<string id="lastNameToolTip">姓を入力してください。</string>
+	<string id="createPassphrase">パスフレーズの作成</string>
+	<string id="passphrase">パスフレーズ*</string>
+	<string id="passphraseHint">パスフレーズ</string>
+	<string id="passphraseToolTip">パスフレーズを入力してください。</string>
+	<string id="confirmPassphrase">パスフレーズの確認*</string>
+	<string id="confirmPassphraseHint">パスフレーズの確認</string>
+	<string id="confirmPassphraseToolTip">パスフレーズを再入力してください。</string>
+	<string id="passphraseLimitationLbl">8文字以上の英数字を入力してください。パスフレーズでは大文字と小文字が区別されます。パスフレーズには英字と数字の両方を含める必要があります。</string>
+	<string id="selectLanguage">CRESアカウントの言語を選択</string>
+	<string id="language">言語*</string>
+	<string id="requiredField">* = 必須フィールド</string>
+	<string id="registrationHelpLink">ヘルプ</string>
+	
+	<!--Following 3 elements are joined in one sentence-->
+	<string id="youCanAlsoRegisterLbl">また、Webブラウザで</string>
+	<string id="linkLbl">リンク</string>
+	<string id="inWebBrowserLbl">を開いて登録することもできます。</string>
+	<!--Following 2 elements are joined in one sentence-->	
+	<string id="userConsent">登録することにより、CREの</string>
+	<string id="termOfServiceLinkLbl">サービス利用規約に同意することになります。</string>	
+	
+	<string id="personalSecurityPhraseTitle">個人セキュリティフレーズ</string>
+	<string id="personalSecurityPhrase">個人セキュリティフレーズ*</string>
+	<string id="personalSecurityPhraseToolTip">個人セキュリティフレーズを入力してください。</string>
+	<string id="personalSecurityPhraseIconToolTip">自分にしかわからない短いフレーズを入力してください。このフレーズは、ログインの際、メッセージエンベロープに表示されます。このフレーズが表示されることで、セキュアサイトにログインしていることを確認できます。</string>
+	<string id="enableMyPersonalSecurityPhrase">個人セキュリティフレーズを有効化する</string>
+	<string id="enableMyPersonalSecurityPhraseToolTip">個人セキュリティフレーズを有効化する</string>
+	<string id="selectSecurrityQuestions">セキュリティ用の質問を3つ選択</string>
+	<string id="selectSecurrityQuestionsIconToolTip">今後、パスフレーズを忘れた場合に、これらの質問に答える必要があります。</string>
+	<string id="showButton">表示</string>
+	<string id="showButtonToolTip">セキュリティ用の質問への回答を表示します。</string>
+	<string id="hideButton">非表示</string>
+	<string id="hideButtonToolTip">セキュリティ用の質問への回答を非表示にします。</string>
+	<string id="question1">質問1*</string>
+	<string id="answer1">回答1*</string>
+	<string id="answer1Hint">回答1</string>
+	<string id="confirmAnswer1">回答1の確認*</string>
+	<string id="confirmAnswer1Hint">回答1の確認</string>
+	<string id="question2">質問2*</string>
+	<string id="answer2">回答2*</string>
+	<string id="answer2Hint">回答 2</string>
+	<string id="confirmAnswer2">回答2の確認*</string>
+	<string id="confirmAnswer2Hint">回答2の確認</string>
+	<string id="question3">質問3*</string>
+	<string id="answer3">回答3*</string>
+	<string id="answer3Hint">回答 3</string>
+	<string id="confirmAnswer3">回答3の確認*</string>
+	<string id="confirmAnswer3Hint">回答3の確認</string>
+	<string id="questionCustomOption">質問を選択するか、独自の質問を入力してください...</string>
+	<string id="questionCustomHint">独自の質問</string>
+	<string id="questionCustomToolTip">パスフレーズを回復するための質問を選択または入力してください。</string>
+	<string id="questionNoCustomOption">質問を選択...</string>
+	<string id="questionNoCustomToolTip">パスフレーズを回復するための質問を選択します。</string>
+	<string id="answerToolTip">選択した質問に対する答えを入力してください。</string>
+	<string id="finalStepAccActivation">最終ステップ：アカウントの有効化</string>
+	<string id="yourCiscoRegisteredEnvelope">Cisco Registered Envelope Serviceアカウントが正常に作成されました。</string>
+	<string id="instructions">アカウントの有効化手順が記載されたメールが{0}に送信されています。</string>
+	<string id="pleaseCheckYourInbox">メールの受信トレイを確認してください。このメールが受信トレイに見つからない場合は、迷惑メールのフォルダをチェックしてください。</string>
+	<string id="advancedSettingsBtn">詳細設定</string>
+	<string id="advancedSettingsBtnToolTip">フォームの入力後、ここをクリックすると詳細設定に進みます。</string>
+	<string id="registerBtn">登録</string>
+	<string id="registerBtnToolTip">登録を完了するには、ここをクリックします。</string>
+	<string id="registerBtnIconToolTip">今すぐ登録するか、[詳細設定]をクリックして、アカウントの保護を強化するセキュリティ用の質問と個人のセキュリティフレーズを設定してください。</string>
+	<string id="cancelBtn">キャンセル</string>
+	<string id="cancelBtnToolTip">登録プロセスを取り消すには[キャンセル]をクリックします。</string>
+	<string id="backBtn">戻る</string>
+	<string id="backBtnToolTip">ここをクリックすると、最初のページに戻ります。入力した情報は失われます。</string>
+	<string id="continueBtn">続行</string>
+	<string id="continueBtnToolTip">フォームの入力後、ここをクリックすると詳細設定に進みます。</string>
+	<string id="okBtn">OK</string>
+	<string id="fixError">次のエラーを修正してください。</string>
+	<string id="fixErrors">次のエラーを修正してください。</string>
+	<string id="fixErrorss">次のエラーを修正してください。</string>
+	<!--Following 3 elements are joined in one sentence-->
+
+	<string id="GeneralError">登録できません。以下の </string>
+	<string id="GeneralErrorLink">リンク</string>
+	<string id="GeneralErrorEnd"> をクリックして登録するか、もう一度セキュアメッセージを開いてください。</string>
+	
+	<string id="PassphraseEmptyConstraint">パスフレーズを入力してください。</string>
+	<string id="PassphraseLengthConstraint">パスフレーズは{0}～{1}文字にする必要があります。</string>
+	<string id="PassphraseAlphanumericConstraint">パスフレーズは英数字にする必要があります。</string>
+	<string id="PassphraseUpperLowercasesConstraint">パスフレーズには大文字と小文字を含める必要があります。</string>
+	<string id="PassphraseOneSpecialCharacterConstraint">パスフレーズには1文字以上の特殊文字を含める必要があります。</string>
+	<string id="PassphraseTheSameAsEmailConstraint">パスフレーズを電子メールアドレスと同じにすることはできません。</string>
+	<string id="PassphraseAndConfirmationPassphraseDoNotMatch">新しいパスフレーズとパスフレーズの確認が一致しません。もう一度パスフレーズを入力してください。</string>
+	<string id="PassphraseContainCharacterRepeatedMoreThanThreeTimesConstraint">パスフレーズでは同じ文字を連続して3回以上繰り返すことはできません。</string>
+	<string id="PassphraseCiscoConstraint">パスフレーズには「Cisco」、「ocsic」の文字列を使用することはできません。また、同様の文字列の小文字と大文字を変更したものや、「i」を「1」、「|」、「!」に置き換えたもの、「o」を「0」に置き換えたもの、「s」を「$」に置き換えたものも使用できません。</string>
+	<string id="PassphraseCharactersConstraint">パスフレーズには、小文字、大文字、数字、特殊文字の文字クラスのうち、3つ以上の文字クラスの文字が含まれる必要があります。</string>
+	<string id="FirstNameConstraint">名を入力する必要があります。</string>
+	<string id="LastNameConstraint">姓を入力する必要があります。</string>
+	<string id="personalPhraseEmptyConstraint">個人のセキュリティフレーズを入力してください。</string>
+	<string id="quesionsUniquieConstraint">一意のセキュリティ用の質問を3つ選択する必要があります。</string>
+	<string id="quesionEmptyConstraint">セキュリティ用の質問{0}を選択します。</string>
+	<string id="answerTheSameAsEmailConstraint">セキュリティ用の質問{0}への回答を電子メールアドレスにすることはできません。</string>
+	<string id="answerAlphanumericConstraint">セキュリティ用の質問{0}への回答には、1つ以上の文字または数字を含める必要があります。</string>
+	<string id="answerEmptyConstraint">セキュリティ用の質問{0}に答えてください。</string>
+	<string id="answerAndConfirmationAnswerDoNotMatch">セキュリティ用の質問{0}への回答と回答{0}の確認が一致しません。</string>
+  </group>
+</strings>

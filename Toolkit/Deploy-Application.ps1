@@ -99,7 +99,7 @@ Try {
     [String]$appLang = 'EN'
     [String]$appRevision = '01'
     [String]$appScriptVersion = '1.0.0'
-    [String]$appScriptDate = '26/07/2023'
+    [String]$appScriptDate = '16/10/2023'
     [String]$appScriptAuthor = 'Workplace Services'
     ##*===============================================
     ## Variables: Install Titles (Only set here to override defaults set by the toolkit)

@@ -1,0 +1,11 @@
+Sie haben eine sichere Nachricht erhalten
+
+Lesen Sie die sichere Nachricht, indem Sie die Anlage ${AttachmentName} öffnen.
+Sie werden aufgefordert, die Datei zu öffnen (anzuzeigen) oder sie auf Ihrem Computer zu speichern (herunterzuladen). Um optimale Ergebnisse zu erhalten, speichern Sie die Datei zuerst, und öffnen Sie sie anschließend in einem Webbrowser. Um mit einem mobilen Gerät auf die Anlage zuzugreifen, leiten Sie diese Nachricht an ${MOBILE_EMAIL} weiter. Anschließend erhalten Sie einen Anmelde-URL für das mobile Gerät.
+
+Wenn Sie Zweifel an der Gültigkeit dieser Nachricht haben, wenden Sie sich direkt an den Absender.
+
+Neue Benutzer müssen sich nach dem Öffnen der Anlage registrieren. Weitere Informationen erhalten Sie unter folgendem Hilfe-Link.
+Hilfe - ${HTTPS_URL}/websafe/help?topic=RegEnvelope
+Info zu ${FULL_SERVICE_NAME} - ${HTTPS_URL}/websafe/about 
+

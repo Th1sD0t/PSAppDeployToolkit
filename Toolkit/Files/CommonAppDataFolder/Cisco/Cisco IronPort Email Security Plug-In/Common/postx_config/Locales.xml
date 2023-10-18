@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Supported locales by the SDK only if the key server
+    does not support localized envelopes.
+-->
+
+<locales>
+    <locale>
+        <value>en</value>
+        <display>English (US)</display>
+        <displayNative>English (US)</displayNative>
+    </locale>
+</locales>

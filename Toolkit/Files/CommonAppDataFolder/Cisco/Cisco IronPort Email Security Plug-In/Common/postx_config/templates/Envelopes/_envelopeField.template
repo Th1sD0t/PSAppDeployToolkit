@@ -1,0 +1,12 @@
+	<field name="${Name}" position="${titlePosition}">
+	    <title id="${titleID}" classAttr="${titleClass}">
+		${titleText}
+	    </title>
+	    <entry
+		size="${inputSize}"
+		maxLen="${inputMaxLen}"
+		obscure="${inputObscure}"
+		id="${inputID}"
+		classAttr="${inputClass}"
+		title="${inputTitle}"/>
+	</field>

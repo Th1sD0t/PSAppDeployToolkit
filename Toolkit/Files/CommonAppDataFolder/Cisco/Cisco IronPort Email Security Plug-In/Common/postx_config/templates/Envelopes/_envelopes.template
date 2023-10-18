@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    $Id: _envelopes.template,v 1.8 2011-05-04 22:36:05 bting Exp $
+-->
+
+<!DOCTYPE envelopes
+[
+<!ELEMENT envelopes (envelope+)>
+
+<!ELEMENT envelope (source, TEName, encoding, script, sso, forms, passphrase,
+	  info, buttons, checkboxes, links, key?, addresses, graphic*,
+	  field*)>
+<!ATTLIST envelope name CDATA #REQUIRED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT TEName EMPTY>
+<!ATTLIST TEName name CDATA #REQUIRED>
+
+<!ELEMENT encoding EMPTY>
+<!ATTLIST encoding name CDATA #REQUIRED>
+
+<!ELEMENT script EMPTY>
+<!ATTLIST script
+	  useScript (true|false) "true"
+>
+
+<!ELEMENT sso EMPTY>
+<!ATTLIST sso
+	  enable (true|false) "false"
+>
+
+<!ELEMENT forms EMPTY>
+<!ATTLIST forms
+	  useGetForGPT (true|false) "true"
+>
+
+<!ELEMENT passphrase EMPTY>
+<!ATTLIST passphrase
+	  usePassphrase (true|false) "true"
+>
+
+<!ELEMENT info EMPTY>
+<!ATTLIST info
+	  showSenderAuth (true|false) "true"
+	  showSensitivity (true|false) "true"
+>
+
+<!ELEMENT buttons EMPTY>
+<!ATTLIST buttons
+	  open (true|false) "true"
+	  save (true|false) "true"
+	  openOnline (true|false) "true"
+>
+
+<!ELEMENT checkboxes EMPTY>
+<!ATTLIST checkboxes
+	  openOffline (true|false) "true"
+	  rememberUserKey (true|false) "true"
+	  rememberEnvelopeKey (true|false) "true"
+	  rememberMe (true|false) "true"
+	  enablePSP (true|false) "true"
+	  autoOpen (true|false) "true"
+>
+
+<!ELEMENT links EMPTY>
+<!ATTLIST links
+	  company CDATA #IMPLIED
+	  help CDATA #IMPLIED
+	  notListed CDATA #IMPLIED
+	  forgotPassword CDATA #IMPLIED
+	  passphraseNotShown CDATA #IMPLIED
+>
+
+<!ELEMENT key EMPTY>
+<!ATTLIST key
+	  caseSensitive (true|false) "true"
+	  fieldSeparator CDATA "^"
+>
+
+<!ELEMENT addresses EMPTY>
+<!ATTLIST addresses
+	  mobile CDATA "mobile@res.cisco.com"
+>
+
+<!ELEMENT graphic (source, link?, cache?, explode?, size?, alt?, anchor?)>
+<!ATTLIST graphic name CDATA #REQUIRED>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT cache (#PCDATA)>
+
+<!ELEMENT explode (#PCDATA)>
+
+<!ELEMENT size (#PCDATA)>
+
+<!ELEMENT alt (#PCDATA)>
+
+<!ELEMENT anchor EMPTY>
+<!ATTLIST anchor
+	  classAttr CDATA #IMPLIED
+	  href CDATA #REQUIRED
+	  id CDATA #IMPLIED
+	  name CDATA #IMPLIED
+	  newWindow (true|false) "true"
+	  title CDATA #IMPLIED
+>
+
+<!ELEMENT field (title, entry)>
+<!ATTLIST field
+	  name CDATA #REQUIRED
+	  position (l|t|r|b) "l"
+>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+	  classAttr CDATA #IMPLIED
+	  id CDATA #IMPLIED
+>
+
+<!ELEMENT entry EMPTY>
+<!ATTLIST entry
+	  classAttr CDATA #IMPLIED
+	  id CDATA #IMPLIED
+	  maxLen CDATA #IMPLIED
+	  obscure (true|false) "true"
+	  size CDATA #REQUIRED
+	  title CDATA #IMPLIED
+>
+]>
+<envelopes>
+${Envelope}</envelopes>

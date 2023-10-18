@@ -1,0 +1,38 @@
+    <envelope name="${Name}">
+	<source>${envelopeSource}</source>
+	<TEName name="${envelopeTEName}"/>
+	<encoding name="${envelopeFileEncoding}"/>
+	<script
+	    useScript="${useScript}"/>
+	<sso
+	    enable="${useSSO}"/>
+	<forms
+	    useGetForGPT="${useGetForGPT}"/>
+	<passphrase
+	    usePassphrase="${usePassphrase}"/>
+	<info
+	    showSenderAuth="${showSenderAuth}"
+	    showSensitivity="${showSensitivity}"/>
+	<buttons
+	    open="${showOpenButton}"
+	    save="${showSaveButton}"
+	    openOnline="${showOpenOnlineButton}"/>
+	<checkboxes
+	    openOffline="${showOpenOfflineCheckbox}"
+	    rememberUserKey="${showRememberUserKeyCheckbox}"
+	    rememberEnvelopeKey="${showRememberEnvelopeKeyCheckbox}"
+	    rememberMe="${showRememberMeCheckbox}"
+	    enablePSP="${showEnablePSPCheckbox}"
+	    autoOpen="${showAutoOpenCheckbox}"/>
+	<links
+	    company="${evpCompanyLink}"
+	    help="${evpHelpLink}"
+	    notListed="${evpNotListedLink}"
+	    forgotPassword="${evpForgotPasswordLink}"
+	    passphraseNotShown="${evpPassphraseNotShownLink}"/>
+	<key
+	    fieldSeparator="${keyFieldSep}"
+	    caseSensitive="${keyCaseSensitive}"/>
+	<addresses
+	    mobile="${mobileAddress}"/>
+${EnvelopeGraphics}${EnvelopeFields}    </envelope>
